@@ -223,7 +223,7 @@ export default function HomePage() {
             
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Strategic Playbooks</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <a
                   href="https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit"
                   target="_blank"
@@ -241,8 +241,30 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
                 >
-                  <h4 className="font-medium text-gray-900 mb-2">Sales Scripts Collection</h4>
-                  <p className="text-sm text-gray-600 mb-3">Proven sales scripts for various industries and lead types</p>
+                  <h4 className="font-medium text-gray-900 mb-2">Complete Sales Scripts Course</h4>
+                  <p className="text-sm text-gray-600 mb-3">Step-by-step guide to designing, writing, and optimizing sales scripts for consistent results</p>
+                  <span className="text-blue-600 font-medium">Get it for $9 →</span>
+                </a>
+                
+                <a
+                  href="https://billriceconsulting.gumroad.com/l/aged-leads-scripts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <h4 className="font-medium text-gray-900 mb-2">Aged Leads Sales Playbook</h4>
+                  <p className="text-sm text-gray-600 mb-3">Transform dormant aged leads into active customers with proven scripts and strategies</p>
+                  <span className="text-blue-600 font-medium">Get it for $9 →</span>
+                </a>
+                
+                <a
+                  href="https://billriceconsulting.gumroad.com/l/mortgage-scripts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <h4 className="font-medium text-gray-900 mb-2">Mortgage Sales System</h4>
+                  <p className="text-sm text-gray-600 mb-3">Complete mortgage sales system with scripts, strategies, and lead management automation</p>
                   <span className="text-blue-600 font-medium">Get it for $9 →</span>
                 </a>
               </div>
