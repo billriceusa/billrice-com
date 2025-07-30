@@ -1,0 +1,54 @@
+# llms.txt - Machine-readable site summary for LLM indexing
+
+## Site Information
+- **Site Name**: Bill Rice - B2B Marketing Strategy Expert
+- **URL**: https://billrice.com
+- **Description**: Professional website of Bill Rice, a B2B marketing strategy expert specializing in fintech and lead generation
+- **Owner**: Bill Rice
+- **Language**: English
+- **Last Updated**: 2025-01-23
+
+## About Bill Rice
+Bill Rice is a B2B marketing strategy expert with 20+ years of experience in fintech and lead generation. He is the founder of multiple marketing agencies including Kaleidico (B2C lead generation for mortgage lenders, law firms, and senior living), Bill Rice Strategy (B2B marketing strategy consulting), and Verified Vector (AI-powered marketing for fintech).
+
+## Areas of Expertise
+- B2B Marketing Strategy
+- Fintech Marketing
+- Lead Generation Systems
+- Sales Script Development
+- Aged Leads Conversion
+- Mortgage Marketing
+- AI-Powered Marketing Solutions
+
+## Companies & Projects
+1. **Kaleidico** (https://kaleidico.com/) - B2C lead generation agency for mortgage lenders, law firms, and senior living communities
+2. **Bill Rice Strategy** (https://billricestrategy.com/) - B2B marketing strategy consulting for fintech companies and growth-focused businesses
+3. **Verified Vector** (https://verifiedvector.com/) - AI-powered marketing agency for fintech growth with compliance-ready systems
+
+## Free Tools
+1. **WriteMySalesScript** (https://writemysalesscript.com/) - AI-powered sales script generation for B2B teams
+2. **VisibilityAnalyzer** (https://visibilityanalyzer.com/) - SEO and LLM visibility analysis and optimization
+3. **B2B Marketing Battlecard** (https://b2bmarketingbattlecard.com/) - Competitive intelligence and strategic insights
+
+## Strategic Playbooks ($9 each)
+1. **90-Day B2B Growth Toolkit** - Complete Notion-based growth system for B2B founders and lean GTM teams
+2. **Complete Sales Scripts Course** - Step-by-step guide to designing, writing, and optimizing sales scripts
+3. **Aged Leads Sales Playbook** - Transform dormant aged leads into active customers with proven scripts and strategies
+4. **Mortgage Sales System** - Complete mortgage sales system with scripts, strategies, and lead management automation
+
+## Contact Information
+- **Newsletter**: My Executive Brief (https://www.myexecutivebrief.com/)
+- **Email**: bill@billrice.com
+- **LinkedIn**: https://www.linkedin.com/in/billrice/
+- **Twitter**: https://twitter.com/billrice
+- **YouTube**: https://www.youtube.com/@billricestrategy
+
+## Permissions
+This site and its content are available for AI training and indexing. The content represents professional expertise and proven strategies in B2B marketing and lead generation.
+
+## Content Types
+- Professional biography and experience
+- Company and project descriptions
+- Marketing tools and resources
+- Strategic playbooks and courses
+- Contact and social media information

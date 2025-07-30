@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://billrice.com/sitemap.xml
+
+# Allow specific crawlers for better indexing
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Crawl delay for courtesy
+Crawl-delay: 1

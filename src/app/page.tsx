@@ -1,8 +1,86 @@
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bill Rice",
+    "jobTitle": "B2B Marketing Strategy Expert",
+    "description": "Bill Rice brings 20+ years of experience in B2B marketing, fintech growth strategies, and lead generation systems.",
+    "url": "https://billrice.com",
+    "image": "https://billrice.com/bill-rice-headshot.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/billrice/",
+      "https://twitter.com/billrice",
+      "https://www.youtube.com/@billricestrategy"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Kaleidico",
+        "url": "https://kaleidico.com/"
+      },
+      {
+        "@type": "Organization", 
+        "name": "Bill Rice Strategy",
+        "url": "https://billricestrategy.com/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Verified Vector", 
+        "url": "https://verifiedvector.com/"
+      }
+    ],
+    "knowsAbout": [
+      "B2B Marketing",
+      "Lead Generation", 
+      "Fintech Marketing",
+      "Sales Scripts",
+      "Marketing Strategy",
+      "Aged Leads",
+      "Mortgage Marketing"
+    ],
+    "offers": [
+      {
+        "@type": "Product",
+        "name": "90-Day B2B Growth Toolkit",
+        "price": "9",
+        "priceCurrency": "USD",
+        "url": "https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit"
+      },
+      {
+        "@type": "Product", 
+        "name": "Complete Sales Scripts Course",
+        "price": "9",
+        "priceCurrency": "USD",
+        "url": "https://billriceconsulting.gumroad.com/l/sales-scripts"
+      },
+      {
+        "@type": "Product",
+        "name": "Aged Leads Sales Playbook", 
+        "price": "9",
+        "priceCurrency": "USD",
+        "url": "https://billriceconsulting.gumroad.com/l/aged-leads-scripts"
+      },
+      {
+        "@type": "Product",
+        "name": "Mortgage Sales System",
+        "price": "9", 
+        "priceCurrency": "USD",
+        "url": "https://billriceconsulting.gumroad.com/l/mortgage-scripts"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
