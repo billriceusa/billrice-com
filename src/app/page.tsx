@@ -1,77 +1,14 @@
 import Link from 'next/link';
 import Script from 'next/script';
+import Image from 'next/image';
+import { personStructuredData, websiteStructuredData, organizationStructuredData } from '@/lib/structured-data';
 
 export default function HomePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Bill Rice",
-    "jobTitle": "B2B Marketing Strategy Expert",
-    "description": "Bill Rice brings 20+ years of experience in B2B marketing, fintech growth strategies, and lead generation systems.",
-    "url": "https://billrice.com",
-    "image": "https://billrice.com/bill-rice-headshot.jpg",
-    "sameAs": [
-      "https://www.linkedin.com/in/billrice/",
-      "https://twitter.com/billrice",
-      "https://www.youtube.com/@billricestrategy"
-    ],
-    "worksFor": [
-      {
-        "@type": "Organization",
-        "name": "Kaleidico",
-        "url": "https://kaleidico.com/"
-      },
-      {
-        "@type": "Organization", 
-        "name": "Bill Rice Strategy",
-        "url": "https://billricestrategy.com/"
-      },
-      {
-        "@type": "Organization",
-        "name": "Verified Vector", 
-        "url": "https://verifiedvector.com/"
-      }
-    ],
-    "knowsAbout": [
-      "B2B Marketing",
-      "Lead Generation", 
-      "Fintech Marketing",
-      "Sales Scripts",
-      "Marketing Strategy",
-      "Aged Leads",
-      "Mortgage Marketing"
-    ],
-    "offers": [
-      {
-        "@type": "Product",
-        "name": "90-Day B2B Growth Toolkit",
-        "price": "9",
-        "priceCurrency": "USD",
-        "url": "https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit"
-      },
-      {
-        "@type": "Product", 
-        "name": "Complete Sales Scripts Course",
-        "price": "9",
-        "priceCurrency": "USD",
-        "url": "https://billriceconsulting.gumroad.com/l/sales-scripts"
-      },
-      {
-        "@type": "Product",
-        "name": "Aged Leads Sales Playbook", 
-        "price": "9",
-        "priceCurrency": "USD",
-        "url": "https://billriceconsulting.gumroad.com/l/aged-leads-scripts"
-      },
-      {
-        "@type": "Product",
-        "name": "Mortgage Sales System",
-        "price": "9", 
-        "priceCurrency": "USD",
-        "url": "https://billriceconsulting.gumroad.com/l/mortgage-scripts"
-      }
-    ]
-  };
+  const combinedStructuredData = [
+    personStructuredData,
+    websiteStructuredData,
+    organizationStructuredData
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -79,10 +16,19 @@ export default function HomePage() {
       <Script
         id="structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedStructuredData) }}
       />
+      
+      {/* Skip to main content for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
+      >
+        Skip to main content
+      </a>
+
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <header className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl">
             Bill Rice
@@ -94,156 +40,168 @@ export default function HomePage() {
             Helping fintech and B2B companies grow through proven marketing strategies and lead generation systems.
           </p>
           
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">
             <a
               href="https://www.myexecutivebrief.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-center"
+              aria-label="Subscribe to Bill Rice's newsletter (opens in new tab)"
             >
               Subscribe to Newsletter
             </a>
             <a
               href="#about"
               className="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-center"
+              aria-label="Learn more about Bill Rice"
             >
               Learn More
             </a>
-          </div>
+          </nav>
         </div>
-      </div>
+      </header>
 
       {/* About Section */}
-      <div id="about" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+      <main id="main-content">
+        <section id="about" className="py-16 bg-gray-50" aria-labelledby="about-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 id="about-heading" className="text-3xl font-bold text-gray-900">
+                  About Bill Rice
+                </h2>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <p className="text-lg text-gray-600 mb-6">
+                    Bill Rice brings 20+ years of experience designing and building online consumer-direct banking and lending platforms. His journey from Air Force intelligence operations to marketing leadership provides a unique strategic perspective on B2B growth.
+                  </p>
+                  <p className="text-lg text-gray-600 mb-6">
+                    As the founder of multiple successful marketing agencies including Kaleidico, Bill Rice Strategy, and Verified Vector, Bill helps fintech companies and B2B organizations build predictable revenue pipelines through proven marketing frameworks.
+                  </p>
+                  <p className="text-lg text-gray-600">
+                    His expertise spans from building marketing systems for major financial institutions like Quicken Loans to developing AI-powered growth strategies for emerging fintech companies.
+                  </p>
+                </div>
+                <div className="order-1 md:order-2 text-center">
+                  <div className="w-64 h-64 mx-auto">
+                    <Image
+                      src="/bill-rice-headshot.jpg"
+                      alt="Bill Rice - Professional headshot showing a business leader in professional attire"
+                      width={256}
+                      height={256}
+                      className="w-full h-full object-cover rounded-lg shadow-lg"
+                      priority
+                      sizes="(max-width: 768px) 256px, 256px"
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <Link 
+                      href="/now" 
+                      className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                      aria-label="Visit Bill Rice's now page to see current projects"
+                    >
+                      See what I&apos;m working on now
+                      <span className="ml-1" aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Companies Section */}
+        <section className="py-16 bg-white" aria-labelledby="companies-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900">
-                About Bill Rice
+              <h2 id="companies-heading" className="text-3xl font-bold text-gray-900">
+                Companies & Projects
               </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Strategic marketing solutions across multiple ventures
+              </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1">
-                <p className="text-lg text-gray-600 mb-6">
-                  Bill Rice brings 20+ years of experience designing and building online consumer-direct banking and lending platforms. His journey from Air Force intelligence operations to marketing leadership provides a unique strategic perspective on B2B growth.
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Kaleidico
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  B2C lead generation agency for mortgage lenders, law firms, and senior living communities.
                 </p>
-                <p className="text-lg text-gray-600 mb-6">
-                  As the founder of multiple successful marketing agencies including Kaleidico, Bill Rice Strategy, and Verified Vector, Bill helps fintech companies and B2B organizations build predictable revenue pipelines through proven marketing frameworks.
+                <a
+                  href="https://kaleidico.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  aria-label="Visit Kaleidico website (opens in new tab)"
+                >
+                  Visit Kaleidico
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+              
+              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Bill Rice Strategy
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  B2B marketing strategy consulting for fintech companies and growth-focused businesses.
                 </p>
-                <p className="text-lg text-gray-600">
-                  His expertise spans from building marketing systems for major financial institutions like Quicken Loans to developing AI-powered growth strategies for emerging fintech companies.
+                <a
+                  href="https://billricestrategy.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  aria-label="Visit Bill Rice Strategy website (opens in new tab)"
+                >
+                  Visit Bill Rice Strategy
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+              
+              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Verified Vector
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  AI-powered marketing agency for fintech growth with compliance-ready systems.
                 </p>
-              </div>
-              <div className="order-1 md:order-2 text-center">
-                <div className="w-64 h-64 mx-auto">
-                  <img 
-                    src="/bill-rice-headshot.jpg" 
-                    alt="Bill Rice - Professional Headshot" 
-                    className="w-full h-full object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-                <div className="mt-6">
-                  <Link 
-                    href="/now" 
-                    className="text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    See what I&apos;m working on now →
-                  </Link>
-                </div>
-              </div>
+                <a
+                  href="https://verifiedvector.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  aria-label="Visit Verified Vector website (opens in new tab)"
+                >
+                  Visit Verified Vector
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* Companies Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">
-              Companies & Projects
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Strategic marketing solutions across multiple ventures
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Kaleidico
-              </h3>
-              <p className="text-gray-600 mb-4">
-                B2C lead generation agency for mortgage lenders, law firms, and senior living communities.
+        {/* Tools & Resources Section */}
+        <section className="py-16 bg-gray-50" aria-labelledby="tools-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">
+                Tools & Resources
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Free AI-powered tools and strategic playbooks
               </p>
-              <a
-                href="https://kaleidico.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-              >
-                Visit Kaleidico
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
             </div>
-            
-            <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Bill Rice Strategy
-              </h3>
-              <p className="text-gray-600 mb-4">
-                B2B marketing strategy consulting for fintech companies and growth-focused businesses.
-              </p>
-              <a
-                href="https://billricestrategy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-              >
-                Visit Bill Rice Strategy
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-            
-            <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Verified Vector
-              </h3>
-              <p className="text-gray-600 mb-4">
-                AI-powered marketing agency for fintech growth with compliance-ready systems.
-              </p>
-              <a
-                href="https://verifiedvector.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-              >
-                Visit Verified Vector
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Tools & Resources Section */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">
-              Tools & Resources
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Free AI-powered tools and strategic playbooks
-            </p>
-          </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
@@ -351,13 +309,13 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Newsletter & Contact Section */}
-      <div id="contact" className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Stay Connected
-            </h2>
+        {/* Newsletter & Contact Section */}
+        <section id="contact" className="py-16 bg-white" aria-labelledby="contact-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 id="contact-heading" className="text-3xl font-bold text-gray-900 mb-8">
+                Stay Connected
+              </h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="p-6 border border-gray-200 rounded-lg">
@@ -422,22 +380,26 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
 
       {/* Footer */}
-      <div className="py-8 bg-gray-100 border-t border-gray-200">
+      <footer className="py-8 bg-gray-100 border-t border-gray-200" role="contentinfo">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-gray-600">
             <p>&copy; 2025 Bill Rice. All rights reserved.</p>
             <p className="mt-2">
-              <Link href="/now" className="text-blue-600 hover:text-blue-700">
+              <Link 
+                href="/now" 
+                className="text-blue-600 hover:text-blue-700"
+                aria-label="Visit Bill Rice's now page"
+              >
                 See what I&apos;m working on now
               </Link>
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

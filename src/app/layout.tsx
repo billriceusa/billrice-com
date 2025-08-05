@@ -14,18 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation",
+  metadataBase: new URL('https://billrice.com'),
+  title: {
+    default: "Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation",
+    template: "%s | Bill Rice - B2B Marketing Strategy Expert"
+  },
   description: "Bill Rice brings 20+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.",
-  keywords: ["B2B marketing", "fintech marketing", "lead generation", "sales scripts", "marketing strategy", "Bill Rice", "aged leads", "mortgage marketing", "business growth"],
-  authors: [{ name: "Bill Rice" }],
+  keywords: ["B2B marketing", "fintech marketing", "lead generation", "sales scripts", "marketing strategy", "Bill Rice", "aged leads", "mortgage marketing", "business growth", "marketing automation", "revenue pipelines", "growth strategy"],
+  authors: [{ name: "Bill Rice", url: "https://billrice.com" }],
   creator: "Bill Rice",
   publisher: "Bill Rice Strategy",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -44,6 +55,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Bill Rice - B2B Marketing Strategy Expert',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -53,11 +65,30 @@ export const metadata: Metadata = {
     description: 'Bill Rice brings 20+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines.',
     images: ['/bill-rice-headshot.jpg'],
     creator: '@billrice',
+    site: '@billrice',
   },
   alternates: {
     canonical: 'https://billrice.com',
+    types: {
+      'application/rss+xml': [
+        { url: 'https://www.myexecutivebrief.com/feed', title: 'My Executive Brief RSS Feed' },
+      ],
+    },
   },
   category: 'Business',
+  classification: 'Business',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -66,6 +97,14 @@ export const metadata: Metadata = {
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
+    shortcut: '/favicon-32x32.png',
+  },
+  manifest: '/manifest.json',
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    other: {
+      'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION || '',
+    },
   },
 };
 

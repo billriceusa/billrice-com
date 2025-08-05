@@ -1,30 +1,62 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "What I'm Working On Now",
+  description: "Current projects and strategic priorities for Bill Rice - B2B Marketing Strategy Expert. Updated regularly with latest initiatives in AI-powered marketing, fintech consulting, and business strategy.",
+  keywords: ["Bill Rice current projects", "AI marketing", "fintech consulting", "B2B strategy", "marketing automation", "business consulting"],
+  openGraph: {
+    title: "What I'm Working On Now | Bill Rice",
+    description: "Current projects and strategic priorities for Bill Rice - B2B Marketing Strategy Expert. Updated regularly with latest initiatives.",
+    type: 'website',
+    url: 'https://billrice.com/now',
+  },
+  twitter: {
+    title: "What I'm Working On Now | Bill Rice",
+    description: "Current projects and strategic priorities for Bill Rice - B2B Marketing Strategy Expert.",
+  },
+  alternates: {
+    canonical: 'https://billrice.com/now',
+  },
+};
 
 export default function NowPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Skip to main content for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
+      >
+        Skip to main content
+      </a>
+
       {/* Header */}
-      <div className="py-8 bg-gray-50 border-b border-gray-200">
+      <header className="py-8 bg-gray-50 border-b border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Link 
-              href="/" 
-              className="text-blue-600 hover:text-blue-700 font-medium mb-4 inline-block"
-            >
-              ← Back to BillRice.com
-            </Link>
+            <nav className="mb-4" aria-label="Breadcrumb">
+              <Link 
+                href="/" 
+                className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                aria-label="Return to homepage"
+              >
+                <span aria-hidden="true">←</span>
+                <span className="ml-1">Back to BillRice.com</span>
+              </Link>
+            </nav>
             <h1 className="text-4xl font-bold text-gray-900">
               What I&apos;m Working On Now
             </h1>
             <p className="mt-4 text-lg text-gray-600">
-              Last updated: July 30, 2025
+              <time dateTime="2025-07-30">Last updated: July 30, 2025</time>
             </p>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Content */}
-      <div className="py-16">
+      <main id="main-content" className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             
@@ -124,19 +156,29 @@ export default function NowPage() {
 
           </div>
         </div>
-      </div>
+      </main>
 
       {/* Footer */}
-      <div className="py-8 bg-gray-100 border-t border-gray-200">
+      <footer className="py-8 bg-gray-100 border-t border-gray-200" role="contentinfo">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-gray-600">
             <p>&copy; 2025 Bill Rice. All rights reserved.</p>
             <p className="mt-2">
-              This page follows the <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">now page movement</a> by Derek Sivers.
+              This page follows the{' '}
+              <a 
+                href="https://nownownow.com/about" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-600 hover:text-blue-700"
+                aria-label="Learn about the now page movement by Derek Sivers (opens in new tab)"
+              >
+                now page movement
+              </a>{' '}
+              by Derek Sivers.
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
