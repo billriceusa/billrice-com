@@ -306,8 +306,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+        </section>
 
         {/* Newsletter & Contact Section */}
         <section id="contact" className="py-16 bg-white" aria-labelledby="contact-heading">
@@ -379,6 +379,7 @@ export default function HomePage() {
                 </svg>
               </a>
             </div>
+          </div>
           </div>
         </section>
       </main>
