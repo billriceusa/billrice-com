@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
+const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
@@ -117,28 +118,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${interSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="border-b border-gray-200 bg-white dark:bg-gray-950 dark:border-gray-800">
+        <header className="border-b border-gray-200 bg-white dark:bg-white dark:border-gray-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-3">
               <Link
                 href="/"
-                className="text-sm font-semibold text-gray-900 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-gray-100"
+                className="text-base font-semibold text-gray-900 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 aria-label="BillRice.com home"
               >
-                BillRice.com
+                Bill Rice
               </Link>
               <nav aria-label="Main navigation" className="flex items-center gap-6">
                 <Link
                   href="/now"
-                  className="text-sm text-gray-700 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-gray-200"
+                  className="text-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 >
                   Current Focus Areas
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-sm text-gray-700 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-gray-200"
+                  className="text-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
                 >
                   Contact
                 </Link>
