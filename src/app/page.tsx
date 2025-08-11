@@ -51,11 +51,11 @@ export default function HomePage() {
               Subscribe to Newsletter
             </a>
             <a
-              href="#about"
+              href="/contact"
               className="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 text-center"
-              aria-label="Learn more about Bill Rice"
+              aria-label="Contact Bill Rice"
             >
-              Learn More
+              Contact Bill Rice
             </a>
           </nav>
         </div>
