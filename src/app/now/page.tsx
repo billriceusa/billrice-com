@@ -68,15 +68,31 @@ export default function NowPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Marketing Systems</h3>
                   <p className="text-gray-600">
-                    Developing compliance-ready AI marketing solutions for fintech companies through Verified Vector. 
-                    Focus on dramatically increasing content productivity while maintaining regulatory compliance.
+                    Developing compliance-ready AI marketing solutions for fintech companies through{' '}
+                    <a
+                      href="https://verifiedvector.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
+                      Verified Vector
+                    </a>.
+                    {' '}Focus on dramatically increasing content productivity while maintaining regulatory compliance.
                   </p>
                 </div>
                 
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">B2B Strategy Consulting</h3>
                   <p className="text-gray-600">
-                    Working with 120-day strategic engagements through Bill Rice Strategy, helping fintech and B2B 
+                    Working with 120-day strategic engagements through{' '}
+                    <a
+                      href="https://billricestrategy.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
+                      Bill Rice Strategy
+                    </a>, helping fintech and B2B
                     companies build predictable revenue pipelines and demand generation systems.
                   </p>
                 </div>
@@ -84,7 +100,16 @@ export default function NowPage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">My Executive Brief Newsletter</h3>
                   <p className="text-gray-600">
-                    Publishing weekly strategic insights for B2B marketing leaders. Curating tactical briefs, 
+                    Publishing{' '}
+                    <a
+                      href="https://myexecutivebrief.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
+                      weekly strategic insights for B2B marketing leaders
+                    </a>.
+                    {' '}Curating tactical briefs, 
                     strategic notes, and special reports on emerging trends in B2B marketing and fintech.
                   </p>
                 </div>
