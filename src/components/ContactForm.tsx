@@ -225,12 +225,12 @@ export default function ContactForm() {
 function Input({ name, label, type = 'text', required = false }: { name: string; label: string; type?: string; required?: boolean }) {
   return (
     <label className="block">
-      <span className="block text-sm font-medium text-gray-700 mb-1">{label}{required && ' *'}</span>
+      <span className="block text-sm font-medium text-gray-800 mb-1">{label}{required && ' *'}</span>
       <input
         name={name}
         type={type}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-600 focus:ring-blue-600 bg-white text-gray-900 placeholder:text-gray-500 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-400"
       />
     </label>
   );
@@ -239,11 +239,11 @@ function Input({ name, label, type = 'text', required = false }: { name: string;
 function Select({ name, label, options, required = false }: { name: string; label: string; options: { value: string; label: string }[]; required?: boolean }) {
   return (
     <label className="block">
-      <span className="block text-sm font-medium text-gray-700 mb-1">{label}{required && ' *'}</span>
+      <span className="block text-sm font-medium text-gray-800 mb-1">{label}{required && ' *'}</span>
       <select
         name={name}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white"
+        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-600 focus:ring-blue-600 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100"
         defaultValue=""
       >
         <option value="" disabled>Choose...</option>
@@ -267,7 +267,7 @@ function CheckboxGroup({ name, label, options, max }: { name: string; label: str
   }
   return (
     <fieldset>
-      <legend className="block text-sm font-medium text-gray-700 mb-2">{label}</legend>
+      <legend className="block text-sm font-medium text-gray-800 mb-2">{label}</legend>
       <div className="grid sm:grid-cols-2 gap-2">
         {options.map((opt) => (
           <label key={opt} className="inline-flex items-center gap-2">
@@ -279,7 +279,7 @@ function CheckboxGroup({ name, label, options, max }: { name: string; label: str
               onChange={() => toggle(opt)}
               className="h-4 w-4 text-blue-600 border-gray-300 rounded"
             />
-            <span className="text-gray-700">{opt}</span>
+            <span className="text-gray-800">{opt}</span>
           </label>
         ))}
       </div>
