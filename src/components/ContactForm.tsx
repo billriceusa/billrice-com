@@ -66,7 +66,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('consulting')}
-          className="w-full border border-gray-300 hover:border-gray-400 text-gray-800 px-4 py-3 rounded-lg text-left"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-left text-gray-800 hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           aria-label="One-off consulting call"
         >
           <span className="block font-medium">One-off consulting call</span>
@@ -75,7 +75,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('podcast')}
-          className={`w-full border ${intent==='podcast' ? 'border-blue-500' : 'border-gray-300 hover:border-gray-400'} text-gray-800 px-4 py-3 rounded-lg text-left`}
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='podcast' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
           aria-label="Guest appearance on your podcast"
         >
           <span className="block font-medium">Guest appearance on your podcast</span>
@@ -84,7 +84,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('speaking')}
-          className={`w-full border ${intent==='speaking' ? 'border-blue-500' : 'border-gray-300 hover:border-gray-400'} text-gray-800 px-4 py-3 rounded-lg text-left`}
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='speaking' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
           aria-label="Speaking at your event"
         >
           <span className="block font-medium">Speaking at your event</span>
@@ -93,10 +93,10 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('engagement')}
-          className={`w-full border ${intent==='engagement' ? 'border-blue-500' : 'border-gray-300 hover:border-gray-400'} text-gray-800 px-4 py-3 rounded-lg text-left`}
-          aria-label="Ongoing sales and marketing engagement"
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='engagement' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
+          aria-label="Sales and Marketing Engagement"
         >
-          <span className="block font-medium">Ongoing sales and marketing engagement</span>
+          <span className="block font-medium">Sales and Marketing Engagement</span>
           <span className="block text-sm text-gray-600">Explore longer-term collaboration</span>
         </button>
       </div>
@@ -230,7 +230,7 @@ function Input({ name, label, type = 'text', required = false }: { name: string;
         name={name}
         type={type}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-600 focus:ring-blue-600 bg-white text-gray-900 placeholder:text-gray-500 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-400"
+        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-500 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
       />
     </label>
   );
@@ -243,7 +243,7 @@ function Select({ name, label, options, required = false }: { name: string; labe
       <select
         name={name}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-600 focus:ring-blue-600 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         defaultValue=""
       >
         <option value="" disabled>Choose...</option>

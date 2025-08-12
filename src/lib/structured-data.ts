@@ -135,7 +135,7 @@ export const organizationStructuredData = {
   "description": "B2B marketing strategy consulting and fintech growth solutions",
   "serviceArea": {
     "@type": "Place",
-    "name": "Global"
+    "name": "United States"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -159,4 +159,68 @@ export const organizationStructuredData = {
       }
     ]
   }
+};
+
+// LocalBusiness / ProfessionalService with US-only service area (no public address)
+export const professionalServiceStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Bill Rice Strategy",
+  "url": "https://billrice.com",
+  "image": "https://billrice.com/bill-rice-headshot.jpg",
+  "description": "B2B marketing strategy consulting and fintech growth solutions",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "bill@billrice.com",
+    "contactType": "Professional Inquiries",
+    "areaServed": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/billrice/",
+    "https://twitter.com/billrice",
+    "https://www.youtube.com/@billricestrategy"
+  ]
+};
+
+// Breadcrumbs helpers
+export const breadcrumbHomeToNow = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://billrice.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Now",
+      "item": "https://billrice.com/now"
+    }
+  ]
+};
+
+export const breadcrumbHomeToContact = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://billrice.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://billrice.com/contact"
+    }
+  ]
 };

@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Script from 'next/script';
 import Image from 'next/image';
-import { personStructuredData, websiteStructuredData, organizationStructuredData } from '@/lib/structured-data';
+import { personStructuredData, websiteStructuredData, organizationStructuredData, professionalServiceStructuredData } from '@/lib/structured-data';
 
 export default function HomePage() {
   const combinedStructuredData = [
     personStructuredData,
     websiteStructuredData,
-    organizationStructuredData
+    organizationStructuredData,
+    professionalServiceStructuredData
   ];
 
   return (

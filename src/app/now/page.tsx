@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Script from 'next/script';
+import { breadcrumbHomeToNow } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
   title: "What I'm Working On Now",
@@ -23,6 +25,8 @@ export const metadata: Metadata = {
 export default function NowPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Breadcrumbs JSON-LD */}
+      <Script id="breadcrumbs-now" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbHomeToNow) }} />
       {/* Skip to main content for accessibility */}
       <a 
         href="#main-content" 

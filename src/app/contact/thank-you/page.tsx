@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Thank You | Bill Rice',
+  alternates: {
+    canonical: 'https://billrice.com/contact/thank-you',
+  },
 };
 
 const DISCOVERY_CALENDAR_URL = 'https://calendar.app.google/SzNkR5pExSJLeu9N7';

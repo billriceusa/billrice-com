@@ -120,6 +120,9 @@ export default function RootLayout({
       <body
         className={`${interSans.variable} ${geistMono.variable} antialiased`}
       >
+        <head>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        </head>
         <header className="border-b border-gray-200 bg-white dark:bg-white dark:border-gray-200">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-3">
