@@ -170,7 +170,7 @@ export default function NowPage() {
             </div>
 
             {/* Contact */}
-            <div className="bg-gray-50 p-8 rounded-lg text-center">
+            <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-l-[#FFD000] text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Get In Touch</h2>
               <p className="text-gray-600 mb-6">
                 Interested in working together or have questions about any of these projects?
