@@ -32,9 +32,15 @@ export const personStructuredData = {
     },
     {
       "@type": "Organization",
-      "name": "Verified Vector", 
+      "name": "Verified Vector",
       "url": "https://verifiedvector.com/",
       "description": "AI-powered marketing agency for fintech growth with compliance-ready systems"
+    },
+    {
+      "@type": "Organization",
+      "name": "How to Work Leads",
+      "url": "https://www.howtoworkleads.com/",
+      "description": "Practical strategies and proven techniques for converting leads into customers"
     }
   ],
   "knowsAbout": [
