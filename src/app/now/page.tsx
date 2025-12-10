@@ -28,9 +28,9 @@ export default function NowPage() {
       {/* Breadcrumbs JSON-LD */}
       <Script id="breadcrumbs-now" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbHomeToNow) }} />
       {/* Skip to main content for accessibility */}
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50"
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-[#FFD000] text-black p-2 z-50"
       >
         Skip to main content
       </a>
@@ -40,9 +40,9 @@ export default function NowPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <nav className="mb-4" aria-label="Breadcrumb">
-              <Link 
-                href="/" 
-                className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+              <Link
+                href="/"
+                className="text-black hover:text-black font-medium inline-flex items-center underline"
                 aria-label="Return to homepage"
               >
                 <span aria-hidden="true">←</span>
@@ -77,7 +77,7 @@ export default function NowPage() {
                       href="https://verifiedvector.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-black hover:text-black underline"
                     >
                       Verified Vector
                     </a>.
@@ -93,7 +93,7 @@ export default function NowPage() {
                       href="https://billricestrategy.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-black hover:text-black underline"
                     >
                       Bill Rice Strategy
                     </a>, helping fintech and B2B
@@ -109,7 +109,7 @@ export default function NowPage() {
                       href="https://myexecutivebrief.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-black hover:text-black underline"
                     >
                       weekly strategic insights for B2B marketing leaders
                     </a>.
@@ -177,7 +177,7 @@ export default function NowPage() {
               </p>
               <a
                 href="mailto:bill@billrice.com"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
               >
                 Contact Bill Rice
               </a>
@@ -194,11 +194,11 @@ export default function NowPage() {
             <p>&copy; 2025 Bill Rice. All rights reserved.</p>
             <p className="mt-2">
               This page follows the{' '}
-              <a 
-                href="https://nownownow.com/about" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-blue-600 hover:text-blue-700"
+              <a
+                href="https://nownownow.com/about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black hover:text-black underline"
                 aria-label="Learn about the now page movement by Derek Sivers (opens in new tab)"
               >
                 now page movement

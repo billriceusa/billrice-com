@@ -128,7 +128,7 @@ export default function RootLayout({
             <div className="flex items-center justify-between py-3">
               <Link
                 href="/"
-                className="text-base font-semibold text-gray-900 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                className="text-base font-semibold text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
                 aria-label="BillRice.com home"
               >
                 Bill Rice
@@ -136,13 +136,13 @@ export default function RootLayout({
               <nav aria-label="Main navigation" className="flex items-center gap-6">
                 <Link
                   href="/now"
-                  className="text-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                  className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
                 >
                   Current Focus Areas
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-sm text-blue-700 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+                  className="text-sm bg-[#FFD000] hover:bg-[#E6BB00] text-black px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
                 >
                   Contact
                 </Link>
