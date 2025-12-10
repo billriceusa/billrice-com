@@ -22,14 +22,14 @@ export default function NotFound() {
         <div className="space-y-4">
           <Link
             href="/"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="inline-block bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
           >
             Return Home
           </Link>
           <div>
             <Link
               href="/now"
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-black hover:text-black font-medium underline"
             >
               See what I&apos;m working on now
             </Link>

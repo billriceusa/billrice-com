@@ -66,7 +66,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('consulting')}
-          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-left text-gray-800 hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-left text-gray-800 hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2"
           aria-label="One-off consulting call"
         >
           <span className="block font-medium">One-off consulting call</span>
@@ -75,7 +75,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('podcast')}
-          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='podcast' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2 ${intent==='podcast' ? 'border-[#FFD000] bg-[#FFF8D6]' : 'border-gray-300 hover:border-gray-400'}`}
           aria-label="Guest appearance on your podcast"
         >
           <span className="block font-medium">Guest appearance on your podcast</span>
@@ -84,7 +84,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('speaking')}
-          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='speaking' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2 ${intent==='speaking' ? 'border-[#FFD000] bg-[#FFF8D6]' : 'border-gray-300 hover:border-gray-400'}`}
           aria-label="Speaking at your event"
         >
           <span className="block font-medium">Speaking at your event</span>
@@ -93,7 +93,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => onSelectIntent('engagement')}
-          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${intent==='engagement' ? 'border-blue-600 bg-blue-50' : 'border-gray-300 hover:border-gray-400'}`}
+          className={`w-full rounded-lg border px-4 py-3 text-left text-gray-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2 ${intent==='engagement' ? 'border-[#FFD000] bg-[#FFF8D6]' : 'border-gray-300 hover:border-gray-400'}`}
           aria-label="Sales and Marketing Engagement"
         >
           <span className="block font-medium">Sales and Marketing Engagement</span>
@@ -203,7 +203,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white px-6 py-3 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="bg-[#FFD000] hover:bg-[#E6BB00] disabled:opacity-60 text-black px-6 py-3 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
             >
               {loading ? 'Submitting...' : 'Submit'}
             </button>
@@ -211,7 +211,7 @@ export default function ContactForm() {
               href={DISCOVERY_CALENDAR_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-700"
+              className="text-black hover:text-black underline"
             >
               Or schedule a discovery call →
             </a>
@@ -230,7 +230,7 @@ function Input({ name, label, type = 'text', required = false }: { name: string;
         name={name}
         type={type}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-500 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-500 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2"
       />
     </label>
   );
@@ -243,7 +243,7 @@ function Select({ name, label, options, required = false }: { name: string; labe
       <select
         name={name}
         required={required}
-        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+        className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-900 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD000] focus-visible:ring-offset-2"
         defaultValue=""
       >
         <option value="" disabled>Choose...</option>
@@ -277,7 +277,7 @@ function CheckboxGroup({ name, label, options, max }: { name: string; label: str
               value={opt}
               checked={selected.includes(opt)}
               onChange={() => toggle(opt)}
-              className="h-4 w-4 text-blue-600 border-gray-300 rounded"
+              className="h-4 w-4 text-[#FFD000] border-gray-300 rounded accent-[#FFD000]"
             />
             <span className="text-gray-800">{opt}</span>
           </label>
