@@ -113,19 +113,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Companies Section */}
+        {/* My Companies Section */}
         <section className="py-16 bg-white" aria-labelledby="companies-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 id="companies-heading" className="text-3xl font-bold text-gray-900">
-                Companies & Projects
+                My Companies
               </h2>
               <p className="mt-4 text-lg text-gray-600">
                 Strategic marketing solutions across multiple ventures
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Kaleidico
@@ -167,12 +167,70 @@ export default function HomePage() {
                   </svg>
                 </a>
               </article>
+
+              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Verified Vector
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  AI-powered marketing agency for fintech growth with compliance-ready systems and proven ROI frameworks.
+                </p>
+                <a
+                  href="https://verifiedvector.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  aria-label="Visit Verified Vector website (opens in new tab)"
+                >
+                  Visit Verified Vector
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* My Projects Section */}
+        <section className="py-16 bg-gray-50" aria-labelledby="projects-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 id="projects-heading" className="text-3xl font-bold text-gray-900">
+                My Projects
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Resources and tools for sales and marketing professionals
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+              <article className="text-center p-6 border border-gray-200 rounded-lg bg-white hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  How to Work Leads
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Practical strategies and proven techniques for converting leads into customers, from first contact to close.
+                </p>
+                <a
+                  href="https://www.howtoworkleads.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  aria-label="Visit How to Work Leads website (opens in new tab)"
+                >
+                  Visit How to Work Leads
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
             </div>
           </div>
         </section>
 
         {/* Tools & Resources Section */}
-        <section className="py-16 bg-gray-50" aria-labelledby="tools-heading">
+        <section className="py-16 bg-white" aria-labelledby="tools-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">
