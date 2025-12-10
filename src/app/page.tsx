@@ -35,10 +35,10 @@ export default function HomePage() {
             Bill Rice
           </h1>
           <p className="mt-6 text-2xl text-gray-600 max-w-3xl mx-auto">
-            B2B Marketing Strategy Expert
+            Inbound Lead Generation Strategist
           </p>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-            Helping fintech and B2B companies grow through proven marketing strategies and lead generation systems.
+            Building predictable revenue engines for fintech and financial services companies through high-performance lead generation systems.
           </p>
           
           <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">
@@ -76,13 +76,13 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-lg text-gray-600 mb-6">
-                    Bill Rice brings 20+ years of experience designing and building online consumer-direct banking and lending platforms. His journey from Air Force intelligence operations to marketing leadership provides a unique strategic perspective on B2B growth.
+                    Bill Rice is a veteran strategist in high-performance lead generation, specializing in bridging the gap between high-volume B2C acquisition and complex B2B sales cycles. As the founder of Kaleidico and Bill Rice Strategy Group, Bill has spent over 20 years designing predictable revenue engines for the financial and technology sectors.
                   </p>
                   <p className="text-lg text-gray-600 mb-6">
-                    As the founder of multiple successful marketing agencies including Kaleidico, Bill Rice Strategy, and Verified Vector, Bill helps fintech companies and B2B organizations build predictable revenue pipelines through proven marketing frameworks.
+                    His expertise lies in his ability to simplify the complex. Having designed marketing systems for some of the world&apos;s largest financial institutions—including early consumer-direct platforms for Quicken Loans—he now advises high-growth companies on how to navigate the new era of inbound marketing.
                   </p>
                   <p className="text-lg text-gray-600">
-                    His expertise spans from building marketing systems for major financial institutions like Quicken Loans to developing AI-powered growth strategies for emerging fintech companies.
+                    Bill brings a unique, disciplined approach—rooted in his early career in Air Force intelligence—to architecting systems that turn raw traffic into qualified pipeline, helping businesses move beyond vanity metrics to generate actual revenue.
                   </p>
                 </div>
                 <div className="order-1 md:order-2 text-center">
@@ -125,13 +125,13 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Kaleidico
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  B2C lead generation agency for mortgage lenders, law firms, and senior living communities.
+                  High-performance B2C lead generation agency helping mortgage lenders, law firms, and senior living communities build sustainable, scalable sales pipelines.
                 </p>
                 <a
                   href="https://kaleidico.com/"
@@ -146,43 +146,22 @@ export default function HomePage() {
                   </svg>
                 </a>
               </article>
-              
+
               <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Bill Rice Strategy
+                  Bill Rice Strategy Group
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  B2B marketing strategy consulting for fintech companies and growth-focused businesses.
+                  B2B consultancy helping fintech founders and marketing leaders replace guesswork with data-driven frameworks that generate predictable revenue.
                 </p>
                 <a
                   href="https://billricestrategy.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                  aria-label="Visit Bill Rice Strategy website (opens in new tab)"
+                  aria-label="Visit Bill Rice Strategy Group website (opens in new tab)"
                 >
-                  Visit Bill Rice Strategy
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </article>
-              
-              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Verified Vector
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  AI-powered marketing agency for fintech growth with compliance-ready systems.
-                </p>
-                <a
-                  href="https://verifiedvector.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                  aria-label="Visit Verified Vector website (opens in new tab)"
-                >
-                  Visit Verified Vector
+                  Visit Bill Rice Strategy Group
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
