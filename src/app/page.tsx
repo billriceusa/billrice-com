@@ -126,7 +126,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Kaleidico
                 </h3>
@@ -147,7 +147,7 @@ export default function HomePage() {
                 </a>
               </article>
 
-              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Bill Rice Strategy Group
                 </h3>
@@ -168,7 +168,7 @@ export default function HomePage() {
                 </a>
               </article>
 
-              <article className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Verified Vector
                 </h3>
@@ -179,7 +179,7 @@ export default function HomePage() {
                   href="https://verifiedvector.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
                   aria-label="Visit Verified Vector website (opens in new tab)"
                 >
                   Visit Verified Vector
@@ -205,7 +205,7 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              <article className="text-center p-6 border border-gray-200 rounded-lg bg-white hover:shadow-lg transition-shadow">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-white hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   How to Work Leads
                 </h3>
@@ -216,7 +216,7 @@ export default function HomePage() {
                   href="https://www.howtoworkleads.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
                   aria-label="Visit How to Work Leads website (opens in new tab)"
                 >
                   Visit How to Work Leads
@@ -245,7 +245,7 @@ export default function HomePage() {
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Free AI Tools</h3>
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+                <div className="p-4 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all">
                   <h4 className="font-medium text-gray-900 mb-2">WriteMySalesScript</h4>
                   <p className="text-sm text-gray-600 mb-4">AI-powered sales script generation for B2B teams</p>
                   <a
@@ -261,7 +261,7 @@ export default function HomePage() {
                   </a>
                 </div>
                 
-                <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+                <div className="p-4 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all">
                   <h4 className="font-medium text-gray-900 mb-2">VisibilityAnalyzer</h4>
                   <p className="text-sm text-gray-600 mb-4">SEO and LLM visibility analysis and optimization</p>
                   <a
@@ -277,7 +277,7 @@ export default function HomePage() {
                   </a>
                 </div>
                 
-                <div className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+                <div className="p-4 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all">
                   <h4 className="font-medium text-gray-900 mb-2">B2B Marketing Battlecard</h4>
                   <p className="text-sm text-gray-600 mb-4">Competitive intelligence and strategic insights</p>
                   <a
@@ -302,7 +302,7 @@ export default function HomePage() {
                   href="https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  className="block p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">90-Day B2B Growth Toolkit</h4>
                   <p className="text-sm text-gray-600 mb-3">Complete Notion-based growth system for B2B founders and lean GTM teams</p>
@@ -313,7 +313,7 @@ export default function HomePage() {
                   href="https://billriceconsulting.gumroad.com/l/sales-scripts"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  className="block p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">Complete Sales Scripts Course</h4>
                   <p className="text-sm text-gray-600 mb-3">Step-by-step guide to designing, writing, and optimizing sales scripts for consistent results</p>
@@ -324,7 +324,7 @@ export default function HomePage() {
                   href="https://billriceconsulting.gumroad.com/l/aged-leads-scripts"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  className="block p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">Aged Leads Sales Playbook</h4>
                   <p className="text-sm text-gray-600 mb-3">Transform dormant aged leads into active customers with proven scripts and strategies</p>
@@ -335,7 +335,7 @@ export default function HomePage() {
                   href="https://billriceconsulting.gumroad.com/l/mortgage-scripts"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+                  className="block p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">Mortgage Sales System</h4>
                   <p className="text-sm text-gray-600 mb-3">Complete mortgage sales system with scripts, strategies, and lead management automation</p>
@@ -356,7 +356,7 @@ export default function HomePage() {
               </h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="p-6 border border-gray-200 rounded-lg">
+              <div className="p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">My Executive Brief</h3>
                 <p className="text-gray-600 mb-6">
                   Weekly strategic insights for B2B marketing leaders. Curated notes, tactical briefs, and special reports.
@@ -371,7 +371,7 @@ export default function HomePage() {
                 </a>
               </div>
               
-              <div className="p-6 border border-gray-200 rounded-lg">
+              <div className="p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Get In Touch</h3>
                 <p className="text-gray-600 mb-6">
                   Interested in strategic consulting or speaking engagements? Let&apos;s discuss how we can work together.
