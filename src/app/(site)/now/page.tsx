@@ -196,28 +196,6 @@ export default function NowPage() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="py-8 bg-gray-100 border-t border-gray-200" role="contentinfo">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-gray-600">
-            <p>&copy; 2026 Bill Rice. All rights reserved.</p>
-            <p className="mt-2">
-              This page follows the{' '}
-              <a
-                href="https://nownownow.com/about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black hover:text-black underline"
-                aria-label="Learn about the now page movement by Derek Sivers (opens in new tab)"
-              >
-                now page movement
-              </a>{' '}
-              by Derek Sivers.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
