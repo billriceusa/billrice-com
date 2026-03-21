@@ -81,7 +81,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://lead-buyer-playbook.vercel.app/"
+                    href="https://www.leadbuyerplaybook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"

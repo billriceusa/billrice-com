@@ -78,7 +78,7 @@ export default async function BookPage() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a
-              href={book?.freeReadUrl || 'https://lead-buyer-playbook.vercel.app/'}
+              href={book?.freeReadUrl || 'https://www.leadbuyerplaybook.com/'}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"

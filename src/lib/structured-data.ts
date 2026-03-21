@@ -220,7 +220,7 @@ export const bookStructuredData = {
     "name": "Bill Rice",
     "url": "https://billrice.com"
   },
-  "url": "https://lead-buyer-playbook.vercel.app/",
+  "url": "https://www.leadbuyerplaybook.com/",
   "datePublished": "2025-11",
   "bookEdition": "First Edition",
   "bookFormat": "https://schema.org/EBook",

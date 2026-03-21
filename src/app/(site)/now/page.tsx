@@ -74,7 +74,7 @@ export default function NowPage() {
                   <p className="text-gray-600">
                     Published my first book —{' '}
                     <a
-                      href="https://lead-buyer-playbook.vercel.app/"
+                      href="https://www.leadbuyerplaybook.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-black hover:text-black underline"
@@ -83,7 +83,7 @@ export default function NowPage() {
                     </a>.
                     {' '}The enterprise guide to buying and converting leads profitably, drawing on 30+ years in lead generation and mortgage lending. Available{' '}
                     <a
-                      href="https://lead-buyer-playbook.vercel.app/"
+                      href="https://www.leadbuyerplaybook.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-black hover:text-black underline"
