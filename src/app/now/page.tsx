@@ -53,7 +53,7 @@ export default function NowPage() {
               What I&apos;m Working On Now
             </h1>
             <p className="mt-4 text-lg text-gray-600">
-              <time dateTime="2025-07-30">Last updated: July 30, 2025</time>
+              <time dateTime="2026-03-21">Last updated: March 21, 2026</time>
             </p>
           </div>
         </div>
@@ -67,12 +67,62 @@ export default function NowPage() {
             {/* Current Projects */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Strategic Priorities</h2>
-              
+
               <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Lead Buyer&apos;s Playbook</h3>
+                  <p className="text-gray-600">
+                    Published my first book —{' '}
+                    <a
+                      href="https://lead-buyer-playbook.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black hover:text-black underline"
+                    >
+                      The Lead Buyer&apos;s Playbook
+                    </a>.
+                    {' '}The enterprise guide to buying and converting leads profitably, drawing on 30+ years in lead generation and mortgage lending. Available{' '}
+                    <a
+                      href="https://lead-buyer-playbook.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black hover:text-black underline"
+                    >
+                      free online
+                    </a>{' '}and on Amazon.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Building Niche Authority Sites</h3>
+                  <p className="text-gray-600">
+                    Growing a portfolio of authority-driven education platforms, each built on Next.js and Sanity.io:{' '}
+                    <a href="https://agedleadsales.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">AgedLeadSales.com</a> (aged lead training),{' '}
+                    <a href="https://proinvestorhub.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">ProInvestorHub.com</a> (real estate investing education),{' '}and{' '}
+                    <a href="https://cryptolendinghub.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">CryptoLendingHub.com</a> (crypto lending reviews and education).
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Lead Brief Newsletter & Podcast</h3>
+                  <p className="text-gray-600">
+                    Rebranded My Executive Brief to{' '}
+                    <a
+                      href="https://theleadbrief.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black hover:text-black underline"
+                    >
+                      The Lead Brief
+                    </a>.
+                    {' '}Weekly tactics for buying, generating, and converting more leads. Now includes a podcast alongside the newsletter.
+                  </p>
+                </div>
+
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Marketing Systems</h3>
                   <p className="text-gray-600">
-                    Developing compliance-ready AI marketing solutions for fintech companies through{' '}
+                    Continuing to develop compliance-ready AI marketing solutions for fintech companies through{' '}
                     <a
                       href="https://verifiedvector.com"
                       target="_blank"
@@ -81,14 +131,14 @@ export default function NowPage() {
                     >
                       Verified Vector
                     </a>.
-                    {' '}Focus on dramatically increasing content productivity while maintaining regulatory compliance.
+                    {' '}Leveraging AI agents and LLMs to dramatically increase content productivity while maintaining regulatory compliance.
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">B2B Strategy Consulting</h3>
                   <p className="text-gray-600">
-                    Working with 120-day strategic engagements through{' '}
+                    Working with strategic engagements through{' '}
                     <a
                       href="https://billricestrategy.com"
                       target="_blank"
@@ -100,69 +150,29 @@ export default function NowPage() {
                     companies build predictable revenue pipelines and demand generation systems.
                   </p>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">My Executive Brief Newsletter</h3>
-                  <p className="text-gray-600">
-                    Publishing{' '}
-                    <a
-                      href="https://myexecutivebrief.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      weekly strategic insights for B2B marketing leaders
-                    </a>.
-                    {' '}Curating tactical briefs, 
-                    strategic notes, and special reports on emerging trends in B2B marketing and fintech.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Currently Reading */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Currently Reading & Learning</h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Business & Strategy</h3>
-                  <p className="text-gray-600">
-                    Exploring the intersection of AI and business strategy, with particular focus on 
-                    how emerging technologies are reshaping B2B marketing and customer acquisition.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Technology Trends</h3>
-                  <p className="text-gray-600">
-                    Following developments in AI agents, LLM applications for business, and 
-                    compliance-first approaches to marketing automation in regulated industries.
-                  </p>
-                </div>
               </div>
             </div>
 
             {/* Speaking & Availability */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Speaking & Consulting</h2>
-              
+
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Available Topics</h3>
                   <ul className="text-gray-600 space-y-2 ml-4">
+                    <li>• Enterprise Lead Buying Strategy</li>
                     <li>• AI-Powered Marketing for Fintech Companies</li>
                     <li>• Building Predictable B2B Revenue Pipelines</li>
-                    <li>• From Military Intelligence to Marketing Strategy</li>
+                    <li>• Building Authority-Driven Niche Content Sites</li>
                     <li>• Compliance-First Marketing in Regulated Industries</li>
-                    <li>• Strategic Frameworks for B2B Growth</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-medium text-gray-900">Consulting Availability</h3>
                   <p className="text-gray-600">
-                    Currently accepting strategic consulting engagements for fintech companies and 
+                    Currently accepting strategic consulting engagements for fintech companies and
                     B2B organizations looking to build or optimize their marketing and growth systems.
                   </p>
                 </div>
@@ -191,7 +201,7 @@ export default function NowPage() {
       <footer className="py-8 bg-gray-100 border-t border-gray-200" role="contentinfo">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-gray-600">
-            <p>&copy; 2025 Bill Rice. All rights reserved.</p>
+            <p>&copy; 2026 Bill Rice. All rights reserved.</p>
             <p className="mt-2">
               This page follows the{' '}
               <a

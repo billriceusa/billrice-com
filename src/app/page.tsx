@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Script from 'next/script';
 import Image from 'next/image';
-import { personStructuredData, websiteStructuredData, organizationStructuredData, professionalServiceStructuredData } from '@/lib/structured-data';
+import { personStructuredData, websiteStructuredData, organizationStructuredData, professionalServiceStructuredData, bookStructuredData } from '@/lib/structured-data';
 
 export default function HomePage() {
   const combinedStructuredData = [
     personStructuredData,
     websiteStructuredData,
     organizationStructuredData,
-    professionalServiceStructuredData
+    professionalServiceStructuredData,
+    bookStructuredData
   ];
 
   return (
@@ -43,13 +44,13 @@ export default function HomePage() {
           
           <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">
             <a
-              href="https://www.myexecutivebrief.com/"
+              href="https://theleadbrief.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
-              aria-label="Subscribe to Bill Rice's newsletter (opens in new tab)"
+              aria-label="Subscribe to The Lead Brief newsletter (opens in new tab)"
             >
-              Subscribe to Newsletter
+              Subscribe to The Lead Brief
             </a>
             <a
               href="/contact"
@@ -62,9 +63,49 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* About Section */}
+      {/* Book Section */}
       <main id="main-content">
-        <section id="about" className="py-16 bg-gray-50" aria-labelledby="about-heading">
+        <section className="py-16 bg-gray-50" aria-labelledby="book-heading">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <p className="text-sm font-semibold text-[#E6BB00] uppercase tracking-wide mb-2">New Book</p>
+                <h2 id="book-heading" className="text-3xl font-bold text-gray-900">
+                  The Lead Buyer&apos;s Playbook
+                </h2>
+                <p className="mt-2 text-lg text-gray-500">The Enterprise Guide to Buying and Converting Leads Profitably</p>
+              </div>
+              <div className="bg-white p-8 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
+                <p className="text-lg text-gray-600 mb-6">
+                  Stop treating lead generation as a procurement problem. Learn the systematic approach that transforms lead buying from a cost center into a competitive advantage. Drawing on 30+ years of experience in lead generation and mortgage lending, this book covers strategic foundations, risk management, operational excellence, and financial intelligence for enterprise lead acquisition.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://lead-buyer-playbook.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
+                    aria-label="Read The Lead Buyer's Playbook free online (opens in new tab)"
+                  >
+                    Read Free Online
+                  </a>
+                  <a
+                    href="https://www.amazon.com/dp/B0DRBK6QJZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-black hover:bg-black hover:text-white text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                    aria-label="Buy The Lead Buyer's Playbook on Amazon (opens in new tab)"
+                  >
+                    Buy on Amazon
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-16 bg-white" aria-labelledby="about-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -76,7 +117,7 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-lg text-gray-600 mb-6">
-                    Bill Rice is a veteran strategist in high-performance lead generation, specializing in bridging the gap between high-volume B2C acquisition and complex B2B sales cycles. As the founder of Kaleidico and Bill Rice Strategy Group, Bill has spent over 20 years designing predictable revenue engines for the financial and technology sectors.
+                    Bill Rice is a veteran strategist in high-performance lead generation, specializing in bridging the gap between high-volume B2C acquisition and complex B2B sales cycles. As the founder of Kaleidico and Bill Rice Strategy Group, Bill has spent over 30 years designing predictable revenue engines for the financial and technology sectors.
                   </p>
                   <p className="text-lg text-gray-600 mb-6">
                     His expertise lies in his ability to simplify the complex. Having designed marketing systems for some of the world&apos;s largest financial institutions—including early consumer-direct platforms for Quicken Loans—he now advises high-growth companies on how to navigate the new era of inbound marketing.
@@ -114,7 +155,7 @@ export default function HomePage() {
         </section>
 
         {/* My Companies Section */}
-        <section className="py-16 bg-white" aria-labelledby="companies-heading">
+        <section className="py-16 bg-gray-50" aria-labelledby="companies-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 id="companies-heading" className="text-3xl font-bold text-gray-900">
@@ -193,19 +234,40 @@ export default function HomePage() {
         </section>
 
         {/* My Projects Section */}
-        <section className="py-16 bg-gray-50" aria-labelledby="projects-heading">
+        <section className="py-16 bg-white" aria-labelledby="projects-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 id="projects-heading" className="text-3xl font-bold text-gray-900">
                 My Projects
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Resources and tools for sales and marketing professionals
+                Authority-driven education platforms and resources across lead generation, real estate investing, and crypto lending
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-white hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Aged Lead Sales
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Sales training and education platform for working aged leads. Playbooks, calculators, and industry-specific strategies for insurance, mortgage, legal, and solar professionals.
+                </p>
+                <a
+                  href="https://agedleadsales.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
+                  aria-label="Visit Aged Lead Sales website (opens in new tab)"
+                >
+                  Visit Aged Lead Sales
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   How to Work Leads
                 </h3>
@@ -225,12 +287,54 @@ export default function HomePage() {
                   </svg>
                 </a>
               </article>
+
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  ProInvestorHub
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Real estate investing education platform with expert guides, interactive calculators, market data for 50+ cities, and a weekly investor newsletter.
+                </p>
+                <a
+                  href="https://proinvestorhub.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
+                  aria-label="Visit ProInvestorHub website (opens in new tab)"
+                >
+                  Visit ProInvestorHub
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  CryptoLendingHub
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Data-driven crypto lending education with platform reviews, rate comparisons, risk assessments, and DeFi protocol analysis. No hype — just data.
+                </p>
+                <a
+                  href="https://cryptolendinghub.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
+                  aria-label="Visit CryptoLendingHub website (opens in new tab)"
+                >
+                  Visit CryptoLendingHub
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
             </div>
           </div>
         </section>
 
         {/* Tools & Resources Section */}
-        <section className="py-16 bg-white" aria-labelledby="tools-heading">
+        <section className="py-16 bg-gray-50" aria-labelledby="tools-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">
@@ -357,17 +461,17 @@ export default function HomePage() {
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">My Executive Brief</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">The Lead Brief</h3>
                 <p className="text-gray-600 mb-6">
-                  Weekly strategic insights for B2B marketing leaders. Curated notes, tactical briefs, and special reports.
+                  Weekly tactics for buying, generating, and converting more leads. Newsletter and podcast for founders, agency owners, and sales teams.
                 </p>
                 <a
-                  href="https://www.myexecutivebrief.com/"
+                  href="https://theleadbrief.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
                 >
-                  Subscribe to Newsletter
+                  Subscribe to The Lead Brief
                 </a>
               </div>
               
@@ -426,7 +530,7 @@ export default function HomePage() {
       <footer className="py-8 bg-gray-100 border-t border-gray-200" role="contentinfo">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-gray-600">
-            <p>&copy; 2025 Bill Rice. All rights reserved.</p>
+            <p>&copy; 2026 Bill Rice. All rights reserved.</p>
             <p className="mt-2">
               <Link
                 href="/now"

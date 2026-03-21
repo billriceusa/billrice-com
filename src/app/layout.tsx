@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation",
     template: "%s | Bill Rice - B2B Marketing Strategy Expert"
   },
-  description: "Bill Rice brings 20+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.",
+  description: "Bill Rice brings 30+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.",
   keywords: ["B2B marketing", "fintech marketing", "lead generation", "sales scripts", "marketing strategy", "Bill Rice", "aged leads", "mortgage marketing", "business growth", "marketing automation", "revenue pipelines", "growth strategy"],
   authors: [{ name: "Bill Rice", url: "https://billrice.com" }],
   creator: "Bill Rice",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     url: 'https://billrice.com',
     siteName: 'Bill Rice - B2B Marketing Strategy Expert',
     title: 'Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation',
-    description: 'Bill Rice brings 20+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.',
+    description: 'Bill Rice brings 30+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.',
     images: [
       {
         url: '/bill-rice-headshot.jpg',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation',
-    description: 'Bill Rice brings 20+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines.',
+    description: 'Bill Rice brings 30+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines.',
     images: ['/bill-rice-headshot.jpg'],
     creator: '@billrice',
     site: '@billrice',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     canonical: 'https://billrice.com',
     types: {
       'application/rss+xml': [
-        { url: 'https://www.myexecutivebrief.com/feed', title: 'My Executive Brief RSS Feed' },
+        { url: 'https://theleadbrief.com/feed', title: 'The Lead Brief RSS Feed' },
       ],
     },
   },

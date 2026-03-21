@@ -3,7 +3,7 @@ export const personStructuredData = {
   "@type": "Person",
   "name": "Bill Rice",
   "jobTitle": "B2B Marketing Strategy Expert",
-  "description": "Bill Rice brings 20+ years of experience in B2B marketing, fintech growth strategies, and lead generation systems.",
+  "description": "Bill Rice brings 30+ years of experience in B2B marketing, fintech growth strategies, and lead generation systems. Author of The Lead Buyer's Playbook.",
   "url": "https://billrice.com",
   "image": {
     "@type": "ImageObject",
@@ -41,6 +41,24 @@ export const personStructuredData = {
       "name": "How to Work Leads",
       "url": "https://www.howtoworkleads.com/",
       "description": "Practical strategies and proven techniques for converting leads into customers"
+    },
+    {
+      "@type": "Organization",
+      "name": "Aged Lead Sales",
+      "url": "https://agedleadsales.com/",
+      "description": "Sales training and education platform for working aged leads profitably"
+    },
+    {
+      "@type": "Organization",
+      "name": "ProInvestorHub",
+      "url": "https://proinvestorhub.com/",
+      "description": "Real estate investing education with expert guides, calculators, and market data"
+    },
+    {
+      "@type": "Organization",
+      "name": "CryptoLendingHub",
+      "url": "https://cryptolendinghub.com/",
+      "description": "Data-driven crypto lending education with platform reviews and rate comparisons"
     }
   ],
   "knowsAbout": [
@@ -112,7 +130,7 @@ export const websiteStructuredData = {
   "url": "https://billrice.com",
   "description": "B2B Marketing Strategy Expert specializing in fintech and lead generation systems",
   "inLanguage": "en-US",
-  "copyrightYear": 2025,
+  "copyrightYear": 2026,
   "copyrightHolder": {
     "@type": "Person",
     "name": "Bill Rice"
@@ -190,6 +208,30 @@ export const professionalServiceStructuredData = {
     "https://twitter.com/billrice",
     "https://www.youtube.com/@billricestrategy"
   ]
+};
+
+export const bookStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Lead Buyer's Playbook",
+  "alternateName": "The Enterprise Guide to Buying and Converting Leads Profitably",
+  "author": {
+    "@type": "Person",
+    "name": "Bill Rice",
+    "url": "https://billrice.com"
+  },
+  "url": "https://lead-buyer-playbook.vercel.app/",
+  "datePublished": "2025-11",
+  "bookEdition": "First Edition",
+  "bookFormat": "https://schema.org/EBook",
+  "description": "The enterprise guide to buying and converting leads profitably. A systematic approach that transforms lead buying from a cost center into a competitive advantage.",
+  "genre": "Business",
+  "inLanguage": "en",
+  "numberOfPages": 15,
+  "publisher": {
+    "@type": "Person",
+    "name": "Bill Rice"
+  }
 };
 
 // Breadcrumbs helpers
