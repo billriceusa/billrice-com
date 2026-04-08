@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description: 'Bill Rice brings 30+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines through proven marketing frameworks and lead generation systems.',
     images: [
       {
-        url: '/bill-rice-headshot.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Bill Rice - B2B Marketing Strategy Expert',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Bill Rice - B2B Marketing Strategy Expert | Fintech & Lead Generation',
     description: 'Bill Rice brings 30+ years of B2B marketing expertise helping fintech companies and growth-focused businesses build predictable revenue pipelines.',
-    images: ['/bill-rice-headshot.jpg'],
+    images: ['/og-image.jpg'],
     creator: '@billrice',
     site: '@billrice',
   },

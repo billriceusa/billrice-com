@@ -5,12 +5,17 @@ export const personStructuredData = {
   "jobTitle": "Fintech Marketing Strategist & Lead Generation Pioneer",
   "description": "Fintech marketing pioneer who coined 'lead management,' was Employee #7 at DeepGreen Bank, built EquityOnline at Quicken Loans, and has spent 30+ years building lead generation platforms for financial services companies. Author of The Lead Buyer's Playbook.",
   "url": "https://billrice.com",
+  "gender": "Male",
+  "nationality": {
+    "@type": "Country",
+    "name": "United States"
+  },
   "image": {
     "@type": "ImageObject",
     "url": "https://billrice.com/bill-rice-headshot.jpg",
-    "width": 1200,
-    "height": 630,
-    "caption": "Bill Rice - B2B Marketing Strategy Expert"
+    "width": 1080,
+    "height": 1080,
+    "caption": "Bill Rice - Fintech Marketing Pioneer & Lead Generation Strategist"
   },
   "sameAs": [
     "https://www.linkedin.com/in/billrice/",
@@ -149,6 +154,14 @@ export const personStructuredData = {
       "description": "Founded Kaleidico, coined 'lead management', built icoSales"
     }
   ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Lead Generation World",
+      "url": "https://leadgenerationworld.com/"
+    }
+  ],
+  "award": "Coined the industry term 'lead management' and authored the original Wikipedia definition",
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "bill@billrice.com",
@@ -224,7 +237,7 @@ export const professionalServiceStructuredData = {
   "@type": "ProfessionalService",
   "name": "Bill Rice Strategy",
   "url": "https://billrice.com",
-  "image": "https://billrice.com/bill-rice-headshot.jpg",
+  "image": "https://billrice.com/og-image.jpg",
   "description": "B2B marketing strategy consulting and fintech growth solutions",
   "areaServed": {
     "@type": "Country",
