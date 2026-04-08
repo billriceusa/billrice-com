@@ -117,7 +117,7 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-lg text-gray-600 mb-6">
-                    I started in Air Force intelligence running counterespionage operations, then became Employee #7 at DeepGreen Bank&mdash;one of the first internet-only banks. At Quicken Loans, I built EquityOnline, their first true online lending platform.
+                    I started as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations, then became Employee #7 at DeepGreen Bank&mdash;one of the first internet-only banks. At Quicken Loans, I built EquityOnline, their first true online lending platform.
                   </p>
                   <p className="text-lg text-gray-600 mb-6">
                     I coined the term &ldquo;lead management&rdquo; to differentiate platforms that work leads from CRMs that manage customers. I authored the original Wikipedia page for the category. The frameworks I built are now industry standard.

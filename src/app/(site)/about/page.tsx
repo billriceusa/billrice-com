@@ -50,14 +50,14 @@ const timelineEvents = [
     title: 'U.S. Air Force Academy',
     subtitle: 'B.S. Political Science',
     description:
-      'Commissioned as an officer from the United States Air Force Academy. Specialized in counterespionage and intelligence operations during the earliest days of the internet.',
+      'Commissioned from the United States Air Force Academy. Served as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations during the earliest days of the internet.',
   },
   {
     year: '1992-2000',
     title: 'Air Force Intelligence & Information Warfare',
     subtitle: 'USAF, TASC Inc., Iridium Communications',
     description:
-      'Served as a U.S. Air Force Officer in counterespionage operations. Managed information warfare programs at TASC, Inc. and served as Call Intercept System Security Manager at Iridium Communications. Pioneered information warfare operations at the dawn of the internet age.',
+      'Served as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations. Managed information warfare programs at TASC, Inc. and served as Call Intercept System Security Manager at Iridium Communications. Pioneered information warfare operations at the dawn of the internet age.',
   },
   {
     year: '2000',
@@ -177,7 +177,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">The Short Version</h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  I started my career as a U.S. Air Force intelligence officer running counterespionage operations in the late 1990s&mdash;the very beginning of the internet era. That experience taught me systems thinking, pattern recognition, and how to build operational frameworks under pressure.
+                  I started my career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations in the late 1990s&mdash;the very beginning of the internet era. That experience taught me systems thinking, pattern recognition, and how to build operational frameworks under pressure.
                 </p>
                 <p>
                   In 2000, I made the jump to fintech as Employee #7 at DeepGreen Bank, one of the very first internet-only banks in the United States. We launched the industry&rsquo;s first unconditional online HELOC. From there, I went to Quicken Loans (now Rocket Mortgage) as VP of National Home Equity, where I built EquityOnline&mdash;their first true online lending and offer platform.
@@ -201,7 +201,7 @@ export default function AboutPage() {
                 <div className="border-l-4 border-l-[#FFD000] pl-6">
                   <h3 className="text-lg font-semibold text-gray-900">Intelligence to Internet</h3>
                   <p className="text-gray-600 mt-1">
-                    I went from running counterespionage operations for the Air Force to building one of the first internet banks. The systems thinking and analytical rigor from intelligence work is the foundation of everything I do in marketing.
+                    I went from running counterespionage operations as an AFOSI Special Agent to building one of the first internet banks. The systems thinking and analytical rigor from intelligence work is the foundation of everything I do in marketing.
                   </p>
                 </div>
                 <div className="border-l-4 border-l-[#FFD000] pl-6">

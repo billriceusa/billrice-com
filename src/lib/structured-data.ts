@@ -122,9 +122,9 @@ export const personStructuredData = {
   "hasOccupation": [
     {
       "@type": "Occupation",
-      "name": "U.S. Air Force Intelligence Officer",
+      "name": "AFOSI Special Agent & Case Officer",
       "occupationalCategory": "Intelligence & Counterespionage",
-      "description": "Counterespionage operations, information warfare"
+      "description": "U.S. Air Force Office of Special Investigations — counterespionage operations, information warfare"
     },
     {
       "@type": "Occupation",
