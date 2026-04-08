@@ -36,10 +36,10 @@ export default function HomePage() {
             Bill Rice
           </h1>
           <p className="mt-6 text-2xl text-gray-600 max-w-3xl mx-auto">
-            Inbound Lead Generation Strategist
+            Fintech Marketing Pioneer & Lead Generation Strategist
           </p>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-            Building predictable revenue engines for fintech and financial services companies through high-performance lead generation systems.
+            30+ years building lead generation platforms and revenue systems for financial services companies. Coined &ldquo;lead management.&rdquo; Built platforms at DeepGreen Bank and Quicken Loans.
           </p>
           
           <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">
@@ -117,13 +117,18 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-lg text-gray-600 mb-6">
-                    Bill Rice is a veteran strategist in high-performance lead generation, specializing in bridging the gap between high-volume B2C acquisition and complex B2B sales cycles. As the founder of Kaleidico and Bill Rice Strategy Group, Bill has spent over 30 years designing predictable revenue engines for the financial and technology sectors.
+                    I started in Air Force intelligence running counterespionage operations, then became Employee #7 at DeepGreen Bank&mdash;one of the first internet-only banks. At Quicken Loans, I built EquityOnline, their first true online lending platform.
                   </p>
                   <p className="text-lg text-gray-600 mb-6">
-                    His expertise lies in his ability to simplify the complex. Having designed marketing systems for some of the world&apos;s largest financial institutions—including early consumer-direct platforms for Quicken Loans—he now advises high-growth companies on how to navigate the new era of inbound marketing.
+                    I coined the term &ldquo;lead management&rdquo; to differentiate platforms that work leads from CRMs that manage customers. I authored the original Wikipedia page for the category. The frameworks I built are now industry standard.
                   </p>
-                  <p className="text-lg text-gray-600">
-                    Bill brings a unique, disciplined approach—rooted in his early career in Air Force intelligence—to architecting systems that turn raw traffic into qualified pipeline, helping businesses move beyond vanity metrics to generate actual revenue.
+                  <p className="text-lg text-gray-600 mb-6">
+                    Today I run three companies&mdash;Kaleidico, Bill Rice Strategy Group, and Verified Vector&mdash;and operate a portfolio of authority content sites across lead generation, real estate investing, and fintech.
+                  </p>
+                  <p className="mt-4">
+                    <Link href="/about" className="text-black font-medium underline hover:text-gray-700">
+                      Read the full story &rarr;
+                    </Link>
                   </p>
                 </div>
                 <div className="order-1 md:order-2 text-center">
@@ -214,7 +219,7 @@ export default function HomePage() {
                   Verified Vector
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  AI-powered marketing agency for fintech growth with compliance-ready systems and proven ROI frameworks.
+                  Programmatic SEO and AI marketing agency for fintech companies. Compliance-ready content and marketing systems at scale.
                 </p>
                 <a
                   href="https://verifiedvector.com/"
@@ -246,6 +251,27 @@ export default function HomePage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  The Lead Brief
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Weekly newsletter and podcast on lead generation strategy. Tactics for buying, generating, and converting more leads.
+                </p>
+                <a
+                  href="https://theleadbrief.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-black hover:text-black font-medium underline"
+                  aria-label="Visit The Lead Brief website (opens in new tab)"
+                >
+                  Visit The Lead Brief
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </article>
+
               <article className="text-center p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg bg-gray-50 hover:shadow-lg hover:border-l-[#E6BB00] transition-all">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Aged Lead Sales
@@ -391,6 +417,22 @@ export default function HomePage() {
                     className="inline-flex items-center text-black hover:text-black font-medium underline"
                   >
                     Visit B2B Marketing Battlecard
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div className="p-4 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all">
+                  <h4 className="font-medium text-gray-900 mb-2">DemoLeadGen</h4>
+                  <p className="text-sm text-gray-600 mb-4">Interactive lead generation demo platform</p>
+                  <a
+                    href="https://demoleadgen.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-black hover:text-black font-medium underline"
+                  >
+                    Visit DemoLeadGen
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>

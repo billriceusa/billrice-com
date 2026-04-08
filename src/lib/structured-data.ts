@@ -2,8 +2,8 @@ export const personStructuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Bill Rice",
-  "jobTitle": "B2B Marketing Strategy Expert",
-  "description": "Bill Rice brings 30+ years of experience in B2B marketing, fintech growth strategies, and lead generation systems. Author of The Lead Buyer's Playbook.",
+  "jobTitle": "Fintech Marketing Strategist & Lead Generation Pioneer",
+  "description": "Fintech marketing pioneer who coined 'lead management,' was Employee #7 at DeepGreen Bank, built EquityOnline at Quicken Loans, and has spent 30+ years building lead generation platforms for financial services companies. Author of The Lead Buyer's Playbook.",
   "url": "https://billrice.com",
   "image": {
     "@type": "ImageObject",
@@ -107,14 +107,37 @@ export const personStructuredData = {
       "url": "https://billriceconsulting.gumroad.com/l/mortgage-scripts"
     }
   ],
-  "alumniOf": {
-    "@type": "Organization",
-    "name": "United States Air Force",
-    "description": "Intelligence Operations"
-  },
-  "award": [
-    "B2B Marketing Excellence",
-    "Fintech Innovation Leader"
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "United States Air Force Academy",
+      "description": "B.S. Political Science, 1992"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Phoenix",
+      "description": "MBA, Marketing, 2003"
+    }
+  ],
+  "hasOccupation": [
+    {
+      "@type": "Occupation",
+      "name": "U.S. Air Force Intelligence Officer",
+      "occupationalCategory": "Intelligence & Counterespionage",
+      "description": "Counterespionage operations, information warfare"
+    },
+    {
+      "@type": "Occupation",
+      "name": "VP National Home Equity",
+      "occupationalCategory": "Fintech Executive",
+      "description": "Built EquityOnline platform at Quicken Loans"
+    },
+    {
+      "@type": "Occupation",
+      "name": "Founder & CRO",
+      "occupationalCategory": "Marketing Agency Founder",
+      "description": "Founded Kaleidico, coined 'lead management', built icoSales"
+    }
   ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -250,6 +273,25 @@ export const breadcrumbHomeToNow = {
       "position": 2,
       "name": "Now",
       "item": "https://billrice.com/now"
+    }
+  ]
+};
+
+export const breadcrumbHomeToAbout = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://billrice.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://billrice.com/about"
     }
   ]
 };

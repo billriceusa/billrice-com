@@ -14,6 +14,12 @@ export function Header() {
           </Link>
           <nav aria-label="Main navigation" className="flex items-center gap-6">
             <Link
+              href="/about"
+              className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
+            >
+              About
+            </Link>
+            <Link
               href="/book"
               className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
             >
@@ -29,7 +35,7 @@ export function Header() {
               href="/now"
               className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
             >
-              Current Focus Areas
+              Now
             </Link>
             <Link
               href="/contact"
