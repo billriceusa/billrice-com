@@ -122,6 +122,7 @@ export default function RootLayout({
       >
         <head>
           <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="alternate" type="application/rss+xml" title="Bill Rice Blog" href="/feed.xml" />
         </head>
         {/* Google Analytics */}
         <Script

@@ -15,7 +15,17 @@ export const personStructuredData = {
   "sameAs": [
     "https://www.linkedin.com/in/billrice/",
     "https://twitter.com/billrice",
-    "https://www.youtube.com/@billricestrategy"
+    "https://www.youtube.com/@billricestrategy",
+    "https://billricestrategy.com/",
+    "https://kaleidico.com/",
+    "https://verifiedvector.com/",
+    "https://theleadbrief.com/",
+    "https://agedleadsales.com/",
+    "https://www.howtoworkleads.com/",
+    "https://proinvestorhub.com/",
+    "https://cryptolendinghub.com/",
+    "https://demoleadgen.com/",
+    "https://www.leadbuyerplaybook.com/"
   ],
   "worksFor": [
     {
@@ -225,12 +235,7 @@ export const professionalServiceStructuredData = {
     "email": "bill@billrice.com",
     "contactType": "Professional Inquiries",
     "areaServed": "US"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/billrice/",
-    "https://twitter.com/billrice",
-    "https://www.youtube.com/@billricestrategy"
-  ]
+  }
 };
 
 export const bookStructuredData = {
