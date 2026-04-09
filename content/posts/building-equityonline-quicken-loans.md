@@ -8,23 +8,23 @@ publishedAt: "2026-04-14"
 
 # Building EquityOnline: Inside Quicken Loans' First True Online Lending Platform
 
-In 2002, I got a call from a recruiter about a role at Quicken Loans. At the time, I was finishing my run at DeepGreen Bank, where I'd been part of the team that built one of the first fully online HELOC products. DeepGreen had proved the model but hadn't survived the market. The dot-com crash, the post-9/11 contraction, and the realities of being a tiny internet bank in a hostile funding environment had taken their toll.
+In 2004, I got a call from a recruiter about a role at Quicken Loans. At the time, I was finishing my run at DeepGreen Bank, where I'd been part of the team that built one of the first fully online HELOC products. DeepGreen had proved the model but was beign forced into a fire sale. The dot-com crash, the post-9/11 contraction, and the realities of being a tiny internet bank in a hostile funding environment had taken their toll.
 
 Quicken Loans was a different proposition entirely. They weren't a startup hoping the market would catch up. They were a company with real volume, real infrastructure, and real ambition — but they hadn't yet built the online lending platform they needed to get where they wanted to go. They wanted someone who'd done it before.
 
-I joined as Vice President of National Home Equity. My job was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
+I joined as the COO of the Rock Bank project, with the vision of giving Quicken Loans a federally chartered bank to stabilize funding for unlimited loan originations growth. This wasn't to be - a story for another time. This presented an opportunity to pivot to one of my other unique superpowers: building consumer direct online lending platforms. Swapping titles to Vice President of National Home Equity, my new mission was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
 
 ## Quicken Loans Before It Was Rocket Mortgage
 
 Most people today know Quicken Loans as Rocket Mortgage, the largest mortgage lender in the United States. But in 2002, that version of the company didn't exist yet. Quicken Loans was big — certainly much bigger than DeepGreen had ever been — but it wasn't the dominant force it would become over the next decade.
 
-The company was headquartered in Detroit. Dan Gilbert was running it with a combination of intensity and unconventional thinking that set the culture apart from anything I'd experienced in traditional financial services. The energy was closer to a tech company than a bank. People moved fast. Decisions got made quickly. There was a genuine belief that the mortgage industry was ripe for disruption, and that technology was the lever.
+The company was headquartered in Livonia, Michigan. Dan Gilbert was running it with a combination of intensity and unconventional thinking that set the culture apart from anything I'd experienced in traditional financial services. The energy was closer to a tech company than a bank. People moved fast. Decisions got made quickly. There was a genuine belief that the mortgage industry was ripe for disruption, and that technology was the lever.
 
-But in 2002, the company's online capabilities were still largely focused on lead capture and phone-based sales. A consumer could come to the website, fill out a form, and a loan officer would call them. That was a good business — Quicken Loans was already very effective at converting web leads into closed loans through its phone teams. But it wasn't an online lending platform. The borrower wasn't getting a real offer through the browser. They were submitting their information and waiting for a human to call.
+But in 2004, the company's online capabilities were still largely focused on lead capture and phone-based sales. A consumer could come to the website, fill out a form, and a loan officer would call them. That was a good business — Quicken Loans was already very effective at converting web leads into closed loans through its call-center based mortgage bankers. But it wasn't an online lending platform. The borrower wasn't getting a real offer through the browser. They were submitting their information and waiting for a human to call.
 
 The gap between what Quicken Loans was doing online and what was technically possible was exactly the gap I'd been working in at DeepGreen. The difference was that Quicken Loans had the scale, the capital, and the operational infrastructure to do it at a level DeepGreen never could.
 
-## The Home Equity Market in 2002
+## The Home Equity Market in 2004
 
 To understand why EquityOnline mattered, you need to understand what was happening in home equity at the time.
 
