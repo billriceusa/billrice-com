@@ -77,7 +77,7 @@ export default async function PostPage({ params }: Props) {
           url: `${baseUrl}/blog/${post.slug}`,
           imageUrl: post.mainImage?.asset
             ? urlFor(post.mainImage).width(1200).height(630).url()
-            : undefined,
+            : 'https://billrice.com/default-featured.jpg',
           publishedAt: post.publishedAt || '',
           authorName: post.author?.name || 'Bill Rice',
         })}
@@ -144,18 +144,18 @@ export default async function PostPage({ params }: Props) {
         </div>
       </div>
 
-      {post.mainImage?.asset && (
-        <div className="mt-8 overflow-hidden rounded-xl">
-          <Image
-            src={urlFor(post.mainImage).width(960).height(540).url()}
-            alt={post.mainImage.alt || ''}
-            width={960}
-            height={540}
-            className="w-full"
-            priority
-          />
-        </div>
-      )}
+      <div className="mt-8 overflow-hidden rounded-xl">
+        <Image
+          src={post.mainImage?.asset
+            ? urlFor(post.mainImage).width(960).height(540).url()
+            : '/default-featured.jpg'}
+          alt={post.mainImage?.alt || 'Bill Rice - Fintech Marketing Pioneer & Lead Generation Strategist'}
+          width={960}
+          height={540}
+          className="w-full"
+          priority
+        />
+      </div>
 
       {post.body && (
         <div className="mt-10">

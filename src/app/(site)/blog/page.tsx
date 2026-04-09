@@ -63,17 +63,17 @@ export default async function BlogPage() {
               href={`/blog/${post.slug}`}
               className="group overflow-hidden rounded-xl border border-gray-200 bg-white hover:shadow-lg transition-all"
             >
-              {post.mainImage?.asset && (
-                <div className="aspect-[16/9] overflow-hidden">
-                  <Image
-                    src={urlFor(post.mainImage).width(600).height(338).url()}
-                    alt={post.mainImage.alt || post.title || ''}
-                    width={600}
-                    height={338}
-                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
+              <div className="aspect-[16/9] overflow-hidden">
+                <Image
+                  src={post.mainImage?.asset
+                    ? urlFor(post.mainImage).width(600).height(338).url()
+                    : '/default-featured.jpg'}
+                  alt={post.mainImage?.alt || post.title || 'Bill Rice'}
+                  width={600}
+                  height={338}
+                  className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-6">
                 {post.categories && post.categories.length > 0 && (
                   <span className="text-xs font-medium text-[#E6BB00] uppercase tracking-wide">
