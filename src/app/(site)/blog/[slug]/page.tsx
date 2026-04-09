@@ -9,6 +9,11 @@ import { PortableText } from '@/components/portable-text'
 import type { PostDetail } from '@/sanity/lib/types'
 import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld'
 
+// Allow dynamic rendering for new posts not in the static build
+export const dynamicParams = true
+// Revalidate every hour so new posts appear without a full redeploy
+export const revalidate = 3600
+
 type Props = {
   params: Promise<{ slug: string }>
 }
@@ -41,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const baseUrl = 'https://billrice.com'
   const ogImage = post.mainImage?.asset
     ? urlFor(post.mainImage).width(1200).height(630).url()
-    : `${baseUrl}/bill-rice-headshot.jpg`
+    : `${baseUrl}/og-image.jpg`
 
   return {
     title: post.seo?.metaTitle || post.title,

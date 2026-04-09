@@ -6,6 +6,8 @@ import { POSTS_QUERY, CATEGORIES_QUERY } from '@/sanity/lib/queries'
 import { urlFor } from '@/sanity/lib/image'
 import type { PostSummary, Category } from '@/sanity/lib/types'
 
+export const revalidate = 3600
+
 export const metadata: Metadata = {
   title: 'Blog',
   description:
