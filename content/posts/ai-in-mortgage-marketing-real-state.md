@@ -3,7 +3,7 @@ title: "The Real State of AI in Mortgage Marketing (From Someone Who's Been Doin
 slug: ai-in-mortgage-marketing-real-state
 excerpt: "The mortgage industry is flooded with AI marketing hype. Here's what's actually working, what's not, and what 30 years of mortgage marketing experience tells me about what's next."
 categories: ["AI", "Mortgage Marketing"]
-publishedAt: "2026-04-18"
+publishedAt: "2026-05-04"
 ---
 
 # The Real State of AI in Mortgage Marketing (From Someone Who's Been Doing This 30 Years)

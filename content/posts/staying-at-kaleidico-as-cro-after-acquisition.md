@@ -3,7 +3,7 @@ title: "Why I Stayed at Kaleidico as CRO After the Acquisition"
 slug: staying-at-kaleidico-as-cro-after-acquisition
 excerpt: "When Kaleidico had its acquisition and liquidity event, I kept 10% and stepped into the CRO role. Here's why — and what it taught me about structuring a deal that keeps the founder in the game."
 categories: ["Career Stories", "Entrepreneurship"]
-publishedAt: "2026-04-16"
+publishedAt: "2026-04-24"
 ---
 
 # Why I Stayed at Kaleidico as CRO After the Acquisition

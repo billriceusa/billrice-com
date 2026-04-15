@@ -3,7 +3,7 @@ title: "The Aged Lead Opportunity: What Most Salespeople Get Wrong"
 slug: aged-lead-opportunity
 excerpt: "Most salespeople treat aged leads as garbage. They're not — they're a systematically mispriced asset class. Here's what 20 years of working them taught me."
 categories: ["Lead Generation", "Sales Operations"]
-publishedAt: "2026-04-20"
+publishedAt: "2026-05-06"
 ---
 
 # The Aged Lead Opportunity: What Most Salespeople Get Wrong

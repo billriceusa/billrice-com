@@ -3,7 +3,7 @@ title: "What 30 Years in Fintech Marketing Taught Me About GTM Strategy"
 slug: 30-years-fintech-gtm-lessons
 excerpt: "DeepGreen Bank to Quicken Loans to Velocity Lending to the fintechs I advise today. Four distinct eras of fintech GTM, and the lessons that repeat in every one."
 categories: ["Fintech Marketing", "Strategy"]
-publishedAt: "2026-04-17"
+publishedAt: "2026-04-22"
 ---
 
 # What 30 Years in Fintech Marketing Taught Me About GTM Strategy

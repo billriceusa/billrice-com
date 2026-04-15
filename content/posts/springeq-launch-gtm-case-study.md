@@ -3,7 +3,7 @@ title: "The SpringEQ Launch: Building a Fintech GTM from Zero"
 slug: springeq-launch-gtm-case-study
 excerpt: "In 2018 I built the initial go-to-market strategy and operations for SpringEQ, a home equity lending fintech. Here's what the playbook actually looked like."
 categories: ["Fintech Marketing", "Case Studies", "Go-to-Market"]
-publishedAt: "2026-04-17"
+publishedAt: "2026-04-27"
 ---
 
 # The SpringEQ Launch: Building a Fintech GTM from Zero

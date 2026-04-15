@@ -3,7 +3,7 @@ title: "The Lead Buyer's Framework: Why Most Companies Treat Lead Gen Like Procu
 slug: lead-buyers-framework
 excerpt: "Most enterprises treat lead buying like a procurement function — cheapest price per unit wins. That framing is why lead programs fail. Here's the framework I use instead."
 categories: ["Lead Generation", "Strategy"]
-publishedAt: "2026-04-16"
+publishedAt: "2026-04-20"
 ---
 
 # The Lead Buyer's Framework: Why Most Companies Treat Lead Gen Like Procurement (And Why It Fails)

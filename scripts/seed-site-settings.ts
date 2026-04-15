@@ -46,13 +46,13 @@ const doc = {
     '30+ years building lead generation platforms and revenue systems for financial services companies. Coined "lead management." Built platforms at DeepGreen Bank and Quicken Loans.',
   aboutBio: [
     block(
-      'I started as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations, then became Employee #7 at DeepGreen Bank — one of the first internet-only banks. At Quicken Loans, I built EquityOnline, their first true online lending platform.',
+      'I started as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations. From there I joined DeepGreen Bank as Employee #7 — one of the first internet-only banks, where we grew to about 80 people running what functionally behaved like a billion-dollar bank. After DeepGreen sold to LightYear Capital in 2004, I built EquityOnline at Quicken Loans — their first true online lending platform.',
     ),
     block(
-      'I coined the term "lead management" to differentiate platforms that work leads from CRMs that manage customers. I authored the original Wikipedia page for the category. The frameworks I built are now industry standard.',
+      'In 2005 I founded Kaleidico, starting as a lead management software company before pivoting to the demand generation agency it is today. I coined "lead management" as a category and authored the original Wikipedia page. From 2016 to 2018 I also owned and operated Velocity Lending, a DTC mortgage lender, as a live proof-of-concept for the playbook we were teaching clients.',
     ),
     block(
-      'Today I run three companies — Kaleidico, Bill Rice Strategy Group, and Verified Vector — and operate a portfolio of authority content sites across lead generation, real estate investing, and fintech.',
+      'Today I run three companies. Kaleidico, where I\'m CRO following the agency\'s acquisition — I retained 10% and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees — just AI agents and me, every deliverable produced in code. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
     ),
   ],
   socialLinks: {

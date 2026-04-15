@@ -3,7 +3,7 @@ title: "Why I Build Niche Authority Sites (And Why Every Expert Should)"
 slug: why-i-build-niche-authority-sites
 excerpt: "I operate a portfolio of niche authority content sites across lead generation, real estate investing, and crypto lending. Here's the thesis behind the portfolio — and why I think every expert should build one."
 categories: ["Content Strategy", "SEO"]
-publishedAt: "2026-04-18"
+publishedAt: "2026-04-29"
 ---
 
 # Why I Build Niche Authority Sites (And Why Every Expert Should)

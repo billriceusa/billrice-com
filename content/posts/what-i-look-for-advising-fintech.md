@@ -3,7 +3,7 @@ title: "What I Look for When Advising Early-Stage Fintech Companies"
 slug: what-i-look-for-advising-fintech
 excerpt: "Every year I turn down more advisory engagements than I take. Here's what separates the fintech founders I end up working with from the ones I don't."
 categories: ["Fintech Marketing", "Strategy"]
-publishedAt: "2026-04-21"
+publishedAt: "2026-05-11"
 ---
 
 # What I Look for When Advising Early-Stage Fintech Companies

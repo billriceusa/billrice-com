@@ -3,7 +3,7 @@ title: "Fintech Marketing Is Not SaaS Marketing — Here's Why"
 slug: fintech-marketing-is-not-saas-marketing
 excerpt: "Fintech founders are getting bad marketing advice from SaaS playbooks. Here are the structural differences that make fintech a different sport."
 categories: ["Fintech Marketing", "Strategy"]
-publishedAt: "2026-04-20"
+publishedAt: "2026-05-08"
 ---
 
 # Fintech Marketing Is Not SaaS Marketing — Here's Why
