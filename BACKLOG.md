@@ -1,103 +1,95 @@
 # billrice.com Backlog
 
-## Phase 1: Sanity.io Architecture Migration
+Single source of truth for billrice.com work. Last updated 2026-04-15.
 
-**Priority:** High
-**Status:** In Progress
-
-### Overview
-
-Migrate billrice.com from a static Next.js site (all content hardcoded in `.tsx` files) to a Next.js + Sanity.io CMS architecture, consistent with the rest of the portfolio:
-
-- **ProInvestorHub.com** — Next.js + Sanity (project: `eytfm25g`)
-- **CryptoLendingHub.com** — Next.js + Sanity (project: `h7wh2wa3`)
-- **AgedLeadSales.com** — Next.js + Sanity
-- **BillRiceStrategy.com** — Next.js + Sanity
-
-### Why
-
-- Content updates currently require code changes and redeployment
-- No ability to manage content from a CMS dashboard
-- Inconsistent architecture across the portfolio makes maintenance harder
-- Sanity enables structured content, image optimization, and preview workflows
-
-### Scope
-
-1. **Create dedicated Sanity project** for billrice.com (personal brand deserves its own content space)
-2. **Define schemas**: Page, Post, Project, Company, Tool, Playbook, Book, Author, Category, SiteSettings
-3. **Set up Sanity Studio** (embedded at `/studio`)
-4. **Migrate static content** from `page.tsx` and `now/page.tsx` into Sanity documents
-5. **Update Next.js pages** to fetch content via GROQ queries instead of hardcoded JSX
-6. **Preserve SEO**: structured data, meta tags, sitemap generation from Sanity content
-7. **Deploy**: Vercel with Sanity webhook for ISR/on-demand revalidation
+**Stack**: Next.js 16 + Sanity.io (`st1plnki`) + Tailwind v4 + Resend
+**Repo**: `~/Documents/_projects/brsg-projects/billrice-com`
 
 ---
 
-## Phase 2: Blog / Articles Section
+## Shipped
 
-**Priority:** High
-**Status:** Backlog
-**Depends on:** Phase 1
-
-### Why
-
-- billrice.com currently has zero indexable content pages beyond homepage and /now
-- Need a place for thought leadership that doesn't fit the niche sites
-- Create internal links to portfolio sites (AgedLeadSales, ProInvestorHub, CryptoLendingHub)
-- Support the book with companion content (chapter deep dives, case studies)
-- Strengthen personal brand SEO
-
-### Scope
-
-1. **Post schema** with portable text, categories, featured image, SEO fields
-2. **Blog index page** at `/blog` with pagination
-3. **Individual post pages** at `/blog/[slug]`
-4. **Category pages** at `/blog/category/[slug]`
-5. **Author page** (single author site, but needed for structured data)
-6. **RSS feed** generation from Sanity content
+- Sanity CMS migration (schemas: post, project, company, book, tool, author, category, nowPage, aboutPage, siteSettings, blockContent)
+- Embedded Studio at `/studio`
+- Blog: `/blog`, `/blog/[slug]`, `/blog/category/[slug]`, RSS at `/feed.xml`, ISR (1hr)
+- Book page: `/book` (Sanity-backed)
+- Projects: `/projects`, `/projects/[slug]`
+- Companies: `/companies/[slug]`
+- About page with career narrative (Sanity-driven with fallback)
+- `/now` page wired to `nowPage` schema (with fallback)
+- Homepage wired to `siteSettings` + `COMPANIES_QUERY` + `PROJECTS_QUERY` + `TOOLS_QUERY`
+- `/api/bio` endpoint (multiple lengths + sections, CORS enabled)
+- SEO: Person/Org/Website schema, `llms.txt`, `sameAs` to 13 domains, dynamic sitemap, OG image
+- Branded default featured image for blog posts
+- Publish script: `npx tsx scripts/publish-post.ts content/posts/<file>.md`
+- Audit script: `npx tsx scripts/audit-posts.ts` (read-only)
+- Seed scripts: `seed-now-page.ts`, `seed-site-settings.ts`, `seed-about-page.ts`, `seed-tools.ts`
+- Unpublished 4 off-brand banking/RegTech posts (2026-04-15)
 
 ---
 
-## Phase 3: Dedicated Book Page
+## Action items — awaiting Bill
 
-**Priority:** High
-**Status:** Backlog
-**Depends on:** Phase 1
+### Seed Sanity docs (requires SANITY_API_TOKEN in .env.local)
 
-### Why
+Run in any order; all scripts are idempotent (upsert by `_id`):
 
-- The book is currently just a section on the homepage — not shareable or SEO-friendly
-- A dedicated `/book` route supports chapter previews, testimonials, and multiple purchase options
-- Better landing page for social sharing and marketing campaigns
+```bash
+npx tsx scripts/seed-site-settings.ts
+npx tsx scripts/seed-now-page.ts
+npx tsx scripts/seed-about-page.ts
+npx tsx scripts/seed-tools.ts
+```
 
-### Scope
+Each script seeds the current hardcoded content, so pages will render identically to today. After seeding, edits in Sanity Studio will be live on the site.
 
-1. **Book schema** in Sanity with chapters, description, purchase links, testimonials
-2. **Dedicated `/book` or `/lead-buyers-playbook` page**
-3. **Chapter preview sections** with expandable content
-4. **Purchase CTAs** (Amazon, free online edition)
-5. **Schema.org Book structured data** on dedicated page
-6. **Cross-link** from blog posts, homepage, and /now page
+### Review and publish P0 drafted career stories
+
+Three already in `content/posts/`:
+- [ ] `how-i-coined-lead-management.md`
+- [ ] `building-equityonline-quicken-loans.md`
+- [ ] `how-quizzle-became-bankrate.md`
+
+Run `npx tsx scripts/publish-post.ts content/posts/<file>.md` for each after review.
+
+### Review and publish 10 new expertise/industry posts (2026-04-15 drafts)
+
+**Priority 2 — Expertise / Authority:**
+- [ ] `lead-buyers-framework.md` (1,594 words)
+- [ ] `why-i-sold-90-percent-of-the-agency.md` (1,486 words)
+- [ ] `30-years-fintech-gtm-lessons.md` (1,919 words)
+- [ ] `springeq-launch-gtm-case-study.md` (2,124 words)
+- [ ] `why-i-build-niche-authority-sites.md` (2,027 words)
+
+**Priority 3 — Industry Insight:**
+- [ ] `ai-in-mortgage-marketing-real-state.md` (1,862 words)
+- [ ] `lead-management-vs-crm.md` (1,886 words)
+- [ ] `aged-lead-opportunity.md` (1,767 words)
+- [ ] `fintech-marketing-is-not-saas-marketing.md` (1,898 words)
+- [ ] `what-i-look-for-advising-fintech.md` (2,000 words)
+
+### Rewrite 2 mortgage metrics posts in Bill's voice
+
+Kept published for rewrite (not unpublished) per content plan — currently generic AI-generated, intros need personal perspective:
+- [ ] `mortgage-lenders-measuring-wrong-kpis` (in Sanity)
+- [ ] `5-lead-generation-metrics-mortgage-lender-gets-wrong` (in Sanity)
 
 ---
 
-## Phase 4: Project Detail Pages
+## Ideas / Someday
 
-**Priority:** Medium
-**Status:** Backlog
-**Depends on:** Phase 1
+- Book chapter previews + testimonials on `/book`
+- Newsletter archive page (pulls The Lead Brief issues)
+- Cross-linking automation: related projects on blog posts, related posts on project pages
+- Speaker/press kit page (pulls from existing bio files in `~/Documents/Business/Bio/`)
+- Seed script for companies + projects docs (not currently scripted — existing docs assumed live in Sanity via Studio)
 
-### Why
+---
 
-- Projects currently only have cards with external links
-- Richer project pages make billrice.com a proper portfolio
-- Each project page can include descriptions, screenshots, results, and the story behind the project
-- Better for SEO — more indexable content tied to your name
+## Notes
 
-### Scope
-
-1. **Project schema** in Sanity with rich description, screenshots, tech stack, URL, status
-2. **Project index page** at `/projects`
-3. **Individual project pages** at `/projects/[slug]`
-4. **Company detail pages** at `/companies/[slug]` (Kaleidico, BRSG, Verified Vector)
-5. **Cross-linking** between blog posts and related projects
+- `scripts/` is excluded from `tsconfig.json` to keep Vercel builds green — do not re-include
+- Sanity CLI auth is Google (bill@billrice.com), NOT GitHub — different user IDs
+- Blog uses ISR (revalidate=3600); new posts appear without redeploy
+- Default featured image: `/public/default-featured.jpg`
+- All pages have hardcoded fallbacks so they render correctly even if a seed script hasn't been run
