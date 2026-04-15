@@ -66,9 +66,13 @@ Single source of truth for billrice.com work. Last updated 2026-04-15.
 - [x] SpringEQ year corrected 2018 → 2016 across drafts, published posts, aboutPage Sanity doc, /api/bio, llms.txt (2026-04-15)
 - [x] Owned-site footer audit (2026-04-15): all 7 owned sites (billricestrategy, agedleadsales, proinvestorhub, cryptolendinghub, howtoworkleads, verifiedvector, demoleadgen) correctly link to billrice.com/about. sameAs list in Person schema comprehensive (13 entries).
 
-### Duplicate directory risks (not billrice.com specific — flagged during audit)
-- [ ] **BRSG duplicate clones**: `~/billricestrategy` AND `~/Documents/_projects/billricestrategy/` both exist. Same pattern as the billrice.com duplicate-clone problem recently fixed. Check canonical per memory and archive the other to `~/Documents/_projects/_archive/`.
-- [ ] **Orphan "corrupt" dirs**: `~/Documents/_projects/agedlead-sales-corrupt/`, `~/Documents/_projects/howtoworkleads-corrupt/`, `~/Documents/_projects/verified-vector-projects/` — archive to `_archive/` or delete if truly unused.
+### Duplicate directory risks (resolved 2026-04-15)
+- [x] **BRSG duplicate clones resolved**: `~/billricestrategy` confirmed canonical (recent commits); stale `~/Documents/_projects/billricestrategy/` archived to `~/Documents/_projects/_archive/billricestrategy.old/`. Archived clone had a stash containing only a `.gitignore` addition for `.env*.local` (travels with archive, recoverable if needed).
+- [x] **Corrupt dirs archived**: `agedlead-sales-corrupt/` and `howtoworkleads-corrupt/` moved to `_archive/` (neither was a git repo — extraction debris only).
+- [x] **`verified-vector-projects/` inspected, left alone** — not a duplicate clone; parent dir holding multiple distinct sub-projects (arep-vibe-audit, battlecard-app, bill-rice-linktree, etc.).
+
+### Owner action items flagged during cleanup (BRSG repo — not billrice.com)
+- [ ] **Uncommitted work in canonical BRSG clone**: `src/lib/cron/performance-backlog.ts` is a legitimate file (cron for daily-performance recommendation persistence to GitHub) but uncommitted. Decide whether to commit or remove.
 
 ### Potential small follow-ups
 - [ ] Consider updating `employee-7-deepgreen-bank.md` published post to lightly reinforce the ~80-people operational scale context (optional — Bill reviewed and approved the current version)
