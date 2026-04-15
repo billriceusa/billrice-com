@@ -200,3 +200,18 @@ export const NOW_PAGE_QUERY = defineQuery(/* groq */ `
     consultingAvailability
   }
 `)
+
+// ── About Page ────────────────────────────────────────
+export const ABOUT_PAGE_QUERY = defineQuery(/* groq */ `
+  *[_type == "aboutPage"][0] {
+    headline,
+    heroTagline,
+    shortVersion,
+    differentiators[] { title, description },
+    timelineEvents[] { year, title, subtitle, description },
+    expertiseAreas[] { area, detail },
+    education[] { degree, institution, year },
+    currentVentures[] { name, role, url, description },
+    speakingWriting
+  }
+`)

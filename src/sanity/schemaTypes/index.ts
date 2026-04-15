@@ -7,6 +7,7 @@ import { company } from './company'
 import { project } from './project'
 import { tool } from './tool'
 import { nowPage } from './now-page'
+import { aboutPage } from './about-page'
 import { book } from './book'
 
 export const schemaTypes = [
@@ -19,5 +20,6 @@ export const schemaTypes = [
   project,
   tool,
   nowPage,
+  aboutPage,
   book,
 ]

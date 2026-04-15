@@ -1,7 +1,10 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
-import Script from 'next/script';
-import { breadcrumbHomeToNow } from '@/lib/structured-data';
+import Link from 'next/link'
+import { Metadata } from 'next'
+import Script from 'next/script'
+import { breadcrumbHomeToNow } from '@/lib/structured-data'
+import { sanityFetch } from '@/sanity/lib/live'
+import { NOW_PAGE_QUERY } from '@/sanity/lib/queries'
+import { PortableText } from '@/components/portable-text'
 
 export const metadata: Metadata = {
   title: "What I'm Working On Now",
@@ -20,14 +23,53 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://billrice.com/now',
   },
-};
+}
 
-export default function NowPage() {
+type NowPage = {
+  lastUpdated: string | null
+  priorities: Array<{
+    title: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    description: any
+    _key?: string
+  }> | null
+  speakingTopics: string[] | null
+  consultingAvailability: string | null
+}
+
+function formatDate(iso: string | null): string {
+  if (!iso) return ''
+  try {
+    return new Date(iso).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  } catch {
+    return ''
+  }
+}
+
+export default async function NowPage() {
+  let now: NowPage | null = null
+  try {
+    const { data } = await sanityFetch({ query: NOW_PAGE_QUERY })
+    now = data as NowPage | null
+  } catch {
+    // fallback below
+  }
+
+  const priorities = now?.priorities ?? []
+  const speakingTopics = now?.speakingTopics ?? []
+  const consultingAvailability = now?.consultingAvailability ?? null
+  const lastUpdated = now?.lastUpdated ?? null
+
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumbs JSON-LD */}
       <Script id="breadcrumbs-now" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbHomeToNow) }} />
-      {/* Skip to main content for accessibility */}
+
+      {/* Skip to main content */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-[#FFD000] text-black p-2 z-50"
@@ -52,9 +94,11 @@ export default function NowPage() {
             <h1 className="text-4xl font-bold text-gray-900">
               What I&apos;m Working On Now
             </h1>
-            <p className="mt-4 text-lg text-gray-600">
-              <time dateTime="2026-03-21">Last updated: March 21, 2026</time>
-            </p>
+            {lastUpdated && (
+              <p className="mt-4 text-lg text-gray-600">
+                <time dateTime={lastUpdated}>Last updated: {formatDate(lastUpdated)}</time>
+              </p>
+            )}
           </div>
         </div>
       </header>
@@ -63,121 +107,50 @@ export default function NowPage() {
       <main id="main-content" className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            
-            {/* Current Projects */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Strategic Priorities</h2>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Lead Buyer&apos;s Playbook</h3>
-                  <p className="text-gray-600">
-                    Published my first book —{' '}
-                    <a
-                      href="https://www.leadbuyerplaybook.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      The Lead Buyer&apos;s Playbook
-                    </a>.
-                    {' '}The enterprise guide to buying and converting leads profitably, drawing on 30+ years in lead generation and mortgage lending. Available{' '}
-                    <a
-                      href="https://www.leadbuyerplaybook.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      free online
-                    </a>{' '}and on Amazon.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Building Niche Authority Sites</h3>
-                  <p className="text-gray-600">
-                    Growing a portfolio of authority-driven education platforms, each built on Next.js and Sanity.io:{' '}
-                    <a href="https://agedleadsales.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">AgedLeadSales.com</a> (aged lead training),{' '}
-                    <a href="https://proinvestorhub.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">ProInvestorHub.com</a> (real estate investing education),{' '}and{' '}
-                    <a href="https://cryptolendinghub.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black underline">CryptoLendingHub.com</a> (crypto lending reviews and education).
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">The Lead Brief Newsletter & Podcast</h3>
-                  <p className="text-gray-600">
-                    Rebranded My Executive Brief to{' '}
-                    <a
-                      href="https://theleadbrief.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      The Lead Brief
-                    </a>.
-                    {' '}Weekly tactics for buying, generating, and converting more leads. Now includes a podcast alongside the newsletter.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Marketing Systems</h3>
-                  <p className="text-gray-600">
-                    Continuing to develop compliance-ready AI marketing solutions for fintech companies through{' '}
-                    <a
-                      href="https://verifiedvector.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      Verified Vector
-                    </a>.
-                    {' '}Leveraging AI agents and LLMs to dramatically increase content productivity while maintaining regulatory compliance.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">B2B Strategy Consulting</h3>
-                  <p className="text-gray-600">
-                    Working with strategic engagements through{' '}
-                    <a
-                      href="https://billricestrategy.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-black underline"
-                    >
-                      Bill Rice Strategy
-                    </a>, helping fintech and B2B
-                    companies build predictable revenue pipelines and demand generation systems.
-                  </p>
+            {/* Current Priorities */}
+            {priorities.length > 0 && (
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Strategic Priorities</h2>
+                <div className="space-y-6">
+                  {priorities.map((p, i) => (
+                    <div key={p._key ?? i}>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+                      {p.description && (
+                        <div className="prose prose-gray max-w-none text-gray-600">
+                          <PortableText value={p.description} />
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
 
-            {/* Speaking & Availability */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Speaking & Consulting</h2>
-
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Available Topics</h3>
-                  <ul className="text-gray-600 space-y-2 ml-4">
-                    <li>• Enterprise Lead Buying Strategy</li>
-                    <li>• AI-Powered Marketing for Fintech Companies</li>
-                    <li>• Building Predictable B2B Revenue Pipelines</li>
-                    <li>• Building Authority-Driven Niche Content Sites</li>
-                    <li>• Compliance-First Marketing in Regulated Industries</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Consulting Availability</h3>
-                  <p className="text-gray-600">
-                    Currently accepting strategic consulting engagements for fintech companies and
-                    B2B organizations looking to build or optimize their marketing and growth systems.
-                  </p>
+            {/* Speaking & Consulting */}
+            {(speakingTopics.length > 0 || consultingAvailability) && (
+              <div className="mb-12">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Speaking & Consulting</h2>
+                <div className="space-y-4">
+                  {speakingTopics.length > 0 && (
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-900">Available Topics</h3>
+                      <ul className="text-gray-600 space-y-2 ml-4">
+                        {speakingTopics.map((topic) => (
+                          <li key={topic}>• {topic}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {consultingAvailability && (
+                    <div>
+                      <h3 className="text-lg font-medium text-gray-900">Consulting Availability</h3>
+                      <p className="text-gray-600 whitespace-pre-line">{consultingAvailability}</p>
+                    </div>
+                  )}
                 </div>
               </div>
-            </div>
+            )}
 
             {/* Contact */}
             <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-l-[#FFD000] text-center">
@@ -197,5 +170,5 @@ export default function NowPage() {
         </div>
       </main>
     </div>
-  );
+  )
 }
