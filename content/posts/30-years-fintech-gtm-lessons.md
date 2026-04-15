@@ -1,7 +1,7 @@
 ---
 title: "What 30 Years in Fintech Marketing Taught Me About GTM Strategy"
 slug: 30-years-fintech-gtm-lessons
-excerpt: "DeepGreen Bank to Quicken Loans to SpringEQ to Figure. Four distinct eras of fintech GTM, and the lessons that repeat in every one."
+excerpt: "DeepGreen Bank to Quicken Loans to Velocity Lending to the fintechs I advise today. Four distinct eras of fintech GTM, and the lessons that repeat in every one."
 categories: ["Fintech Marketing", "Strategy"]
 publishedAt: "2026-04-17"
 ---
@@ -10,7 +10,7 @@ publishedAt: "2026-04-17"
 
 I've been in fintech since before most people called it fintech.
 
-In 2000 I joined DeepGreen Bank as Employee #7. It was one of the first internet-only banks in the United States. We launched the industry's first unconditional online HELOC. I went from there to Quicken Loans (now Rocket Mortgage) as VP of National Home Equity, where I built EquityOnline. I founded Kaleidico in 2005 and have been running GTM engagements for financial services companies continuously since then. I built the initial GTM and operations for SpringEQ in 2018. I've been running the content and demand generation strategy for Figure since 2021.
+In 2000 I joined DeepGreen Bank as Employee #7, one of the first internet-only banks in the United States. At operational maturity we were about 80 people running what functionally behaved like a billion-dollar bank — still tiny by industry standards, still punching several weight classes up. We launched the industry's first unconditional online HELOC. In 2004, after DeepGreen's sale to LightYear Capital, I went to Quicken Loans (now Rocket Mortgage), initially joining for the Rock Bank project and then pivoting to VP of National Home Equity to build EquityOnline. In 2005, I founded Kaleidico, which started as a lead management software company and later pivoted to a full-service demand generation agency after the 2008 mortgage meltdown. From 2016 to 2018 I owned and operated Velocity Lending, a DTC mortgage lender that was my proof-of-concept for everything we were teaching Kaleidico clients. I built the initial GTM for SpringEQ in 2018. For the last several years I've been advising fintech companies on content and demand generation through BRSG.
 
 That's 30+ years across four distinct eras of fintech — the internet bank era, the online mortgage era, the home equity 2.0 era, and the current blockchain-plus-AI era.
 
@@ -18,7 +18,7 @@ Across all four eras, the same lessons keep repeating. This post is my attempt t
 
 ## Lesson 1: The market only needs one brutally simple proposition
 
-The thing that worked at DeepGreen — the thing that let a tiny team of seven outcompete regional banks a thousand times our size — was that we had one sentence you could say to a customer and they would understand it immediately:
+The thing that worked at DeepGreen — the thing that let a team of about 80 people outcompete regional banks a thousand times our size — was that we had one sentence you could say to a customer and they would understand it immediately:
 
 "Get a home equity line of credit online. Get the decision in ten minutes. Close it without leaving your house."
 
@@ -26,7 +26,7 @@ Every other proposition was a distraction. We didn't try to sell checking accoun
 
 Quicken Loans was the same when I got there in 2002. They had one sentence: "Get a mortgage online, faster than anyone else can close it." EquityOnline, the platform I built there, was an execution of that one sentence applied to home equity specifically.
 
-SpringEQ was the same. Figure was the same.
+SpringEQ was the same. Velocity Lending was the same. Every successful fintech engagement I've been part of since has followed the same rule.
 
 Every successful fintech GTM I've been part of has been built around one brutally simple proposition. Every struggling one has been built around three or four.
 
@@ -44,7 +44,7 @@ The typical founder reaction to all this is to treat compliance as a constraint 
 
 The better framing, which I've used at every fintech I've worked with, is that compliance is a GTM channel. The companies that invest in deep compliance understanding have access to marketing moves that their competitors cannot safely execute. They get to use channels, claims, and offers that the less sophisticated competitors have to avoid.
 
-At Figure, the best content we've written — the content that ranks, converts, and holds up over time — is content that only Figure could write, because the legal and compliance team has signed off on the specific claims. Competitors can't copy it because their compliance teams won't approve it.
+The best content in regulated fintech — the content that ranks, converts, and holds up over time — is usually content that only one specific lender can write, because that lender's legal and compliance team has signed off on specific claims that competitors can't safely replicate. I've watched this pattern at multiple fintechs I've advised: the firms that invest in deep compliance-marketing partnerships produce content libraries that less-sophisticated competitors cannot copy even if they want to.
 
 The GTM lesson: hire marketing people who think of compliance as a weapon, not a wall.
 
@@ -68,7 +68,7 @@ I'm not talking about "we know our CAC and our LTV." Everyone claims to know tho
 
 When I joined DeepGreen, we built this kind of view before we turned on the website. We knew, by channel, what each lead cost, what the conversion rate was, what the funded loan revenue was, and what the 12-month payback looked like. We killed channels the moment the payback moved the wrong direction.
 
-At EquityOnline at Quicken Loans, I built the same view. At Kaleidico, we've built this view for a hundred-plus clients. At SpringEQ, same. At Figure, we maintain variants of this view across every channel.
+At EquityOnline at Quicken Loans, I built the same view. At Kaleidico, we've built this view for a hundred-plus clients. At SpringEQ, same. At Velocity Lending — the DTC mortgage lender I ran from 2016 to 2018 — I ran the view weekly myself because the unit economics were the whole game. Every fintech I've advised since has some version of this view if the program is healthy.
 
 When a fintech's GTM program starts to fail, it's almost always because the unit economics view went dark somewhere. A new channel got added without cohort tracking. A vendor got onboarded without a P&L. A product line got launched without a payback model. The marketing team keeps running, but nobody knows if what they're running is working.
 
@@ -78,7 +78,7 @@ The GTM lesson: if you can't show me a one-page unit economics view of your mark
 
 Every era of fintech GTM I've been part of has had a paid acquisition boom followed by a paid acquisition correction. In every era, the teams that over-indexed on paid ads ended up in trouble when CPMs went up, when a platform algorithm changed, or when a competitor with deeper pockets arrived.
 
-The teams that survived and compounded were the ones that built content and organic assets alongside the paid channels. At DeepGreen, we built one of the first real content programs for an internet bank. At Quicken Loans, the content and SEO program I influenced became Rocket's long-term moat. At Kaleidico, I've built content programs for a hundred-plus clients. At Figure, we've been compounding organic traffic for years.
+The teams that survived and compounded were the ones that built content and organic assets alongside the paid channels. At DeepGreen, we built one of the first real content programs for an internet bank. At Quicken Loans, the content and SEO program I influenced became Rocket's long-term moat. At Kaleidico, I've built content programs for a hundred-plus clients. Across the fintech clients I advise today, the ones that committed to content years ago are still compounding organic traffic while the ones that didn't are fighting for paid inventory at inflated CPMs.
 
 Content compounds because it accumulates. The article I wrote in 2014 that still drives leads today is essentially a free annuity. The PPC campaign I ran in 2014 produced leads that month and nothing else.
 
@@ -100,7 +100,7 @@ This is the one I'm most opinionated about.
 
 Every fintech I've seen launch successfully — including the ones I wasn't involved in — had a founder who personally owned GTM for the first 18-24 months. They didn't delegate it to a CMO. They didn't outsource it to an agency. They were in the weeds on messaging, on channel selection, on sales scripts, on the unit economics view.
 
-At DeepGreen, the founders were in the weeds. At Quicken Loans, Dan Gilbert and his lieutenants were in the weeds. At Kaleidico, I was in the weeds with every new client in the early years. At SpringEQ, the founder team was in the weeds. At Figure, the founders were in the weeds on messaging and positioning from day one.
+At DeepGreen, the founders were in the weeds. At Quicken Loans, Dan Gilbert and his lieutenants were in the weeds. At Kaleidico, I was in the weeds with every new client in the early years. At SpringEQ, the founder team was in the weeds. At Velocity Lending, I was in the weeds personally because I was the founder and the operator. And the fintech engagements I advise on today that actually produce results are uniformly the ones where the founder is still in the weeds on messaging and positioning.
 
 The GTM lesson: if you're a founder, do not hire a CMO at launch to run GTM for you. Own it personally until the unit economics are stable, then hire someone to scale what's already working.
 

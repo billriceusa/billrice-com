@@ -43,7 +43,7 @@ This felt obvious in the planning session. It became less obvious when people in
 
 My position, which I held hard, was that launching with multiple channels would split the attention of the small team and destroy our chances of nailing any single one. The direct-to-consumer channel also happened to be the one where the unit economics were most defensible — and the one where a fintech could differentiate against the incumbent credit unions who were running TV ads and calling it a strategy.
 
-The decision to launch D2C-only is, in retrospect, the most important GTM decision we made. It's the decision I would make again.
+The decision to launch DTC-only is, in retrospect, the most important GTM decision we made. It's the decision I would make again.
 
 ## Step 2: Build the website as the product
 
@@ -142,7 +142,7 @@ A few things I'd do differently today, with the benefit of six more years of pat
 
 **Invest in first-party data from day one.** In 2018 we were buying signals from third parties. With today's privacy landscape, a first-party data strategy — email capture, educational content gating, calculator tools — would be day-one infrastructure.
 
-**Build the broker / partnership channel earlier.** Once D2C was working, we could have opened the broker channel faster than we did. Brokers have their own complications but they scale differently than D2C and the cross-channel lift is real.
+**Build the broker / partnership channel earlier.** Once DTC was working, we could have opened the broker channel faster than we did. Brokers have their own complications but they scale differently than DTC and the cross-channel lift is real.
 
 **Hire a compliance-fluent marketer as the first marketing hire.** At launch I held most of this role myself. A dedicated marketing leader with financial services compliance fluency would have let us scale the program faster.
 

@@ -55,18 +55,18 @@ Run `npx tsx scripts/publish-post.ts content/posts/<file>.md` for each after rev
 ### Review and publish 10 new expertise/industry posts (2026-04-15 drafts)
 
 **Priority 2 — Expertise / Authority:**
-- [ ] `lead-buyers-framework.md` (1,594 words)
-- [ ] `why-i-sold-90-percent-of-the-agency.md` (1,486 words)
-- [ ] `30-years-fintech-gtm-lessons.md` (1,919 words)
-- [ ] `springeq-launch-gtm-case-study.md` (2,124 words)
-- [ ] `why-i-build-niche-authority-sites.md` (2,027 words)
+- [ ] `lead-buyers-framework.md`
+- [ ] `staying-at-kaleidico-as-cro-after-acquisition.md` (reframed 2026-04-15 per editorial rules: acquisition/liquidity event, 10% retained, CRO role, no buyer named)
+- [ ] `30-years-fintech-gtm-lessons.md` (Figure references anonymized 2026-04-15; Velocity Lending added)
+- [ ] `springeq-launch-gtm-case-study.md` (D2C→DTC sweep 2026-04-15)
+- [ ] `why-i-build-niche-authority-sites.md`
 
 **Priority 3 — Industry Insight:**
-- [ ] `ai-in-mortgage-marketing-real-state.md` (1,862 words)
-- [ ] `lead-management-vs-crm.md` (1,886 words)
-- [ ] `aged-lead-opportunity.md` (1,767 words)
-- [ ] `fintech-marketing-is-not-saas-marketing.md` (1,898 words)
-- [ ] `what-i-look-for-advising-fintech.md` (2,000 words)
+- [ ] `ai-in-mortgage-marketing-real-state.md` (Figure reference removed, Velocity Lending + CRO role added 2026-04-15)
+- [ ] `lead-management-vs-crm.md`
+- [ ] `aged-lead-opportunity.md`
+- [ ] `fintech-marketing-is-not-saas-marketing.md`
+- [ ] `what-i-look-for-advising-fintech.md`
 
 ### Rewrite 2 mortgage metrics posts in Bill's voice
 

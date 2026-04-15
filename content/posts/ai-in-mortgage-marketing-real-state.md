@@ -8,7 +8,7 @@ publishedAt: "2026-04-18"
 
 # The Real State of AI in Mortgage Marketing (From Someone Who's Been Doing This 30 Years)
 
-I've been doing mortgage marketing since I was Employee #7 at DeepGreen Bank in 2000. I built EquityOnline at Quicken Loans. I've run Kaleidico's mortgage practice since 2005. I've been writing content and doing SEO for Figure, a major home equity lender, for years.
+I've been doing mortgage marketing since I was Employee #7 at DeepGreen Bank in 2000 (we grew to about 80 people running what felt like a billion-dollar bank). I built EquityOnline at Quicken Loans. I owned and ran Velocity Lending, a DTC mortgage lender, from 2016 to 2018 — my proof-of-concept that the playbook I'd been selling to Kaleidico clients actually worked when I ran it myself. I've run Kaleidico's mortgage practice since 2005 and today serve as its CRO. And through BRSG, I advise several leading home equity and mortgage fintechs on content and demand generation.
 
 So I have a useful perspective on the "AI in mortgage marketing" conversation that's dominating the industry right now. The perspective is: most of what you're reading is hype, a meaningful subset is actually working, and the industry is going to split into two groups over the next 24 months based on who figures out the difference.
 

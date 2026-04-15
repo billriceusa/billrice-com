@@ -8,7 +8,7 @@ publishedAt: "2026-04-14"
 
 # Building EquityOnline: Inside Quicken Loans' First True Online Lending Platform
 
-In 2004, I got a call from a recruiter about a role at Quicken Loans. At the time, I was finishing my run at DeepGreen Bank, where I'd been part of the team that built one of the first fully online HELOC products. DeepGreen had proved the model but was being forced into a fire sale. The dot-com crash, the post-9/11 contraction, and the realities of being a tiny internet bank in a hostile funding environment had taken their toll.
+In 2004, I got a call from a recruiter about a role at Quicken Loans. At the time, I was wrapping up my run at DeepGreen Bank. I had been Employee #7, and at operational maturity we were about 80 people running what functionally behaved like a billion-dollar bank — small, impressive, and proving that the internet-only banking model actually worked. DeepGreen had just been sold to LightYear Capital in 2004, the culmination of a brutal funding environment — the dot-com crash, the post-9/11 contraction, and the realities of being a tiny internet bank competing for capital against traditional balance sheets had taken their toll.
 
 Quicken Loans was a different proposition entirely. They weren't a startup hoping the market would catch up. They were a company with real volume, real infrastructure, and real ambition — but they hadn't yet built the online lending platform they needed to get where they wanted to go. They wanted someone who'd done it before.
 
