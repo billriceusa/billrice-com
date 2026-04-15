@@ -60,7 +60,7 @@ What differentiated our corner of the market was the focus on speed and distribu
 
 ## Why I Wrote the Wikipedia Page
 
-By 2007 or 2008, I was having the same conversation over and over. A mortgage company would ask what icoSales was, I would explain it, and they would say, "Oh, so it's a CRM." And I would spend ten minutes explaining why it was not a CRM.
+By 2007, I was having the same conversation over and over. A mortgage company would ask what icoSales was, I would explain it, and they would say, "Oh, so it's a CRM." And I would spend ten minutes explaining why it was not a CRM.
 
 I needed a reference. I needed somewhere to point people that explained the category in neutral, authoritative terms. So I wrote the Wikipedia article for "lead management."
 
