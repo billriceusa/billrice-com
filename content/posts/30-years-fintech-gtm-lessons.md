@@ -10,7 +10,7 @@ publishedAt: "2026-04-22"
 
 I've been in fintech since before most people called it fintech.
 
-In 2000 I joined DeepGreen Bank as Employee #7, one of the first internet-only banks in the United States. At operational maturity we were about 80 people running what functionally behaved like a billion-dollar bank — still tiny by industry standards, still punching several weight classes up. We launched the industry's first unconditional online HELOC. In 2004, after DeepGreen's sale to LightYear Capital, I went to Quicken Loans (now Rocket Mortgage), initially joining for the Rock Bank project and then pivoting to VP of National Home Equity to build EquityOnline. In 2005, I founded Kaleidico, which started as a lead management software company and later pivoted to a full-service demand generation agency after the 2008 mortgage meltdown. From 2016 to 2018 I owned and operated Velocity Lending, a DTC mortgage lender that was my proof-of-concept for everything we were teaching Kaleidico clients. I built the initial GTM for SpringEQ in 2018. For the last several years I've been advising fintech companies on content and demand generation through BRSG.
+In 2000 I joined DeepGreen Bank as Employee #7, one of the first internet-only banks in the United States. At operational maturity we were about 80 people running what functionally behaved like a billion-dollar bank — still tiny by industry standards, still punching several weight classes up. We launched the industry's first unconditional online HELOC. In 2004, after DeepGreen's sale to LightYear Capital, I went to Quicken Loans (now Rocket Mortgage), initially joining for the Rock Bank project and then pivoting to VP of National Home Equity to build EquityOnline. In 2005, I founded Kaleidico, which started as a lead management software company and later pivoted to a full-service demand generation agency after the 2008 mortgage meltdown. From 2016 to 2018 I owned and operated Velocity Lending, a DTC mortgage lender that was my proof-of-concept for everything we were teaching Kaleidico clients. I built the initial GTM for SpringEQ in 2016. For the last several years I've been advising fintech companies on content and demand generation through BRSG.
 
 That's 30+ years across four distinct eras of fintech — the internet bank era, the online mortgage era, the home equity 2.0 era, and the current blockchain-plus-AI era.
 
@@ -86,7 +86,7 @@ The GTM lesson: if you're in fintech and you're over 90% paid, you're building o
 
 ## Lesson 6: Do not launch with more than one buyer
 
-When I built the GTM for SpringEQ in 2018, we could have gone to market with half a dozen buyer types — consumers seeking HELOCs, brokers, correspondent lenders, wholesale partners. The product could theoretically serve all of them.
+When I built the GTM for SpringEQ in 2016, we could have gone to market with half a dozen buyer types — consumers seeking HELOCs, brokers, correspondent lenders, wholesale partners. The product could theoretically serve all of them.
 
 We launched with one: consumers. Everything in the GTM plan — the website, the messaging, the lead program, the sales floor, the content, the compliance posture — was built for consumer HELOC buyers. We didn't add the broker program until consumer was working.
 

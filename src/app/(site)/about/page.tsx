@@ -65,25 +65,25 @@ const FALLBACK_TIMELINE = [
       'Served as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations. Managed information warfare programs at TASC, Inc. and served as Call Intercept System Security Manager at Iridium Communications. Pioneered information warfare operations at the dawn of the internet age.',
   },
   {
-    year: '2000',
+    year: '2000-2004',
     title: 'DeepGreen Bank - Employee #7',
     subtitle: 'One of the first internet-only banks',
     description:
-      "Joined DeepGreen Bank as Employee #7, one of the earliest internet-only banks in the United States. Helped launch the industry's first unconditional online HELOC (Home Equity Line of Credit), establishing a template that the industry would follow for the next two decades.",
+      "Joined DeepGreen Bank as Employee #7, one of the earliest internet-only banks in the United States. At operational maturity we were about 80 people running what functionally behaved like a billion-dollar bank — still small by industry standards. Helped launch the industry's first unconditional online HELOC, establishing a template the industry would follow for the next two decades. DeepGreen was sold to LightYear Capital in 2004.",
   },
   {
-    year: '2002-2005',
-    title: 'Quicken Loans - VP, National Home Equity',
+    year: '2004-2005',
+    title: 'Quicken Loans - COO Rock Bank Project → VP, National Home Equity',
     subtitle: 'Built the EquityOnline platform',
     description:
-      "Recruited to Quicken Loans (now Rocket Mortgage) as Vice President of National Home Equity. Led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. During this period, earned an MBA in Marketing from the University of Phoenix (2003).",
+      "Recruited to Quicken Loans (now Rocket Mortgage) in 2004, initially as COO of the Rock Bank project — a federally chartered bank initiative. When that wound down, pivoted to VP of National Home Equity and led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. Completed MBA in Marketing at University of Phoenix (2003) during this era.",
   },
   {
     year: '2005',
     title: 'Founded Kaleidico',
-    subtitle: 'Demand generation agency',
+    subtitle: 'Lead management software → demand generation agency',
     description:
-      'Founded Kaleidico, a demand generation agency serving mortgage lenders, law firms, and senior living communities. Built icoSales, an intelligent lead scoring and distribution platform that competed with Leads360 (later Velocify). Coined the term "lead management" to differentiate platforms that work leads from CRMs that manage customers. Authored the original Wikipedia page for lead management.',
+      'Founded Kaleidico as a lead management software company. Built icoSales, an intelligent lead scoring and distribution platform that competed with Leads360 (later Velocify). Coined "lead management" as a category and authored the original Wikipedia page. After the 2008 mortgage meltdown destroyed the call-center lender client base, pivoted Kaleidico into a demand generation agency serving mortgage lenders, law firms, and senior living communities.',
   },
   {
     year: '2008-2012',
@@ -93,7 +93,14 @@ const FALLBACK_TIMELINE = [
       "Served as growth marketing consultant for Quizzle, one of the first free credit report and financial planning platforms. Bankrate later acquired Quizzle to power their customer acquisition and retention strategy.",
   },
   {
-    year: '2018',
+    year: '2016-2018',
+    title: 'Velocity Lending - Owner & Operator',
+    subtitle: 'DTC mortgage lender (proof-of-concept)',
+    description:
+      'Owned and operated Velocity Lending, a consumer direct (DTC) mortgage lender, alongside Kaleidico. Built as a live proof-of-concept for the Kaleidico playbook: that a small lender could compete alongside the biggest names in the business with first-party lead generation. Also validated that aged leads, worked correctly, can quickly build a large database marketing operation — giving a startup lender a real foundation of leads to nurture, recapture, and generate referrals from.',
+  },
+  {
+    year: '2016',
     title: 'SpringEQ - GTM Strategy & Launch',
     subtitle: 'Home equity lending fintech',
     description:
@@ -102,16 +109,16 @@ const FALLBACK_TIMELINE = [
   {
     year: '2020',
     title: 'Founded Bill Rice Strategy Group',
-    subtitle: 'B2B consulting for fintech',
+    subtitle: 'B2B strategic agency for fintech',
     description:
-      'Launched Bill Rice Strategy Group (BRSG) to focus on B2B consulting for fintech companies and financial services organizations. Provides content strategy, executive thought leadership, and demand generation for high-growth companies including Figure and Boldin.',
+      'Founded Bill Rice Strategy Group to serve fintech companies — many of them longtime referral partners and friends operating as satellites in the same ecosystem Kaleidico has worked in for two decades. BRSG engages at a strategic level, bringing the systems and processes that fueled Kaleidico\'s growth from bootstrap to acquisition.',
   },
   {
     year: '2024',
     title: 'Founded Verified Vector',
-    subtitle: 'Programmatic SEO & AI marketing agency',
+    subtitle: 'AI-first agency',
     description:
-      'Launched Verified Vector, a programmatic SEO and AI marketing agency serving fintech companies. Builds compliance-ready AI-powered content and marketing systems at scale.',
+      'Founded Verified Vector as a playground and proof-of-concept that an agency can be run largely as an AI-first organization. No employees — just AI agents and me. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code.',
   },
   {
     year: '2025',
@@ -143,7 +150,7 @@ const FALLBACK_DIFFERENTIATORS = [
   {
     title: 'Builder, Not Just Advisor',
     description:
-      "I was Employee #7 at DeepGreen Bank. I built EquityOnline at Quicken Loans. I built icoSales from scratch. I built the GTM for SpringEQ. I don't just advise—I build the platforms, the campaigns, the systems, and the operations.",
+      "I was Employee #7 at DeepGreen Bank. I built EquityOnline at Quicken Loans. I built icoSales from scratch. I built the GTM for SpringEQ. I owned and operated Velocity Lending, a DTC mortgage lender, from 2016 to 2018 to prove the playbook works when I run it myself. I don't just advise — I build the platforms, the campaigns, the systems, and the operations.",
   },
   {
     title: '30+ Years, Same Industry',
@@ -173,19 +180,19 @@ const FALLBACK_VENTURES = [
     name: 'Kaleidico',
     role: 'Founder & CRO',
     url: 'https://kaleidico.com/',
-    description: 'B2C lead generation agency for mortgage lenders, law firms, and senior living communities.',
+    description: "Demand generation agency for mortgage lenders, law firms, and senior living communities. Founded 2005. Following the agency's acquisition and liquidity event, I retained 10% ownership and transitioned into the CRO role, where I continue to lead business development, sales, and marketing strategy and execution.",
   },
   {
     name: 'Bill Rice Strategy Group',
     role: 'Founder & Chief Strategist',
     url: 'https://billricestrategy.com/',
-    description: 'B2B content strategy, executive thought leadership, and demand generation for fintech companies.',
+    description: "B2B strategic agency for fintech companies — many of them longtime referral partners and friends who have been satellites in the same ecosystem Kaleidico has worked in for two decades. BRSG helps these clients at a more strategic level.",
   },
   {
     name: 'Verified Vector',
     role: 'Founder',
     url: 'https://verifiedvector.com/',
-    description: 'Programmatic SEO and AI marketing agency for fintech companies.',
+    description: "AI-first agency — a playground proving that an agency can be run largely as an AI-first organization. No employees. Just AI agents and me. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code.",
   },
 ]
 
@@ -295,16 +302,16 @@ export default async function AboutPage() {
                     I started my career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations in the late 1990s&mdash;the very beginning of the internet era. That experience taught me systems thinking, pattern recognition, and how to build operational frameworks under pressure.
                   </p>
                   <p>
-                    In 2000, I made the jump to fintech as Employee #7 at DeepGreen Bank, one of the very first internet-only banks in the United States. We launched the industry&rsquo;s first unconditional online HELOC. From there, I went to Quicken Loans (now Rocket Mortgage) as VP of National Home Equity, where I built EquityOnline&mdash;their first true online lending and offer platform.
+                    In 2000, I made the jump to fintech as Employee #7 at DeepGreen Bank, one of the very first internet-only banks in the United States. We grew to about 80 people running what functionally behaved like a billion-dollar bank&mdash;still small by industry standards, still punching several weight classes up. We launched the industry&rsquo;s first unconditional online HELOC. In 2004, DeepGreen was sold to LightYear Capital and I went to Quicken Loans (now Rocket Mortgage)&mdash;initially joining for the Rock Bank project, then pivoting to VP of National Home Equity, where I built EquityOnline, their first true online lending and offer platform.
                   </p>
                   <p>
-                    In 2005, I founded Kaleidico, a demand generation agency. While building the agency, I created icoSales, an intelligent lead scoring and distribution platform. I started calling it a &ldquo;lead management&rdquo; platform to differentiate it from a CRM&mdash;because it worked <em>leads</em>, not customers. There was no relationship yet. That was my punch line, and the term stuck. I authored the original Wikipedia page for lead management. The category I named is now an industry standard.
+                    In 2005, I founded Kaleidico&mdash;originally as a lead management software company. I built icoSales, an intelligent lead scoring and distribution platform. I started calling it a &ldquo;lead management&rdquo; platform to differentiate it from a CRM&mdash;because it worked <em>leads</em>, not customers. There was no relationship yet. That was my punch line, and the term stuck. I authored the original Wikipedia page for lead management. After the 2008 mortgage meltdown destroyed my call-center clients, I pivoted Kaleidico into the demand generation agency it is today.
                   </p>
                   <p>
-                    Since then, I&rsquo;ve been a growth consultant for Quizzle (acquired by Bankrate), built the GTM strategy and launch for SpringEQ, and founded Bill Rice Strategy Group to do B2B content strategy and demand generation for fintech companies like Figure and Boldin.
+                    From 2016 to 2018 I also owned and operated Velocity Lending, a DTC mortgage lender I built as a live proof-of-concept for everything Kaleidico was teaching clients. I&rsquo;ve also been a growth marketing consultant for Quizzle (acquired by Bankrate), built the initial GTM strategy and launch for SpringEQ in 2016, and founded Bill Rice Strategy Group to serve fintech companies&mdash;many of them longtime referral partners who have been satellites in the same ecosystem Kaleidico has worked in for two decades.
                   </p>
                   <p>
-                    Today I run three companies&mdash;Kaleidico (B2C lead gen agency), Bill Rice Strategy Group (B2B consulting), and Verified Vector (programmatic SEO and AI marketing)&mdash;and operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.
+                    Today I run three companies. Kaleidico, where I&rsquo;m CRO following the agency&rsquo;s acquisition and liquidity event&mdash;I retained 10% and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees&mdash;just AI agents and me, with every deliverable produced in code. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.
                   </p>
                 </div>
               )}

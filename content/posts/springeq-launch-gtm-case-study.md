@@ -1,16 +1,16 @@
 ---
 title: "The SpringEQ Launch: Building a Fintech GTM from Zero"
 slug: springeq-launch-gtm-case-study
-excerpt: "In 2018 I built the initial go-to-market strategy and operations for SpringEQ, a home equity lending fintech. Here's what the playbook actually looked like."
+excerpt: "In 2016 I built the initial go-to-market strategy and operations for SpringEQ, a home equity lending fintech. Here's what the playbook actually looked like."
 categories: ["Fintech Marketing", "Case Studies", "Go-to-Market"]
 publishedAt: "2026-04-27"
 ---
 
 # The SpringEQ Launch: Building a Fintech GTM from Zero
 
-In 2018, I built the initial go-to-market strategy and operations for SpringEQ — a home equity lending fintech that launched into a market most observers thought was dead.
+In 2016, I built the initial go-to-market strategy and operations for SpringEQ — a home equity lending fintech that launched into a market most observers thought was dead.
 
-Six years later, SpringEQ is a serious player in the home equity lending space. A lot had to happen for that to be true, and I'm not going to take credit for all of it. But the GTM playbook we built for the launch is something I've refined and reused for fintech clients ever since, and it's worth writing down.
+Ten years later, SpringEQ is a serious player in the home equity lending space. A lot had to happen for that to be true, and I'm not going to take credit for all of it. But the GTM playbook we built for the launch is something I've refined and reused for fintech clients ever since, and it's worth writing down.
 
 Here's what we actually did.
 
@@ -18,7 +18,7 @@ Here's what we actually did.
 
 SpringEQ launched into the worst possible market timing — or the best, depending on how you thought about it.
 
-In 2018, home equity lending was unfashionable. The 2008 housing crisis had scarred the industry. Most regional banks had quietly shut down their home equity programs. The specialty HELOC and fixed home equity market was dominated by a handful of credit unions and a couple of legacy online players. Consumer awareness was low. Broker networks had atrophied.
+In 2016, home equity lending was unfashionable. The 2008 housing crisis had scarred the industry. Most regional banks had quietly shut down their home equity programs. The specialty HELOC and fixed home equity market was dominated by a handful of credit unions and a couple of legacy online players. Consumer awareness was low. Broker networks had atrophied.
 
 The conventional read was: this is a dying market, go build a mortgage fintech instead.
 
@@ -49,11 +49,11 @@ The decision to launch DTC-only is, in retrospect, the most important GTM decisi
 
 At launch, the SpringEQ website was the product. Not a marketing site for a product — the actual product interface. The homeowner arrived, answered some questions, got a rate estimate, and entered the application flow. The website had to do the work of a lender's front office.
 
-This sounds obvious if you're a Web 2.0-era thinker. It was not the default posture for a home equity lender in 2018. Most of the incumbents had websites that were essentially brochures — marketing pages plus a "click here to apply" button that dumped you into a lead form or a Salesforce queue.
+This sounds obvious if you're a Web 2.0-era thinker. It was not the default posture for a home equity lender in 2016. Most of the incumbents had websites that were essentially brochures — marketing pages plus a "click here to apply" button that dumped you into a lead form or a Salesforce queue.
 
 We built the SpringEQ site as a conversion machine. Short forms. Smart defaults. Instant soft-credit-pull pricing. Transparent rate displays. Content that answered the questions a homeowner actually has (how much can I borrow, what's the rate, how long does this take). Compliance-approved claims that we could legally make.
 
-The cost of building this, in 2018 dollars, was high relative to what competitors were spending on their sites. The payoff was immediate: our conversion rate from visit to application was multiples of what the incumbents were doing. That delta fed back into every channel economic.
+The cost of building this, in 2016 dollars, was high relative to what competitors were spending on their sites. The payoff was immediate: our conversion rate from visit to application was multiples of what the incumbents were doing. That delta fed back into every channel economic.
 
 The GTM principle: in consumer fintech, the website is not marketing collateral. It's the product. Spend like it.
 
@@ -61,7 +61,7 @@ The GTM principle: in consumer fintech, the website is not marketing collateral.
 
 Launching a new lender requires customers immediately. Organic content takes 6-12 months to compound. So we had to buy leads from day one.
 
-The conventional approach would have been to sign a couple of large lead generation partners and let them fill the top of the funnel. I did not want to do that. Single-source lead buying is a risk I had learned to avoid, and the lead partners in home equity in 2018 had uneven quality.
+The conventional approach would have been to sign a couple of large lead generation partners and let them fill the top of the funnel. I did not want to do that. Single-source lead buying is a risk I had learned to avoid, and the lead partners in home equity in 2016 had uneven quality.
 
 Instead we built a portfolio:
 
@@ -73,7 +73,7 @@ Instead we built a portfolio:
 
 On the buy side, we tracked every vendor on a weekly P&L — cost per lead, contact rate, pull-through to funded loan, effective CPA. Vendors that didn't earn their spot got cut fast. Vendors that earned their spot got more volume.
 
-On the build side, we stood up an in-house content program that was deliberately designed to compound. In 2018 the SEO search volume around home equity topics was starting to recover. A fintech that published useful, accurate, compliance-cleared content on those topics was going to own the organic traffic as the market came back.
+On the build side, we stood up an in-house content program that was deliberately designed to compound. In 2016 the SEO search volume around home equity topics was starting to recover. A fintech that published useful, accurate, compliance-cleared content on those topics was going to own the organic traffic as the market came back.
 
 The balance of buy and build mattered. Pure paid acquisition would have made us dependent on vendors. Pure content would have meant no loans for the first year. The mix gave us immediate volume plus an appreciating asset.
 
@@ -81,7 +81,7 @@ The GTM principle: in a new fintech launch, buy leads to prove unit economics im
 
 ## Step 4: The sales floor as the second product
 
-SpringEQ in 2018 was a direct-to-consumer online lender, which meant that the conversion from qualified application to funded loan happened on the phone. We built the sales floor with the same seriousness as the website.
+SpringEQ in 2016 was a direct-to-consumer online lender, which meant that the conversion from qualified application to funded loan happened on the phone. We built the sales floor with the same seriousness as the website.
 
 Specifically, we focused on four operational pillars:
 
@@ -136,11 +136,11 @@ The GTM principle: treat compliance as a competitive advantage. The teams that t
 
 ## What I'd change if I did it again
 
-A few things I'd do differently today, with the benefit of six more years of pattern recognition:
+A few things I'd do differently today, with the benefit of a decade more of pattern recognition:
 
-**Start SEO content even earlier.** In 2018 we started content roughly three months before launch. I'd start 12 months earlier now. Content is the asset that compounds, and earlier investment means earlier compounding.
+**Start SEO content even earlier.** In 2016 we started content roughly three months before launch. I'd start 12 months earlier now. Content is the asset that compounds, and earlier investment means earlier compounding.
 
-**Invest in first-party data from day one.** In 2018 we were buying signals from third parties. With today's privacy landscape, a first-party data strategy — email capture, educational content gating, calculator tools — would be day-one infrastructure.
+**Invest in first-party data from day one.** In 2016 we were buying signals from third parties. With today's privacy landscape, a first-party data strategy — email capture, educational content gating, calculator tools — would be day-one infrastructure.
 
 **Build the broker / partnership channel earlier.** Once DTC was working, we could have opened the broker channel faster than we did. Brokers have their own complications but they scale differently than DTC and the cross-channel lift is real.
 

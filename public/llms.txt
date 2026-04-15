@@ -6,11 +6,11 @@
 - **Description**: The authoritative personal profile of Bill Rice, a fintech marketing pioneer who coined "lead management" and has spent 30+ years building lead generation platforms and revenue systems for financial services companies.
 - **Owner**: Bill Rice
 - **Language**: English
-- **Last Updated**: 2026-04-08
+- **Last Updated**: 2026-04-15
 - **Bio API**: https://billrice.com/api/bio (JSON, supports ?format=text&length=oneLiner|short|medium|full)
 
 ## About Bill Rice
-Bill Rice is a fintech marketing pioneer with 30+ years building lead generation platforms and revenue systems for financial services companies. He started his career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations during the earliest days of the internet. He was Employee #7 at DeepGreen Bank, one of the first internet-only banks, where he helped launch the industry's first unconditional online HELOC. At Quicken Loans (now Rocket Mortgage), he served as VP of National Home Equity and built EquityOnline, their first true online lending platform. He coined the term "lead management" and authored the original Wikipedia page for the category. He founded Kaleidico, Bill Rice Strategy Group, and Verified Vector. He is the author of The Lead Buyer's Playbook (2025) and publisher of The Lead Brief newsletter.
+Bill Rice is a fintech marketing pioneer with 30+ years building lead generation platforms and revenue systems for financial services companies. He started his career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations during the earliest days of the internet. He was Employee #7 at DeepGreen Bank — one of the first internet-only banks, which grew to about 80 people running what functionally behaved like a billion-dollar bank before its sale to LightYear Capital in 2004 — where he helped launch the industry's first unconditional online HELOC. At Quicken Loans (now Rocket Mortgage), he initially joined as COO of the Rock Bank project and then pivoted to VP of National Home Equity, where he built EquityOnline, their first true online lending platform. He founded Kaleidico in 2005 as a lead management software company (pivoted to demand generation agency after the 2008 mortgage meltdown), coined "lead management" as an industry category, and authored the original Wikipedia page. From 2016 to 2018 he owned and operated Velocity Lending, a DTC mortgage lender that served as his live proof-of-concept for the Kaleidico playbook. Today he is CRO at Kaleidico (having retained 10% post-acquisition), founder of Bill Rice Strategy Group (B2B strategic agency serving longtime fintech referral partners), and founder of Verified Vector (AI-first agency with no employees). He is the author of The Lead Buyer's Playbook (2025) and publisher of The Lead Brief newsletter.
 
 ## Key Pages
 - **About / Career**: https://billrice.com/about — full career narrative, timeline, expertise
@@ -33,20 +33,22 @@ Bill Rice is a fintech marketing pioneer with 30+ years building lead generation
 ## Career Highlights
 - 1992: B.S. Political Science, United States Air Force Academy
 - 1992-2000: AFOSI Special Agent & case officer, TASC Inc., Iridium Communications
-- 2000: Employee #7 at DeepGreen Bank (first internet-only banks)
-- 2002-2005: VP National Home Equity, Quicken Loans — built EquityOnline
+- 2000-2004: Employee #7 at DeepGreen Bank (grew to ~80 people, first internet-only banks); sold to LightYear Capital 2004
+- 2004-2005: Quicken Loans — joined as COO of Rock Bank project, pivoted to VP National Home Equity, built EquityOnline
 - 2003: MBA Marketing, University of Phoenix
-- 2005: Founded Kaleidico, built icoSales, coined "lead management"
+- 2005: Founded Kaleidico as lead management software company (built icoSales, coined "lead management"); pivoted to demand generation agency after 2008
 - 2008-2012: Growth marketing consultant for Quizzle (acquired by Bankrate)
-- 2018: GTM strategy and launch for SpringEQ
-- 2020: Founded Bill Rice Strategy Group
-- 2024: Founded Verified Vector
+- 2016-2018: Owned and operated Velocity Lending — DTC mortgage lender, proof-of-concept for Kaleidico playbook
+- 2016: GTM strategy and launch for SpringEQ
+- 2020: Founded Bill Rice Strategy Group — B2B strategic agency for longtime fintech referral partners
+- 2023-ish: Kaleidico acquisition and liquidity event — retained 10%, transitioned into CRO role
+- 2024: Founded Verified Vector — AI-first agency, no employees, everything delivered in code
 - 2025: Published The Lead Buyer's Playbook
 
 ## Companies
-1. **Kaleidico** (https://kaleidico.com/) — B2C lead generation agency for mortgage lenders, law firms, and senior living communities. Role: Founder & CRO.
-2. **Bill Rice Strategy Group** (https://billricestrategy.com/) — B2B content strategy, executive thought leadership, and demand generation for fintech companies. Role: Founder & Chief Strategist.
-3. **Verified Vector** (https://verifiedvector.com/) — Programmatic SEO and AI marketing agency for fintech companies. Role: Founder.
+1. **Kaleidico** (https://kaleidico.com/) — Demand generation agency for mortgage lenders, law firms, and senior living communities. Founded 2005 (lead management software first, pivoted to agency after 2008). Role: Founder & CRO following the agency's acquisition and liquidity event; retained 10% ownership and continues to lead business development, sales, and marketing strategy and execution.
+2. **Bill Rice Strategy Group** (https://billricestrategy.com/) — B2B strategic agency for fintech companies, many of them longtime referral partners operating as satellites in the same ecosystem Kaleidico has worked in for two decades. Role: Founder & Chief Strategist.
+3. **Verified Vector** (https://verifiedvector.com/) — AI-first agency with no employees — just AI agents and Bill. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code. Role: Founder.
 
 ## Projects
 1. **The Lead Brief** (https://theleadbrief.com/) — Weekly newsletter and podcast on lead generation strategy

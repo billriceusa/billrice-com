@@ -57,7 +57,7 @@ const doc = {
       'From 2016 to 2018, I also owned and operated Velocity Lending, a DTC mortgage lender that was my live proof-of-concept for everything Kaleidico was teaching clients. Velocity validated that a small lender could compete alongside the biggest names in the business with first-party lead generation — and that aged leads, worked correctly, could build a large database marketing operation fast enough to give a startup lender a real foundation.',
     ]),
     paragraph([
-      'I\'ve also been a growth marketing consultant for Quizzle (acquired by Bankrate), built the initial GTM strategy and launch for SpringEQ in 2018, and founded Bill Rice Strategy Group to serve fintech companies — many of them longtime referral partners who have been satellites in the same ecosystem Kaleidico has worked in for two decades.',
+      'I\'ve also been a growth marketing consultant for Quizzle (acquired by Bankrate), built the initial GTM strategy and launch for SpringEQ in 2016, and founded Bill Rice Strategy Group to serve fintech companies — many of them longtime referral partners who have been satellites in the same ecosystem Kaleidico has worked in for two decades.',
     ]),
     paragraph([
       'Today I run three companies. Kaleidico, where I serve as CRO following the agency\'s acquisition and liquidity event — I retained 10% ownership and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees — just AI agents and me, with every deliverable produced in code: strategy, content, presentations, sales, and marketing. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
@@ -148,7 +148,7 @@ const doc = {
     },
     {
       _key: randomUUID(),
-      year: '2018',
+      year: '2016',
       title: 'SpringEQ - GTM Strategy & Launch',
       subtitle: 'Home equity lending fintech',
       description:
