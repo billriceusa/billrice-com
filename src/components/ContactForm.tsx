@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { HoneypotInput } from '@/components/honeypot-input';
 
 type Intent = 'consulting' | 'podcast' | 'speaking' | 'engagement';
 
@@ -10,6 +11,7 @@ const DISCOVERY_CALENDAR_URL = 'https://calendar.app.google/SzNkR5pExSJLeu9N7';
 
 export default function ContactForm() {
   const [intent, setIntent] = useState<Intent | ''>('');
+  const [hpUrl, setHpUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
@@ -29,7 +31,7 @@ export default function ContactForm() {
     setLoading(true);
 
     const formData = new FormData(event.currentTarget);
-    const payload: Record<string, string | string[]> = { intent } as Record<string, string | string[]>;
+    const payload: Record<string, string | string[]> = { intent, hp_url: hpUrl } as Record<string, string | string[]>;
     formData.forEach((value, key) => {
       const stringValue = typeof value === 'string' ? value : value.name;
       if (payload[key] === undefined) {
@@ -103,6 +105,7 @@ export default function ContactForm() {
 
       {intent && intent !== 'consulting' && (
         <form onSubmit={handleSubmit} className="space-y-6">
+          <HoneypotInput value={hpUrl} onChange={setHpUrl} />
           {intent === 'podcast' && (
             <div className="space-y-4">
               <Input name="podcastName" label="Podcast name" required />

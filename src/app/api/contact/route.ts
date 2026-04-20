@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { isGoodOrigin, isHoneypotFilled, isGibberishName } from '@/lib/anti-spam';
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const resendFrom = process.env.RESEND_FROM_EMAIL || 'notifications@billrice.com';
@@ -9,13 +10,30 @@ const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 export async function POST(request: Request) {
   try {
+    if (!isGoodOrigin(request)) {
+      return NextResponse.json({ ok: true });
+    }
+
     const data = await request.json();
+
+    if (isHoneypotFilled(data)) {
+      return NextResponse.json({ ok: true });
+    }
+
+    if (
+      isGibberishName(data.firstName) ||
+      isGibberishName(data.lastName) ||
+      isGibberishName(data.name)
+    ) {
+      return NextResponse.json({ ok: true });
+    }
+
     const intent = String(data.intent || 'unknown');
 
     const subject = `New Lead: ${intent}`;
     const bodyLines: string[] = [];
     Object.keys(data).forEach((key) => {
-      if (key === 'intent') return;
+      if (key === 'intent' || key === 'hp_url') return;
       const value = Array.isArray(data[key]) ? data[key].join(', ') : data[key];
       bodyLines.push(`${key}: ${value}`);
     });
