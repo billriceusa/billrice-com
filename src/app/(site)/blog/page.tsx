@@ -75,9 +75,9 @@ export default async function BlogPage() {
                 />
               </div>
               <div className="p-6">
-                {post.categories && post.categories.length > 0 && (
+                {post.categories?.find(Boolean) && (
                   <span className="text-xs font-medium text-[#E6BB00] uppercase tracking-wide">
-                    {post.categories[0].title}
+                    {post.categories.find(Boolean)?.title}
                   </span>
                 )}
                 <h2 className="mt-2 text-lg font-semibold text-gray-900 group-hover:text-black transition-colors">

@@ -98,9 +98,9 @@ export default async function PostPage({ params }: Props) {
         <span className="text-gray-900">{post.title}</span>
       </nav>
 
-      {post.categories && post.categories.length > 0 && (
+      {post.categories && post.categories.filter(Boolean).length > 0 && (
         <div className="flex gap-2 mb-4">
-          {post.categories.map((cat) => (
+          {post.categories.filter(Boolean).map((cat) => (
             <Link
               key={cat._id}
               href={`/blog/category/${cat.slug}`}

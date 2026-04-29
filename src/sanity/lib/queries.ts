@@ -52,6 +52,10 @@ export const TOOLS_QUERY = defineQuery(/* groq */ `
 `)
 
 // ── Posts ──────────────────────────────────────────────
+// Note: categories[]->{...}[defined(_id)] filters out null elements that
+// appear when a referenced category has been deleted in Sanity but the
+// reference still exists on the post. Without this filter, prerender
+// crashes with "Cannot read properties of null" on any .map() consumer.
 export const POSTS_QUERY = defineQuery(/* groq */ `
   *[_type == "post" && defined(slug.current) && publishedAt <= now()]
   | order(publishedAt desc) [0...$limit] {
@@ -69,7 +73,7 @@ export const POSTS_QUERY = defineQuery(/* groq */ `
       alt
     },
     author->{ name, "slug": slug.current, image },
-    categories[]->{ _id, title, "slug": slug.current }
+    "categories": categories[]->{ _id, title, "slug": slug.current }[defined(_id)]
   }
 `)
 
@@ -90,7 +94,7 @@ export const POST_BY_SLUG_QUERY = defineQuery(/* groq */ `
       alt
     },
     author->{ name, "slug": slug.current, image, bio },
-    categories[]->{ _id, title, "slug": slug.current },
+    "categories": categories[]->{ _id, title, "slug": slug.current }[defined(_id)],
     seo
   }
 `)
@@ -127,7 +131,7 @@ export const POSTS_BY_CATEGORY_SLUG_QUERY = defineQuery(/* groq */ `
       alt
     },
     author->{ name, "slug": slug.current, image },
-    categories[]->{ _id, title, "slug": slug.current }
+    "categories": categories[]->{ _id, title, "slug": slug.current }[defined(_id)]
   }
 `)
 
