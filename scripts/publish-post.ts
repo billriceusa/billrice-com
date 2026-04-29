@@ -276,6 +276,17 @@ async function main() {
 
   await client.createOrReplace(doc)
   console.log(`\nPublished: https://billrice.com/blog/${slug}`)
+
+  // Notify IndexNow (Bing/Yandex)
+  try {
+    const indexnowKey = '58e67ed8f262d121576ae18a808d14c9'
+    const url = `https://billrice.com/blog/${slug}`
+    const params = new URLSearchParams({ url, key: indexnowKey })
+    const res = await fetch(`https://api.indexnow.org/IndexNow?${params}`)
+    console.log(`IndexNow: HTTP ${res.status}`)
+  } catch (err) {
+    console.warn('IndexNow notification failed (non-fatal):', err)
+  }
 }
 
 main().catch((err) => {

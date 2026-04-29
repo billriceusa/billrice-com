@@ -9,6 +9,8 @@ import { tool } from './tool'
 import { nowPage } from './now-page'
 import { aboutPage } from './about-page'
 import { book } from './book'
+import { table, tableRow } from './table'
+import { codeBlock } from './code-block'
 
 export const schemaTypes = [
   blockContent,
@@ -22,4 +24,7 @@ export const schemaTypes = [
   nowPage,
   aboutPage,
   book,
+  table,
+  tableRow,
+  codeBlock,
 ]
