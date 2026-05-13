@@ -84,7 +84,7 @@ Single source of truth for billrice.com work. Last updated 2026-04-15.
 - Book chapter previews + testimonials on `/book`
 - Newsletter archive page (pulls The Lead Brief issues)
 - Cross-linking automation: related projects on blog posts, related posts on project pages
-- Speaker/press kit page (pulls from existing bio files in `~/Documents/Business/Bio/` and `/api/bio`)
+- Speaker/press kit page (pulls from existing bio files in `~/Documents/Personal/professional/bio/` and `/api/bio`)
 - `Past Ventures` section on `/about` (Velocity Lending, Quizzle, SpringEQ) if the current Current Ventures section gets crowded
 - Seed script for companies + projects docs (currently assumed seeded via Studio; would help onboarding a new clone)
 
