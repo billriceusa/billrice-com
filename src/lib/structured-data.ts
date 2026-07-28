@@ -19,17 +19,19 @@ export const personStructuredData = {
   },
   "sameAs": [
     "https://www.linkedin.com/in/billrice/",
-    "https://twitter.com/billrice",
+    "https://x.com/billrice",
     "https://www.youtube.com/@billricestrategy",
     "https://billricestrategy.com/",
     "https://kaleidico.com/",
     "https://verifiedvector.com/",
-    "https://theleadbrief.com/",
+    "https://www.theleadbrief.com/",
     "https://agedleadsales.com/",
-    "https://www.howtoworkleads.com/",
+    "https://howtoworkleads.com/",
     "https://proinvestorhub.com/",
     "https://cryptolendinghub.com/",
-    "https://demoleadgen.com/",
+    "https://theestategap.com/",
+    "https://leadcompliancehub.com/",
+    "https://selfemployedlendinghub.com/",
     "https://leadbuyersplaybook.com/",
     "https://salesteamofone.com/"
   ],
@@ -55,7 +57,7 @@ export const personStructuredData = {
     {
       "@type": "Organization",
       "name": "How to Work Leads",
-      "url": "https://www.howtoworkleads.com/",
+      "url": "https://howtoworkleads.com/",
       "description": "Practical strategies and proven techniques for converting leads into customers"
     },
     {
@@ -88,40 +90,6 @@ export const personStructuredData = {
     "Marketing Automation",
     "Revenue Pipeline Development",
     "AI-powered Marketing"
-  ],
-  "offers": [
-    {
-      "@type": "Product",
-      "name": "90-Day B2B Growth Toolkit",
-      "description": "Complete Notion-based growth system for B2B founders and lean GTM teams",
-      "price": "9",
-      "priceCurrency": "USD",
-      "url": "https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit"
-    },
-    {
-      "@type": "Product", 
-      "name": "Complete Sales Scripts Course",
-      "description": "Step-by-step guide to designing, writing, and optimizing sales scripts for consistent results",
-      "price": "9",
-      "priceCurrency": "USD",
-      "url": "https://billriceconsulting.gumroad.com/l/sales-scripts"
-    },
-    {
-      "@type": "Product",
-      "name": "Aged Leads Sales Playbook",
-      "description": "Transform dormant aged leads into active customers with proven scripts and strategies",
-      "price": "9",
-      "priceCurrency": "USD",
-      "url": "https://billriceconsulting.gumroad.com/l/aged-leads-scripts"
-    },
-    {
-      "@type": "Product",
-      "name": "Mortgage Sales System",
-      "description": "Complete mortgage sales system with scripts, strategies, and lead management automation",
-      "price": "9", 
-      "priceCurrency": "USD",
-      "url": "https://billriceconsulting.gumroad.com/l/mortgage-scripts"
-    }
   ],
   "alumniOf": [
     {

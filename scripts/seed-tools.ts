@@ -1,5 +1,8 @@
 /**
- * Seed tools and playbooks as individual Sanity documents.
+ * Seed free tools as individual Sanity documents.
+ *
+ * Gumroad playbooks were removed 2026-07-28 (being phased out) and DemoLeadGen
+ * was removed (domain 404s after the 2026-06-05 archive). Do not re-add.
  *
  * Usage: npx tsx scripts/seed-tools.ts
  *
@@ -37,11 +40,6 @@ const tools: ToolSeed[] = [
   { key: 'writemysalesscript', order: 10, category: 'ai-tool', price: 'Free', name: 'WriteMySalesScript', description: 'AI-powered sales script generation for B2B teams', url: 'https://writemysalesscript.com/' },
   { key: 'visibilityanalyzer', order: 20, category: 'ai-tool', price: 'Free', name: 'VisibilityAnalyzer', description: 'SEO and LLM visibility analysis and optimization', url: 'https://visibilityanalyzer.com/' },
   { key: 'b2bbattlecard', order: 30, category: 'ai-tool', price: 'Free', name: 'B2B Marketing Battlecard', description: 'Competitive intelligence and strategic insights', url: 'https://b2bmarketingbattlecard.com/' },
-  { key: 'demoleadgen', order: 40, category: 'ai-tool', price: 'Free', name: 'DemoLeadGen', description: 'Interactive lead generation demo platform', url: 'https://demoleadgen.com/' },
-  { key: '90day-toolkit', order: 110, category: 'playbook', price: '$9', name: '90-Day B2B Growth Toolkit', description: 'Complete Notion-based growth system for B2B founders and lean GTM teams', url: 'https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit' },
-  { key: 'sales-scripts-course', order: 120, category: 'playbook', price: '$9', name: 'Complete Sales Scripts Course', description: 'Step-by-step guide to designing, writing, and optimizing sales scripts for consistent results', url: 'https://billriceconsulting.gumroad.com/l/sales-scripts' },
-  { key: 'aged-leads-playbook', order: 130, category: 'playbook', price: '$9', name: 'Aged Leads Sales Playbook', description: 'Transform dormant aged leads into active customers with proven scripts and strategies', url: 'https://billriceconsulting.gumroad.com/l/aged-leads-scripts' },
-  { key: 'mortgage-sales-system', order: 140, category: 'playbook', price: '$9', name: 'Mortgage Sales System', description: 'Complete mortgage sales system with scripts, strategies, and lead management automation', url: 'https://billriceconsulting.gumroad.com/l/mortgage-scripts' },
 ]
 
 async function main() {

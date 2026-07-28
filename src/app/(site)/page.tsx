@@ -129,11 +129,6 @@ const FALLBACK_TOOLS: Tool[] = [
   { _id: 'f-wmss', name: 'WriteMySalesScript', description: 'AI-powered sales script generation for B2B teams', url: 'https://writemysalesscript.com/', category: 'ai-tool', price: 'Free' },
   { _id: 'f-va', name: 'VisibilityAnalyzer', description: 'SEO and LLM visibility analysis and optimization', url: 'https://visibilityanalyzer.com/', category: 'ai-tool', price: 'Free' },
   { _id: 'f-b2b', name: 'B2B Marketing Battlecard', description: 'Competitive intelligence and strategic insights', url: 'https://b2bmarketingbattlecard.com/', category: 'ai-tool', price: 'Free' },
-  { _id: 'f-dlg', name: 'DemoLeadGen', description: 'Interactive lead generation demo platform', url: 'https://demoleadgen.com/', category: 'ai-tool', price: 'Free' },
-  { _id: 'f-90d', name: '90-Day B2B Growth Toolkit', description: 'Complete Notion-based growth system for B2B founders and lean GTM teams', url: 'https://billriceconsulting.gumroad.com/l/90dayB2Btoolkit', category: 'playbook', price: '$9' },
-  { _id: 'f-scripts', name: 'Complete Sales Scripts Course', description: 'Step-by-step guide to designing, writing, and optimizing sales scripts for consistent results', url: 'https://billriceconsulting.gumroad.com/l/sales-scripts', category: 'playbook', price: '$9' },
-  { _id: 'f-aged', name: 'Aged Leads Sales Playbook', description: 'Transform dormant aged leads into active customers with proven scripts and strategies', url: 'https://billriceconsulting.gumroad.com/l/aged-leads-scripts', category: 'playbook', price: '$9' },
-  { _id: 'f-mortgage', name: 'Mortgage Sales System', description: 'Complete mortgage sales system with scripts, strategies, and lead management automation', url: 'https://billriceconsulting.gumroad.com/l/mortgage-scripts', category: 'playbook', price: '$9' },
 ]
 
 const FALLBACK_HERO_TITLE = 'Bill Rice'
@@ -185,7 +180,6 @@ export default async function HomePage() {
   const youtube = settings?.socialLinks?.youtube || 'https://www.youtube.com/@billricestrategy'
 
   const aiTools = tools.filter((t) => t.category === 'ai-tool')
-  const playbooks = tools.filter((t) => t.category === 'playbook')
 
   const combinedStructuredData = [
     personStructuredData,
@@ -467,12 +461,12 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* Tools & Playbooks */}
+        {/* Tools */}
         <section className="py-16 bg-gray-50" aria-labelledby="tools-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">Tools & Resources</h2>
-              <p className="mt-4 text-lg text-gray-600">Free AI-powered tools and strategic playbooks</p>
+              <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">Free Tools</h2>
+              <p className="mt-4 text-lg text-gray-600">AI-powered tools I built and give away</p>
             </div>
             <div className="max-w-4xl mx-auto">
               {aiTools.length > 0 && (
@@ -498,29 +492,6 @@ export default async function HomePage() {
                           </a>
                         )}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {playbooks.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Strategic Playbooks</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {playbooks.map((p) => (
-                      <a
-                        key={p._id}
-                        href={p.url ?? '#'}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-6 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
-                      >
-                        <h4 className="font-medium text-gray-900 mb-2">{p.name}</h4>
-                        {p.description && <p className="text-sm text-gray-600 mb-3">{p.description}</p>}
-                        <span className="text-black font-medium underline">
-                          {p.price ? `Get it for ${p.price} →` : 'Get it →'}
-                        </span>
-                      </a>
                     ))}
                   </div>
                 </div>
