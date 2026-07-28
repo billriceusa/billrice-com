@@ -65,8 +65,17 @@ const bioData = {
       title: "The Lead Buyer's Playbook",
       subtitle: 'The Enterprise Guide to Buying and Converting Leads Profitably',
       year: 2025,
-      url: 'https://www.leadbuyerplaybook.com/',
+      status: 'published',
+      url: 'https://leadbuyersplaybook.com/',
       amazon: 'https://www.amazon.com/dp/B0DRBK6QJZ',
+    },
+    {
+      title: 'Sales Team of One',
+      subtitle: 'How to Stay Irreplaceable When AI Comes for the Sales Team',
+      year: 2026,
+      status: 'forthcoming — free chapters available now',
+      url: 'https://salesteamofone.com/',
+      amazon: null,
     },
   ],
 

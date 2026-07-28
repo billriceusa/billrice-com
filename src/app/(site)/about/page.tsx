@@ -419,7 +419,7 @@ export default async function AboutPage() {
                 <div className="space-y-3 text-gray-600">
                   <p>
                     Author of{' '}
-                    <a href="https://www.leadbuyerplaybook.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">The Lead Buyer&rsquo;s Playbook</a>{' '}
+                    <a href="https://leadbuyersplaybook.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">The Lead Buyer&rsquo;s Playbook</a>{' '}
                     (2025). Publisher of{' '}
                     <a href="https://theleadbrief.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">The Lead Brief</a>{' '}
                     newsletter. Regular speaker at Lead Generation World and fintech industry conferences. Featured guest on 30+ marketing and business podcasts.

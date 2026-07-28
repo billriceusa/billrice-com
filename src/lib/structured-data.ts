@@ -30,7 +30,8 @@ export const personStructuredData = {
     "https://proinvestorhub.com/",
     "https://cryptolendinghub.com/",
     "https://demoleadgen.com/",
-    "https://www.leadbuyerplaybook.com/"
+    "https://leadbuyersplaybook.com/",
+    "https://salesteamofone.com/"
   ],
   "worksFor": [
     {
@@ -261,7 +262,7 @@ export const bookStructuredData = {
     "name": "Bill Rice",
     "url": "https://billrice.com"
   },
-  "url": "https://www.leadbuyerplaybook.com/",
+  "url": "https://leadbuyersplaybook.com/",
   "datePublished": "2025-11",
   "bookEdition": "First Edition",
   "bookFormat": "https://schema.org/EBook",
