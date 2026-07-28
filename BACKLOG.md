@@ -1,9 +1,27 @@
 # billrice.com Backlog
 
-Single source of truth for billrice.com work. Last updated 2026-04-15.
+Single source of truth for billrice.com work. Last updated 2026-07-28.
 
 **Stack**: Next.js 16 + Sanity.io (`st1plnki`) + Tailwind v4 + Resend
-**Repo**: `~/Documents/_projects/brsg-projects/billrice-com` (canonical)
+**Repo**: `~/Code/sites/personal/billrice.com` (canonical)
+
+---
+
+## 2026-07-28 — What this site is for (Bill's direction)
+
+**The site is the hub to all of Bill's work** — and, over time, the home for **a few seminal essays** on his thinking, philosophy, and predictions about where the industry goes. Not a content mill. A small number of pieces that only he can write.
+
+Everything on the site should be judged against that. Concretely:
+
+- **Gumroad is being phased out.** All four $9 playbooks removed from the homepage, the Person schema `offers`, and Sanity (2026-07-28). They are also removed from `seed-tools.ts` so a re-run cannot restore them. Do not re-add.
+- **DemoLeadGen is dead** — `demoleadgen.com` returns 404 after the 2026-06-05 archive. Removed from `sameAs`, `/api/bio`, `llms.txt`, the homepage, and Sanity.
+- The blog's job is **not** cadence. It is a small set of durable essays plus the career stories that evidence the four-sides positioning. See the strategy doc's "Selected Writing" recommendation — but note Bill's framing supersedes it: **seminal essays, not curated archives.**
+
+### Open — essays direction
+
+- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation.
+- [ ] **Decide the surface.** Do essays live in `/blog` alongside career stories, or get their own `/essays` route with distinct typography and no dates? Undated reads as durable; dated reads as current. Recommend `/essays`, undated, with a short standfirst each.
+- [ ] **Retire or re-frame the chronological blog** once the essay set exists.
 
 ---
 
