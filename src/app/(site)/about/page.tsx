@@ -244,7 +244,7 @@ export default async function AboutPage() {
   const ventures = about?.currentVentures?.length ? about.currentVentures : FALLBACK_VENTURES
 
   const linkedin = settings?.socialLinks?.linkedin || 'https://www.linkedin.com/in/billrice/'
-  const twitter = settings?.socialLinks?.twitter || 'https://twitter.com/billrice'
+  const twitter = settings?.socialLinks?.twitter || 'https://x.com/billrice'
   const youtube = settings?.socialLinks?.youtube || 'https://www.youtube.com/@billricestrategy'
 
   return (
