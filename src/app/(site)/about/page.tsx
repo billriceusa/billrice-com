@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import Script from 'next/script'
 import { sanityFetch } from '@/sanity/lib/live'
 import { ABOUT_PAGE_QUERY, SITE_SETTINGS_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
+import { aboutProfilePageStructuredData } from '@/lib/structured-data'
+import { JsonLd } from '@/components/json-ld'
 
 export const metadata: Metadata = {
   title: 'About Bill Rice | Career, Experience & Expertise',
@@ -249,11 +250,9 @@ export default async function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Script
-        id="breadcrumbs-about"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-      />
+      <JsonLd data={breadcrumbData} />
+      {/* /about is the authoritative page about the person — mark it as such. */}
+      <JsonLd data={aboutProfilePageStructuredData} />
 
       {/* Header */}
       <header className="py-12 bg-gray-50 border-b border-gray-200">

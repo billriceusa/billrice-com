@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import Script from 'next/script'
 import { breadcrumbHomeToNow } from '@/lib/structured-data'
 import { sanityFetch } from '@/sanity/lib/live'
 import { NOW_PAGE_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
+import { JsonLd } from '@/components/json-ld'
 
 export const metadata: Metadata = {
   title: "What I'm Working On Now",
@@ -67,7 +67,7 @@ export default async function NowPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumbs JSON-LD */}
-      <Script id="breadcrumbs-now" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbHomeToNow) }} />
+      <JsonLd data={breadcrumbHomeToNow} />
 
       {/* Skip to main content */}
       <a
