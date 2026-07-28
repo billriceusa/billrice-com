@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import Script from 'next/script'
 import Image from 'next/image'
 import {
-  personStructuredData,
-  websiteStructuredData,
-  organizationStructuredData,
-  professionalServiceStructuredData,
-  bookStructuredData,
+  siteEntityGraph,
 } from '@/lib/structured-data'
 import { sanityFetch } from '@/sanity/lib/live'
 import {
@@ -16,6 +11,7 @@ import {
   TOOLS_QUERY,
 } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
+import { JsonLd } from '@/components/json-ld'
 
 type SiteSettings = {
   heroTitle: string | null
@@ -181,21 +177,9 @@ export default async function HomePage() {
 
   const aiTools = tools.filter((t) => t.category === 'ai-tool')
 
-  const combinedStructuredData = [
-    personStructuredData,
-    websiteStructuredData,
-    organizationStructuredData,
-    professionalServiceStructuredData,
-    bookStructuredData,
-  ]
-
   return (
     <div className="min-h-screen bg-white">
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedStructuredData) }}
-      />
+      <JsonLd data={siteEntityGraph} />
 
       <a
         href="#main-content"
