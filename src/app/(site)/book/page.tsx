@@ -78,7 +78,7 @@ export default async function BookPage() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <a
-              href={book?.freeReadUrl || 'https://www.leadbuyerplaybook.com/'}
+              href={book?.freeReadUrl || 'https://leadbuyersplaybook.com'}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
@@ -146,6 +146,32 @@ export default async function BookPage() {
               </div>
             </div>
           )}
+
+          {/* Second book */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-black rounded-lg p-7">
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                Also from Bill Rice · Free chapters available now
+              </p>
+              <h2 className="text-2xl font-bold text-gray-900">Sales Team of One</h2>
+              <p className="mt-1 text-gray-500">
+                How to Stay Irreplaceable When AI Comes for the Sales Team
+              </p>
+              <p className="mt-4 text-gray-600">
+                The Playbook is about buying the lead. This one is about who is left to work it — and how to stay the
+                person who can, while the org around the seller collapses into software.
+              </p>
+              <a
+                href="https://salesteamofone.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-5 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                aria-label="Read the opening of Sales Team of One free (opens in new tab)"
+              >
+                Read the Opening — salesteamofone.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

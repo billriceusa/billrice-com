@@ -137,9 +137,15 @@ const FALLBACK_TOOLS: Tool[] = [
 ]
 
 const FALLBACK_HERO_TITLE = 'Bill Rice'
-const FALLBACK_HERO_TAGLINE = 'Fintech Marketing Pioneer & Lead Generation Strategist'
+const FALLBACK_HERO_TAGLINE = "I've stood on all four sides of the consumer-direct lead."
 const FALLBACK_HERO_SUBTEXT =
-  '30+ years building lead generation platforms and revenue systems for financial services companies. Coined "lead management." Built platforms at DeepGreen Bank and Quicken Loans.'
+  'I built the software that managed it, generated it as an agency, bought it as a lender with my own P&L, and wrote the book on how to buy it. 30+ years in mortgage and fintech.'
+
+// Canonical book destinations — never link the singular or a *.vercel.app preview.
+const LEAD_BUYERS_PLAYBOOK_URL = 'https://leadbuyersplaybook.com'
+const SALES_TEAM_OF_ONE_URL = 'https://salesteamofone.com'
+const LEAD_BRIEF_URL = 'https://theleadbrief.com/'
+const AMAZON_LBP_URL = 'https://www.amazon.com/dp/B0DRBK6QJZ'
 
 const ExternalLinkIcon = () => (
   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -215,59 +221,118 @@ export default async function HomePage() {
 
           <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">
             <a
-              href="https://theleadbrief.com/"
+              href={LEAD_BUYERS_PLAYBOOK_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
+              aria-label="Read The Lead Buyer's Playbook free online (opens in new tab)"
+            >
+              Read the Playbook — Free
+            </a>
+            <a
+              href={LEAD_BRIEF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-black hover:bg-black hover:text-white text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
               aria-label="Subscribe to The Lead Brief newsletter (opens in new tab)"
             >
               Subscribe to The Lead Brief
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-black hover:bg-black hover:text-white text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
-              aria-label="Contact Bill Rice"
-            >
-              Contact Bill Rice
             </a>
           </nav>
         </div>
       </header>
 
-      {/* Book */}
+      {/* Books */}
       <main id="main-content">
-        <section className="py-16 bg-gray-50" aria-labelledby="book-heading">
+        <section id="books" className="py-16 bg-gray-50" aria-labelledby="books-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8">
-                <p className="text-sm font-semibold text-[#E6BB00] uppercase tracking-wide mb-2">New Book</p>
-                <h2 id="book-heading" className="text-3xl font-bold text-gray-900">
-                  The Lead Buyer&apos;s Playbook
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <p className="text-sm font-semibold text-[#E6BB00] uppercase tracking-wide mb-2">The Books</p>
+                <h2 id="books-heading" className="text-3xl font-bold text-gray-900">
+                  Two field guides for the AI era of selling
                 </h2>
-                <p className="mt-2 text-lg text-gray-500">The Enterprise Guide to Buying and Converting Leads Profitably</p>
-              </div>
-              <div className="bg-white p-8 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
-                <p className="text-lg text-gray-600 mb-6">
-                  Stop treating lead generation as a procurement problem. Learn the systematic approach that transforms lead buying from a cost center into a competitive advantage. Drawing on 30+ years of experience in lead generation and mortgage lending, this book covers strategic foundations, risk management, operational excellence, and financial intelligence for enterprise lead acquisition.
+                <p className="mt-2 text-lg text-gray-500">
+                  One on buying leads profitably. One on staying irreplaceable when AI comes for the sales team.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="https://www.leadbuyerplaybook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
-                  >
-                    Read Free Online
-                  </a>
-                  <a
-                    href="https://www.amazon.com/dp/B0DRBK6QJZ"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-black hover:bg-black hover:text-white text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
-                  >
-                    Buy on Amazon
-                  </a>
-                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 items-stretch">
+                {/* The Lead Buyer's Playbook */}
+                <article className="flex flex-col bg-white p-7 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                    Published · November 2025
+                  </p>
+                  <h3 className="text-2xl font-bold text-gray-900">The Lead Buyer&apos;s Playbook</h3>
+                  <p className="mt-1 text-gray-500">
+                    The Enterprise Guide to Buying and Converting Leads Profitably
+                  </p>
+                  <p className="mt-4 text-gray-600 flex-1">
+                    Stop treating lead generation as a procurement problem. The systematic approach that turns lead
+                    buying from a cost center into a competitive advantage — vendor selection, lead quality, speed to
+                    lead, aged leads, compliance, and unit economics.
+                  </p>
+                  <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={LEAD_BUYERS_PLAYBOOK_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
+                      aria-label="Read The Lead Buyer's Playbook free online (opens in new tab)"
+                    >
+                      Read Free Online
+                    </a>
+                    <a
+                      href={AMAZON_LBP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                    >
+                      Buy on Amazon
+                    </a>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-500">
+                    leadbuyersplaybook.com
+                  </p>
+                </article>
+
+                {/* Sales Team of One */}
+                <article className="flex flex-col bg-white p-7 border border-gray-200 border-l-4 border-l-black rounded-lg">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                    Free chapters available now
+                  </p>
+                  <h3 className="text-2xl font-bold text-gray-900">Sales Team of One</h3>
+                  <p className="mt-1 text-gray-500">
+                    How to Stay Irreplaceable When AI Comes for the Sales Team
+                  </p>
+                  <p className="mt-4 text-gray-600 flex-1">
+                    The sales org that used to feed a seller — SDRs, marketing, ops, enablement — is being automated out
+                    from under the people standing on it. There is one safe seat left: be the whole team yourself, and
+                    wield the very thing that is coming for everyone else.
+                  </p>
+                  <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={SALES_TEAM_OF_ONE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-black hover:bg-gray-800 text-white px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                      aria-label="Read the opening of Sales Team of One free (opens in new tab)"
+                    >
+                      Read the Opening
+                    </a>
+                    <a
+                      href={`${SALES_TEAM_OF_ONE_URL}/#notify`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                    >
+                      Get Notified
+                    </a>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-500">
+                    salesteamofone.com
+                  </p>
+                </article>
               </div>
             </div>
           </div>
