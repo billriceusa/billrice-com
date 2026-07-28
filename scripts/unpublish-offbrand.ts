@@ -26,13 +26,17 @@ const client = createClient({
   token,
 })
 
-// Docs audited 2026-04-15. Off-brand for personal site — industry infrastructure
-// / banking RegTech pieces, not Bill Rice's personal voice.
 const offBrandIds = [
-  '24-trillion-mortgage-infrastructure-obsolete-2029',
-  'compliance-automation-stack',
-  '847b-legacy-core-banking-migration-crisis',
-  'legacy-core-banking-migration-ainative-architecture',
+  // Audited 2026-07-28. Machine-generated posts published 08:04 UTC on a schedule,
+  // outside the editorial plan. Off-brand for the personal hub: DeFi / post-scarcity
+  // speculation, unsourced statistics, expiring hard-dated predictions, and one
+  // biographical claim that contradicts the canonical career record.
+  'ive-originated-500m-loansheres-current-ai-underwriting',
+  'last-mile-problem-defi-lending',
+  'mortgage-company-building-legacy-rails-burning-investor',
+  'q1-2027',
+  'q3-2026',
+  'q4-2026',
 ]
 
 async function main() {
