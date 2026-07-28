@@ -105,7 +105,7 @@ const FALLBACK_PROJECTS: Project[] = [
     slug: 'how-to-work-leads',
     description:
       'Practical strategies and proven techniques for converting leads into customers, from first contact to close.',
-    url: 'https://www.howtoworkleads.com/',
+    url: 'https://howtoworkleads.com/',
   },
   {
     _id: 'f-pih',
@@ -176,7 +176,7 @@ export default async function HomePage() {
   const heroTagline = settings?.heroTagline || FALLBACK_HERO_TAGLINE
   const heroSubtext = settings?.heroSubtext || FALLBACK_HERO_SUBTEXT
   const linkedin = settings?.socialLinks?.linkedin || 'https://www.linkedin.com/in/billrice/'
-  const twitter = settings?.socialLinks?.twitter || 'https://twitter.com/billrice'
+  const twitter = settings?.socialLinks?.twitter || 'https://x.com/billrice'
   const youtube = settings?.socialLinks?.youtube || 'https://www.youtube.com/@billricestrategy'
 
   const aiTools = tools.filter((t) => t.category === 'ai-tool')

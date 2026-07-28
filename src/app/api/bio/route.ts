@@ -26,7 +26,7 @@ const bioData = {
 
   social: {
     linkedin: 'https://www.linkedin.com/in/billrice/',
-    twitter: 'https://twitter.com/billrice',
+    twitter: 'https://x.com/billrice',
     youtube: 'https://www.youtube.com/@billricestrategy',
   },
 
@@ -53,7 +53,7 @@ const bioData = {
 
   projects: [
     { name: 'Aged Lead Sales', url: 'https://agedleadsales.com/', description: 'Sales training and education for working aged leads.' },
-    { name: 'How to Work Leads', url: 'https://www.howtoworkleads.com/', description: 'Practical strategies for converting leads into customers.' },
+    { name: 'How to Work Leads', url: 'https://howtoworkleads.com/', description: 'Practical strategies for converting leads into customers.' },
     { name: 'ProInvestorHub', url: 'https://proinvestorhub.com/', description: 'Real estate investing education with guides, calculators, and market data.' },
     { name: 'CryptoLendingHub', url: 'https://cryptolendinghub.com/', description: 'Crypto lending education with platform reviews and rate comparisons.' },
     { name: 'The Lead Brief', url: 'https://theleadbrief.com/', description: 'Weekly newsletter and podcast on lead generation strategy.' },
