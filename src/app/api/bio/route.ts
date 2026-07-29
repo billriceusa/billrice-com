@@ -24,10 +24,14 @@ const bioData = {
     'Founder, Verified Vector',
   ],
 
+  // Must stay in lockstep with the sameAs set in src/lib/identity.ts — this
+  // endpoint is the machine-readable twin of the JSON-LD Person node.
   social: {
+    wikidata: 'https://www.wikidata.org/wiki/Q139037772',
     linkedin: 'https://www.linkedin.com/in/billrice/',
     twitter: 'https://x.com/billrice',
     youtube: 'https://www.youtube.com/@billricestrategy',
+    medium: 'https://medium.com/@billrice',
   },
 
   companies: [

@@ -11,7 +11,14 @@
  * not as sameAs — a site Bill owns is not a site that *is* Bill.
  */
 
-export const PERSON_ID = 'https://billrice.com/#person'
+import { BILL_RICE_ID, BILL_RICE_SAME_AS } from './identity'
+
+/**
+ * billrice.com is the AUTHORITATIVE description of the person. Every other
+ * property Bill owns emits a reference node carrying this same @id — see
+ * src/lib/identity.ts and ~/Code/_shared-docs/bill-rice-identity.md.
+ */
+export const PERSON_ID = BILL_RICE_ID
 export const WEBSITE_ID = 'https://billrice.com/#website'
 export const KALEIDICO_ID = 'https://kaleidico.com/#organization'
 export const BRSG_ID = 'https://billricestrategy.com/#organization'
@@ -36,11 +43,7 @@ export const personStructuredData = {
     "caption": "Bill Rice - Fintech Marketing Pioneer & Lead Generation Strategist"
   },
   // Identity only. Profiles that ARE Bill Rice — not properties he owns.
-  "sameAs": [
-    "https://www.linkedin.com/in/billrice/",
-    "https://x.com/billrice",
-    "https://www.youtube.com/@billricestrategy"
-  ],
+  "sameAs": [...BILL_RICE_SAME_AS],
   // Ownership/affiliation expressed as relationships, by reference.
   "worksFor": [
     { "@id": KALEIDICO_ID },
