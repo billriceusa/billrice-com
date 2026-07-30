@@ -100,4 +100,4 @@ And it taught me that proving a model once doesn't mean the work is done. Market
 
 DeepGreen Bank didn't become a household name. But we originated $1.5 billion a year, sold to a private equity firm led by a Wall Street legend, and proved that banking could be fully digital before most banks had a website. Every time someone opens a bank account on their phone, applies for a mortgage from their couch, or taps a home equity line without visiting a branch, they're living in the future we were building with less than 100 people and a thesis.
 
-We were right. And I've spent the last 25 years proving it — over and over again.
+We were right. And I've spent every year since proving it — over and over again.

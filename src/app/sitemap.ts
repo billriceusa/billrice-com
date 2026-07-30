@@ -29,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/blog`,
+      url: `${BASE_URL}/essays`,
       lastModified,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -54,8 +54,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Blog posts from Sanity
-  let blogPages: MetadataRoute.Sitemap = []
+  // Essays from Sanity
+  let essayPages: MetadataRoute.Sitemap = []
   try {
     const posts: { slug: string; publishedAt: string }[] = await client.fetch(
       `*[_type == "post" && defined(slug.current) && publishedAt <= now()]
@@ -64,30 +64,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
          publishedAt
        }`
     )
-    blogPages = (posts || []).map((post) => ({
-      url: `${BASE_URL}/blog/${post.slug}`,
+    essayPages = (posts || []).map((post) => ({
+      url: `${BASE_URL}/essays/${post.slug}`,
       lastModified: new Date(post.publishedAt),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }))
   } catch {
     // Sanity unavailable — static pages only
-  }
-
-  // Blog categories from Sanity
-  let categoryPages: MetadataRoute.Sitemap = []
-  try {
-    const categories: { slug: string }[] = await client.fetch(
-      `*[_type == "category" && defined(slug.current)]{ "slug": slug.current }`
-    )
-    categoryPages = (categories || []).map((cat) => ({
-      url: `${BASE_URL}/blog/category/${cat.slug}`,
-      lastModified,
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    }))
-  } catch {
-    // Sanity unavailable
   }
 
   // Company pages from Sanity
@@ -124,8 +108,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
-    ...blogPages,
-    ...categoryPages,
+    ...essayPages,
     ...companyPages,
     ...projectPages,
   ]

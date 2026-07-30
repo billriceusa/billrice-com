@@ -19,9 +19,25 @@ Everything on the site should be judged against that. Concretely:
 
 ### Open — essays direction
 
-- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation.
-- [ ] **Decide the surface.** Do essays live in `/blog` alongside career stories, or get their own `/essays` route with distinct typography and no dates? Undated reads as durable; dated reads as current. Recommend `/essays`, undated, with a short standfirst each.
-- [ ] **Retire or re-frame the chronological blog** once the essay set exists.
+- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation. Proposed slate + sequencing: `~/.buzz/PLANS/BILLRICE_COM_ESSAY_SLATE.md`.
+- [x] **Decide the surface** (2026-07-30) — `/essays` is now the only writing surface. `/blog` is gone; nav reads Essays.
+- [x] **Retire the chronological blog** (2026-07-30) — see below.
+
+### 2026-07-30 — the blog is gone
+
+Bill's call: the blog was AI-written and never held to the QC standard this domain needs. On a site that is the canonical record on Bill Rice for humans *and* machines, an unreviewed post is not neutral — it becomes the cited source.
+
+- **Ten industry posts unpublished** (`scripts/unpublish-industry-posts.ts`). Reversible — `publishedAt` cleared, nothing deleted. Their URLs 308 to the homepage; they have no topical successor here.
+- **Seven first-person pieces kept** and moved to `/essays`: the six Career Stories plus the SpringEQ launch account. Old `/blog/*` URLs 308 to the matching `/essays/*`.
+- **Six canonical-fact defects corrected** (`scripts/fix-canonical-facts.ts`) — three 2002/2004 contradictions in the EquityOnline post, a sentence fragment, a "25 years" that should not appear in Bill's voice, and a Kaleidico agency-from-inception line.
+- **Root cause of the escaped-quote titles fixed** in `publish-post.ts` — the frontmatter parser stripped outer quotes without unescaping inner ones.
+
+**The mechanism that failed, and the rule that replaces it:** the ten were staged with staggered `publishedAt` and auto-published on a Sanity time-gate while the plan still recorded them as "awaiting Bill's review." The gate wasn't skipped, it was scheduled around. **Nothing on this domain goes live on a date. Only on a merge.**
+
+Still open, needs Bill:
+- [ ] `building-equityonline-quicken-loans` omits the **Rock Bank COO** step — Bill joined Quicken Loans in 2004 as COO of the Rock Bank project and moved to VP National Home Equity when it wound down. The post jumps straight to EquityOnline.
+- [ ] Same post dates the **MBA to 2003** ("during this same period") while narrating 2004–2005. One of the two is wrong.
+- [ ] Decide whether `springeq-launch-gtm-case-study` belongs in `/essays` — it's first-person and fact-clean, but a case study rather than a career story.
 
 ---
 

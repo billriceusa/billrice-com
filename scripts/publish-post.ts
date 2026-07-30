@@ -53,8 +53,14 @@ function parseMarkdown(content: string) {
       if (value.startsWith('[')) {
         frontmatter[kvMatch[1]] = JSON.parse(value.replace(/'/g, '"'))
       } else {
-        // Strip surrounding quotes
-        frontmatter[kvMatch[1]] = value.replace(/^["']|["']$/g, '')
+        // Strip surrounding quotes, then unescape any escapes inside them.
+        // Without the unescape step a frontmatter title like
+        //   title: "How I Coined \"Lead Management\" — and Why ..."
+        // reaches Sanity with the backslashes intact and renders them to the
+        // page. That shipped on 2026-04-08 and was visible until 2026-07-30.
+        const wasQuoted = /^".*"$/.test(value) || /^'.*'$/.test(value)
+        value = value.replace(/^["']|["']$/g, '')
+        frontmatter[kvMatch[1]] = wasQuoted ? value.replace(/\\(["'\\])/g, '$1') : value
       }
     }
   }
@@ -275,12 +281,12 @@ async function main() {
   }
 
   await client.createOrReplace(doc)
-  console.log(`\nPublished: https://billrice.com/blog/${slug}`)
+  console.log(`\nPublished: https://billrice.com/essays/${slug}`)
 
   // Notify IndexNow (Bing/Yandex)
   try {
     const indexnowKey = '58e67ed8f262d121576ae18a808d14c9'
-    const url = `https://billrice.com/blog/${slug}`
+    const url = `https://billrice.com/essays/${slug}`
     const params = new URLSearchParams({ url, key: indexnowKey })
     const res = await fetch(`https://api.indexnow.org/IndexNow?${params}`)
     console.log(`IndexNow: HTTP ${res.status}`)

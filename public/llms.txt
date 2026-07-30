@@ -16,7 +16,7 @@ Bill Rice is a fintech marketing pioneer with 30+ years building lead generation
 - **About / Career**: https://billrice.com/about — full career narrative, timeline, expertise
 - **Bio API**: https://billrice.com/api/bio — programmatic access to bios, companies, projects
 - **Book**: https://billrice.com/book — The Lead Buyer's Playbook
-- **Blog**: https://billrice.com/blog — articles on lead generation and fintech marketing
+- **Essays**: https://billrice.com/essays — first-person accounts from 30+ years building, buying, and selling the consumer-direct lead
 - **Now**: https://billrice.com/now — current projects and priorities
 - **Contact**: https://billrice.com/contact — consulting, speaking, engagement inquiries
 

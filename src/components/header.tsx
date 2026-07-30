@@ -26,10 +26,10 @@ export function Header() {
               Book
             </Link>
             <Link
-              href="/blog"
+              href="/essays"
               className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
             >
-              Blog
+              Essays
             </Link>
             <Link
               href="/now"
