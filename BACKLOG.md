@@ -1,6 +1,6 @@
 # billrice.com Backlog
 
-Single source of truth for billrice.com work. Last updated 2026-07-28.
+Single source of truth for billrice.com work. Last updated 2026-07-30.
 
 **Stack**: Next.js 16 + Sanity.io (`st1plnki`) + Tailwind v4 + Resend
 **Repo**: `~/Code/sites/personal/billrice.com` (canonical)
@@ -22,6 +22,76 @@ Everything on the site should be judged against that. Concretely:
 - [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation. Proposed slate + sequencing: `~/.buzz/PLANS/BILLRICE_COM_ESSAY_SLATE.md`.
 - [x] **Decide the surface** (2026-07-30) — `/essays` is now the only writing surface. `/blog` is gone; nav reads Essays.
 - [x] **Retire the chronological blog** (2026-07-30) — see below.
+- [ ] **Essay 1: All Four Sides** — blocked on Bill. Full spec below.
+
+### Next up — Essay 1: "All Four Sides"
+
+**Status:** blocked on one input from Bill (the Velocity Lending receipt). Everything else
+is ready to draft. Opened 2026-07-30 at Bill's direction — "I love this insight and
+recommendation, but I don't have time right now to give you this detail."
+
+**Why this essay first:** cheapest to write (source material already assembled in
+`~/Code/memory/shared/reference_bill_positioning_four_sides.md`), and it is the only
+essay that fixes a live defect on the homepage.
+
+#### The three problems it solves
+
+1. **The hero claim has nowhere to land.** `I've stood on all four sides of the
+   consumer-direct lead.` renders as plain unlinked text on `/`. The only two buttons on
+   the page — Read the Playbook, Subscribe to The Lead Brief — both point off-domain and
+   open in new tabs. A reader who thinks *"prove it"* has no next click that stays on
+   billrice.com. Verified against production 2026-07-30.
+2. **The buyer leg has no evidence on the site.** `/essays` holds seven pieces
+   (DeepGreen, EquityOnline/Quicken, Quizzle→Bankrate, coining lead management, Kaleidico
+   post-acquisition, AFOSI→fintech, SpringEQ). Every one is *software*, *agency*, or
+   *operator inside someone else's company*. **Velocity Lending appears nowhere in
+   `/essays`** — only as a line in `/about`, `/api/bio`, and `llms.txt`. That is the one
+   leg nobody else on a lead-gen panel has, and the one third-party bios reliably drop.
+   Six essays defending the legs that need no defense; zero defending the one that does.
+3. **It is currently a claim, not an argument.** "I've done four things" is a résumé.
+   Nobody cites a résumé.
+
+#### The thesis — write it as an argument, not a seventh career retrospective
+
+**Each side of the lead has a blind spot only the other three can see.**
+
+- *Software* (icoSales, 2005) thinks the problem is routing and speed. It isn't.
+- *Agency* (Kaleidico + MPL) thinks it's volume and source mix.
+- *Lender* (Velocity Lending, 2016–2018, Bill's own P&L) thinks it's price per lead —
+  then finds out it's the cost of the twelfth dial.
+- *Author* (**The Lead Buyer's Playbook**, Nov 2025) thinks it's process, and has to
+  concede process is the last 20%.
+
+Payoff: everyone on every panel is optimizing their own blind spot. The fourth bullet is
+what makes it credible — an essay where the author's own book places last is not a brag,
+and readers can tell.
+
+#### BLOCKER — what only Bill can supply
+
+The buyer leg needs a real, specific, preferably unflattering receipt from **Velocity
+Lending (2016–2018)**. Do not invent or estimate this. Any one of these is enough:
+
+- What a funded loan actually cost in acquisition, versus what he assumed going in.
+- The month he learned the leads were fine and the follow-up wasn't — and how he learned it.
+- A number he was buying against that turned out to be measuring the wrong thing.
+- The dial-count/contact-rate reality that cost more than the lead price ever did.
+
+Decision already made (Bill's call, 2026-07-30): **carry this inside the Four Sides
+essay** rather than writing a standalone eighth career essay. It is stronger as evidence
+inside an argument than as its own story.
+
+#### Ships with the essay — do not ship separately
+
+- **Link the homepage hero line to `/essays/all-four-sides`.** This is the whole point of
+  the piece; an unlinked hero sentence after this essay exists is a bug.
+- **Exactly one CTA on the essay: The Lead Brief.** Never two. Per the one-capture-per-
+  essay rule — and audit whether it can stay on-domain instead of opening
+  `theleadbrief.com` in a new tab, so a piece that lands well doesn't leak.
+- **Article schema**, `author` pointed at the canonical Person URI (PR #11).
+- Link the existing seven `/essays` pieces as the supporting receipts for legs 1–3.
+
+**Length:** 1,200–1,500. **Sequencing after this:** I Work in Code → Contact/Welcome →
+What Survives → Conversation. One every 4–6 weeks; if it slips, let it.
 
 ### 2026-07-30 — the blog is gone
 
