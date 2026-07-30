@@ -10,7 +10,7 @@ publishedAt: "2026-04-24"
 
 The conventional wisdom about agency ownership is that you build it, you run it, and eventually you either sell it to a larger holding company and walk away, or you run it forever. That framing treats acquisition as an ending.
 
-When Kaleidico — the demand generation agency I founded in 2005 — went through its acquisition and liquidity event, I didn't want an ending. I wanted a different chapter. So I structured a deal that gave me partial liquidity, kept me meaningfully on the cap table, and put me into the Chief Revenue Officer role on the executive team. I retained 10% ownership. I transitioned into CRO. And I continue to actively contribute to Kaleidico today, focused on business development, sales, and marketing strategy and execution.
+When Kaleidico — the company I founded in 2005 — went through its acquisition and liquidity event, I didn't want an ending. I wanted a different chapter. So I structured a deal that gave me partial liquidity, kept me meaningfully on the cap table, and put me into the Chief Revenue Officer role on the executive team. I retained 10% ownership. I transitioned into CRO. And I continue to actively contribute to Kaleidico today, focused on business development, sales, and marketing strategy and execution.
 
 That wasn't an accident. It was the specific outcome I was optimizing for.
 

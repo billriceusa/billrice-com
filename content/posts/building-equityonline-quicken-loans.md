@@ -12,11 +12,15 @@ In 2004, I got a call from a recruiter about a role at Quicken Loans. At the tim
 
 Quicken Loans was a different proposition entirely. They weren't a startup hoping the market would catch up. They were a company with real volume, real infrastructure, and real ambition — but they hadn't yet built the online lending platform they needed to get where they wanted to go. They wanted someone who'd done it before.
 
-I joined as the COO of the Rock Bank project, with the vision of giving Quicken Loans a federally chartered bank to stabilize funding for unlimited loan originations growth. This wasn't to be - a story for another time. This presented an opportunity to pivot to one of my other unique superpowers: building consumer direct online lending platforms. Swapping titles to Vice President of National Home Equity, my new mission was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
+I joined as the COO of the Rock Bank project, with the vision of giving Quicken Loans a federally chartered bank to stabilize funding for unlimited loan origination growth. I led the effort to get an OTS charter.
+
+It died on an adjacent risk. Dan Gilbert wanted to own a professional sports franchise, and the Office of Thrift Supervision was not comfortable with that sitting next to a bank charter. It was one or the other, and Dan turned down the bank.
+
+That's what opened the door to the other thing I know how to do: build consumer-direct online lending platforms. Swapping titles to Vice President of National Home Equity, my new mission was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
 
 ## Quicken Loans Before It Was Rocket Mortgage
 
-Most people today know Quicken Loans as Rocket Mortgage, the largest mortgage lender in the United States. But in 2002, that version of the company didn't exist yet. Quicken Loans was big — certainly much bigger than DeepGreen had ever been — but it wasn't the dominant force it would become over the next decade.
+Most people today know Quicken Loans as Rocket Mortgage, the largest mortgage lender in the United States. But in 2004, that version of the company didn't exist yet. Quicken Loans was big — certainly much bigger than DeepGreen had ever been — but it wasn't the dominant force it would become over the next decade.
 
 The company was headquartered in Livonia, Michigan. Dan Gilbert was running it with a combination of intensity and unconventional thinking that set the culture apart from anything I'd experienced in traditional financial services. The energy was closer to a tech company than a bank. People moved fast. Decisions got made quickly. There was a genuine belief that the mortgage industry was ripe for disruption, and that technology was the lever.
 
@@ -72,7 +76,7 @@ This is a skill that most startup founders never develop and most corporate oper
 
 ## Getting the MBA
 
-During this same period, I completed my MBA in Marketing from the University of Phoenix in 2003. I know some people raise an eyebrow at the institution, but here's what was actually happening: I was a VP at one of the fastest-growing mortgage companies in the country, building a lending platform from scratch, and going to school at the same time. I wasn't looking for a brand name on a diploma. I was looking for formal marketing frameworks to complement what I was learning by doing every day.
+During this same period, I completed my MBA in Marketing from the University of Phoenix in 2004. I know some people raise an eyebrow at the institution, but here's what was actually happening: I was a VP at one of the fastest-growing mortgage companies in the country, building a lending platform from scratch, and going to school at the same time. I wasn't looking for a brand name on a diploma. I was looking for formal marketing frameworks to complement what I was learning by doing every day.
 
 The combination was powerful in a way that either experience alone wouldn't have been. I was studying marketing theory at night and applying it to a real product with real users during the day. Pricing strategy wasn't an abstract case study — it was a decision I had to make about HELOC rates that would show up on a live platform by Friday. Consumer behavior wasn't a chapter in a textbook — it was something I could measure in real time through EquityOnline's analytics.
 
@@ -100,15 +104,15 @@ At DeepGreen, I'd learned how to build from scratch. At Quicken Loans, I'd learn
 
 That perspective was more valuable as a consultant than as an employee. An employee applies it to one company. A consultant applies it to dozens.
 
-In 2005, I left Quicken Loans and founded Kaleidico, at first a lead management software company, focused on intelligently managing the thousands of leads being ingested into mortgage lending call centers. Then, later, after the mortgage meltdown killed all my call center lender clients. a digital marketing agency focused on mortgage and financial services. The thesis was straightforward: the mortgage industry was going to move online, most lenders didn't know how to make that transition, and I'd spent five years learning exactly what that transition required — first at a startup that proved the concept, then at a company that proved it could scale.
+In 2005, I left Quicken Loans and founded Kaleidico, at first a lead management software company, focused on intelligently managing the thousands of leads being ingested into mortgage lending call centers. Then, later, after the mortgage meltdown killed all my call center lender clients, a digital marketing agency focused on mortgage and financial services. The thesis was straightforward: the mortgage industry was going to move online, most lenders didn't know how to make that transition, and I'd spent five years learning exactly what that transition required — first at a startup that proved the concept, then at a company that proved it could scale.
 
 ## The Through Line to Today
 
 When I work with fintech companies and mortgage lenders now, I'm drawing on everything EquityOnline taught me. The technology has changed dramatically — we've gone from dial-up to 5G, from desktop browsers to mobile apps, from manual underwriting to AI-powered decisioning. But the fundamental challenges are remarkably similar.
 
-Lenders still struggle with the gap between lead capture and real offers. Most mortgage websites in 2026 are still, at their core, lead forms — more sophisticated lead forms than what existed in 2002, but lead forms nonetheless. The borrower fills out information and waits for someone to call. The companies that close that gap — that deliver a real, meaningful answer through the digital interface — are the ones that win.
+Lenders still struggle with the gap between lead capture and real offers. Most mortgage websites in 2026 are still, at their core, lead forms — more sophisticated lead forms than what existed in 2004, but lead forms nonetheless. The borrower fills out information and waits for someone to call. The companies that close that gap — that deliver a real, meaningful answer through the digital interface — are the ones that win.
 
-Trust is still the central challenge. Consumers are still nervous about financial transactions online, just in different ways. In 2002, they worried about entering their Social Security number. In 2026, they worry about data breaches and algorithmic bias. The solution is the same: transparency, specificity, and delivering on your promises.
+Trust is still the central challenge. Consumers are still nervous about financial transactions online, just in different ways. In 2004, they worried about entering their Social Security number. In 2026, they worry about data breaches and algorithmic bias. The solution is the same: transparency, specificity, and delivering on your promises.
 
 And organizational alignment is still the thing that kills more products than bad technology. I've watched companies with superior technology lose to companies with better internal coordination. The mortgage company that gets its product team, compliance team, sales team, and marketing team pulling in the same direction will beat the one with the best algorithm every time.
 

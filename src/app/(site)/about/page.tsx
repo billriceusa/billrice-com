@@ -77,7 +77,7 @@ const FALLBACK_TIMELINE = [
     title: 'Quicken Loans - COO Rock Bank Project → VP, National Home Equity',
     subtitle: 'Built the EquityOnline platform',
     description:
-      "Recruited to Quicken Loans (now Rocket Mortgage) in 2004, initially as COO of the Rock Bank project — a federally chartered bank initiative. When that wound down, pivoted to VP of National Home Equity and led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. Completed MBA in Marketing at University of Phoenix (2003) during this era.",
+      "Recruited to Quicken Loans (now Rocket Mortgage) in 2004, initially as COO of the Rock Bank project — a federally chartered bank initiative. When Dan Gilbert turned down the bank charter, pivoted to VP of National Home Equity and led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. Completed MBA in Marketing at University of Phoenix (2004) during this era.",
   },
   {
     year: '2005',
@@ -173,7 +173,7 @@ const FALLBACK_EXPERTISE = [
 
 const FALLBACK_EDUCATION = [
   { degree: 'B.S., Political Science', institution: 'United States Air Force Academy', year: '1992' },
-  { degree: 'MBA, Marketing', institution: 'University of Phoenix', year: '2003' },
+  { degree: 'MBA, Marketing', institution: 'University of Phoenix', year: '2004' },
 ]
 
 const FALLBACK_VENTURES = [

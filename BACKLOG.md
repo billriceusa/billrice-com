@@ -19,9 +19,32 @@ Everything on the site should be judged against that. Concretely:
 
 ### Open — essays direction
 
-- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation.
-- [ ] **Decide the surface.** Do essays live in `/blog` alongside career stories, or get their own `/essays` route with distinct typography and no dates? Undated reads as durable; dated reads as current. Recommend `/essays`, undated, with a short standfirst each.
-- [ ] **Retire or re-frame the chronological blog** once the essay set exists.
+- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation. Proposed slate + sequencing: `~/.buzz/PLANS/BILLRICE_COM_ESSAY_SLATE.md`.
+- [x] **Decide the surface** (2026-07-30) — `/essays` is now the only writing surface. `/blog` is gone; nav reads Essays.
+- [x] **Retire the chronological blog** (2026-07-30) — see below.
+
+### 2026-07-30 — the blog is gone
+
+Bill's call: the blog was AI-written and never held to the QC standard this domain needs. On a site that is the canonical record on Bill Rice for humans *and* machines, an unreviewed post is not neutral — it becomes the cited source.
+
+- **Ten industry posts unpublished** (`scripts/unpublish-industry-posts.ts`). Reversible — `publishedAt` cleared, nothing deleted. Their URLs 308 to the homepage; they have no topical successor here.
+- **Seven first-person pieces kept** and moved to `/essays`: the six Career Stories plus the SpringEQ launch account. Old `/blog/*` URLs 308 to the matching `/essays/*`.
+- **Six canonical-fact defects corrected** (`scripts/fix-canonical-facts.ts`) — three 2002/2004 contradictions in the EquityOnline post, a sentence fragment, a "25 years" that should not appear in Bill's voice, and a Kaleidico agency-from-inception line.
+- **Root cause of the escaped-quote titles fixed** in `publish-post.ts` — the frontmatter parser stripped outer quotes without unescaping inner ones.
+
+**The mechanism that failed, and the rule that replaces it:** the ten were staged with staggered `publishedAt` and auto-published on a Sanity time-gate while the plan still recorded them as "awaiting Bill's review." The gate wasn't skipped, it was scheduled around. **Nothing on this domain goes live on a date. Only on a merge.**
+
+Answered by Bill 2026-07-30 and applied:
+- [x] **The Rock Bank story is now in the essay.** It previously read "This wasn't to be - a story for another time." Bill's account: he led the effort to get an OTS charter; Dan Gilbert wanted to own a professional sports franchise; the OTS was not comfortable with that adjacent risk next to a bank charter; Gilbert turned down the bank. That is what moved him to VP National Home Equity and produced EquityOnline.
+- [x] **MBA corrected 2003 → 2004** everywhere (`/api/bio`, `llms.txt`, `/about` fallback + timeline, `seed-about-page.ts`, the aboutPage doc in Sanity, and the essay). 2003 predated the Quicken tenure it was described as happening "during," so it contradicted the narrative it sat inside.
+- [x] **SpringEQ stays in `/essays`** — Bill: "another defining moment... once again helping to build another consumer direct online home equity platform."
+
+### Canonical fact corrections (2026-07-30)
+
+Supersedes the prior record. Both are now consistent across every surface:
+
+- **MBA Marketing, University of Phoenix — 2004** (was 2003).
+- **Rock Bank did not "wind down."** Bill led the OTS charter effort and Dan Gilbert turned it down rather than give up owning a professional sports franchise, which the OTS treated as adjacent risk to a bank charter.
 
 ---
 

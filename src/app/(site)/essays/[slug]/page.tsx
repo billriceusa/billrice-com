@@ -9,9 +9,9 @@ import { PortableText } from '@/components/portable-text'
 import type { PostDetail } from '@/sanity/lib/types'
 import { JsonLd, articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld'
 
-// Allow dynamic rendering for new posts not in the static build
+// Allow dynamic rendering for new essays not in the static build
 export const dynamicParams = true
-// Revalidate every hour so new posts appear without a full redeploy
+// Revalidate every hour so new essays appear without a full redeploy
 export const revalidate = 3600
 
 type Props = {
@@ -51,12 +51,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.seo?.metaTitle || post.title,
     description: post.seo?.metaDescription || post.excerpt,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: { canonical: `/essays/${slug}` },
     openGraph: { images: [{ url: ogImage, width: 1200, height: 630 }] },
   }
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function EssayPage({ params }: Props) {
   const { slug } = await params
   const { data } = await sanityFetch({
     query: POST_BY_SLUG_QUERY,
@@ -74,7 +74,7 @@ export default async function PostPage({ params }: Props) {
         data={articleJsonLd({
           title: post.title || '',
           description: post.excerpt || '',
-          url: `${baseUrl}/blog/${post.slug}`,
+          url: `${baseUrl}/essays/${post.slug}`,
           imageUrl: post.mainImage?.asset
             ? urlFor(post.mainImage).width(1200).height(630).url()
             : 'https://billrice.com/default-featured.jpg',
@@ -85,32 +85,18 @@ export default async function PostPage({ params }: Props) {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: 'Home', url: baseUrl },
-          { name: 'Blog', url: `${baseUrl}/blog` },
-          { name: post.title || '', url: `${baseUrl}/blog/${post.slug}` },
+          { name: 'Essays', url: `${baseUrl}/essays` },
+          { name: post.title || '', url: `${baseUrl}/essays/${post.slug}` },
         ])}
       />
 
       <nav className="mb-8 text-sm text-gray-500">
-        <Link href="/blog" className="hover:text-black transition-colors">
-          Blog
+        <Link href="/essays" className="hover:text-black transition-colors">
+          Essays
         </Link>
         <span className="mx-2">/</span>
         <span className="text-gray-900">{post.title}</span>
       </nav>
-
-      {post.categories && post.categories.filter(Boolean).length > 0 && (
-        <div className="flex gap-2 mb-4">
-          {post.categories.filter(Boolean).map((cat) => (
-            <Link
-              key={cat._id}
-              href={`/blog/category/${cat.slug}`}
-              className="rounded-full bg-[#FFD000]/10 px-3 py-1 text-xs font-medium text-[#B8960A] hover:bg-[#FFD000]/20 transition-colors"
-            >
-              {cat.title}
-            </Link>
-          ))}
-        </div>
-      )}
 
       <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl leading-tight">
         {post.title}

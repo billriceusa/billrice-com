@@ -48,7 +48,7 @@ const doc = {
       'I started my career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations in the late 1990s — the very beginning of the internet era. That experience taught me systems thinking, pattern recognition, and how to build operational frameworks under pressure.',
     ]),
     paragraph([
-      'In 2000, I made the jump to fintech as Employee #7 at DeepGreen Bank, one of the very first internet-only banks in the United States. We grew to about 80 people running what functionally behaved like a billion-dollar bank — still small by industry standards, still punching several weight classes up. We launched the industry\'s first unconditional online HELOC. In 2004, DeepGreen was sold to LightYear Capital and I went to Quicken Loans (now Rocket Mortgage). I initially joined for the Rock Bank project — a federally chartered bank initiative that ultimately wound down — and then pivoted to VP of National Home Equity, where I built EquityOnline, Quicken Loans\' first true online lending and offer platform.',
+      'In 2000, I made the jump to fintech as Employee #7 at DeepGreen Bank, one of the very first internet-only banks in the United States. We grew to about 80 people running what functionally behaved like a billion-dollar bank — still small by industry standards, still punching several weight classes up. We launched the industry\'s first unconditional online HELOC. In 2004, DeepGreen was sold to LightYear Capital and I went to Quicken Loans (now Rocket Mortgage). I initially joined for the Rock Bank project — a federally chartered bank initiative Dan Gilbert ultimately turned down — and then pivoted to VP of National Home Equity, where I built EquityOnline, Quicken Loans\' first true online lending and offer platform.',
     ]),
     paragraph([
       'In 2005, I founded Kaleidico — originally as a lead management software company. I built icoSales, an intelligent lead scoring and distribution platform for the mortgage call centers that were buying internet leads by the thousands. I started calling it a "lead management" platform to differentiate it from a CRM — because it worked leads, not customers. There was no relationship yet. That was my punch line, and the term stuck. I authored the original Wikipedia page for lead management. The category I named is now an industry standard. After the 2008 mortgage meltdown destroyed my call-center clients, I pivoted Kaleidico into the demand generation agency it is today.',
@@ -120,7 +120,7 @@ const doc = {
       title: 'Quicken Loans - COO Rock Bank Project → VP, National Home Equity',
       subtitle: 'Built the EquityOnline platform',
       description:
-        "Recruited to Quicken Loans (now Rocket Mortgage) in 2004, initially as COO of the Rock Bank project — a vision to give Quicken Loans a federally chartered bank to stabilize funding for unlimited loan origination growth. When that initiative wound down, pivoted to Vice President of National Home Equity and led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. Completed an MBA in Marketing at the University of Phoenix (2003) during this era.",
+        "Recruited to Quicken Loans (now Rocket Mortgage) in 2004, initially as COO of the Rock Bank project — a vision to give Quicken Loans a federally chartered bank to stabilize funding for unlimited loan origination growth. When Dan Gilbert turned down the bank charter, pivoted to Vice President of National Home Equity and led the design and build of EquityOnline, Quicken Loans' first true online lending and offer platform. Completed an MBA in Marketing at the University of Phoenix (2004) during this era.",
     },
     {
       _key: randomUUID(),
@@ -199,7 +199,7 @@ const doc = {
   ],
   education: [
     { _key: randomUUID(), degree: 'B.S., Political Science', institution: 'United States Air Force Academy', year: '1992' },
-    { _key: randomUUID(), degree: 'MBA, Marketing', institution: 'University of Phoenix', year: '2003' },
+    { _key: randomUUID(), degree: 'MBA, Marketing', institution: 'University of Phoenix', year: '2004' },
   ],
   currentVentures: [
     {

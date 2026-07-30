@@ -16,6 +16,17 @@ const RETIRED_INDUSTRY_POST_SLUGS = [
   'what-i-look-for-advising-fintech',
 ];
 
+// The seven first-person pieces that moved from /blog to /essays on 2026-07-30.
+const MOVED_ESSAY_SLUGS = [
+  'how-i-coined-lead-management',
+  'employee-7-deepgreen-bank',
+  'from-afosi-to-fintech',
+  'building-equityonline-quicken-loans',
+  'how-quizzle-became-bankrate',
+  'staying-at-kaleidico-as-cro-after-acquisition',
+  'springeq-launch-gtm-case-study',
+];
+
 const nextConfig: NextConfig = {
   // Enable experimental features for better performance
   experimental: {
@@ -81,6 +92,34 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       })),
+
+      // /blog became /essays on 2026-07-30. These seven have been indexed since
+      // April and are referenced from the sitemap and the RSS feed, so they move
+      // by 301 rather than disappearing. Listed explicitly instead of using a
+      // wildcard: a catch-all /blog/:slug rule would shadow the retired-post
+      // redirects above and quietly send dead URLs to a live essay.
+      ...MOVED_ESSAY_SLUGS.map((slug) => ({
+        source: `/blog/${slug}`,
+        destination: `/essays/${slug}`,
+        permanent: true,
+      })),
+      {
+        source: '/blog/category/:slug',
+        destination: '/essays',
+        permanent: true,
+      },
+      {
+        source: '/blog',
+        destination: '/essays',
+        permanent: true,
+      },
+      // Anything else that was ever under /blog — including the four off-brand
+      // posts unpublished on 2026-04-15, which never got redirects.
+      {
+        source: '/blog/:slug*',
+        destination: '/essays',
+        permanent: true,
+      },
     ]
   },
 };

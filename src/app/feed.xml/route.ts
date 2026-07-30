@@ -20,10 +20,10 @@ export async function GET() {
       (post: { title: string; slug: string; excerpt: string; publishedAt: string; author: { name: string } | null }) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
-      <link>${baseUrl}/blog/${post.slug}</link>
+      <link>${baseUrl}/essays/${post.slug}</link>
       <description><![CDATA[${post.excerpt || ''}]]></description>
       <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
-      <guid>${baseUrl}/blog/${post.slug}</guid>
+      <guid>${baseUrl}/essays/${post.slug}</guid>
       ${post.author ? `<dc:creator><![CDATA[${post.author.name}]]></dc:creator>` : ''}
     </item>`
     )
@@ -32,9 +32,9 @@ export async function GET() {
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bill Rice Blog</title>
-    <link>${baseUrl}/blog</link>
-    <description>Insights on lead generation, B2B marketing strategy, and building revenue engines.</description>
+    <title>Bill Rice — Essays</title>
+    <link>${baseUrl}/essays</link>
+    <description>First-person accounts from 30+ years building, buying, and selling the consumer-direct lead.</description>
     <language>en-US</language>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
     ${items}
