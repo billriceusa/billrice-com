@@ -12,7 +12,11 @@ In 2004, I got a call from a recruiter about a role at Quicken Loans. At the tim
 
 Quicken Loans was a different proposition entirely. They weren't a startup hoping the market would catch up. They were a company with real volume, real infrastructure, and real ambition — but they hadn't yet built the online lending platform they needed to get where they wanted to go. They wanted someone who'd done it before.
 
-I joined as the COO of the Rock Bank project, with the vision of giving Quicken Loans a federally chartered bank to stabilize funding for unlimited loan originations growth. This wasn't to be - a story for another time. This presented an opportunity to pivot to one of my other unique superpowers: building consumer direct online lending platforms. Swapping titles to Vice President of National Home Equity, my new mission was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
+I joined as the COO of the Rock Bank project, with the vision of giving Quicken Loans a federally chartered bank to stabilize funding for unlimited loan origination growth. I led the effort to get an OTS charter.
+
+It died on an adjacent risk. Dan Gilbert wanted to own a professional sports franchise, and the Office of Thrift Supervision was not comfortable with that sitting next to a bank charter. It was one or the other, and Dan turned down the bank.
+
+That's what opened the door to the other thing I know how to do: build consumer-direct online lending platforms. Swapping titles to Vice President of National Home Equity, my new mission was to design and build EquityOnline — Quicken Loans' first true online lending and offer platform.
 
 ## Quicken Loans Before It Was Rocket Mortgage
 
@@ -72,7 +76,7 @@ This is a skill that most startup founders never develop and most corporate oper
 
 ## Getting the MBA
 
-During this same period, I completed my MBA in Marketing from the University of Phoenix in 2003. I know some people raise an eyebrow at the institution, but here's what was actually happening: I was a VP at one of the fastest-growing mortgage companies in the country, building a lending platform from scratch, and going to school at the same time. I wasn't looking for a brand name on a diploma. I was looking for formal marketing frameworks to complement what I was learning by doing every day.
+During this same period, I completed my MBA in Marketing from the University of Phoenix in 2004. I know some people raise an eyebrow at the institution, but here's what was actually happening: I was a VP at one of the fastest-growing mortgage companies in the country, building a lending platform from scratch, and going to school at the same time. I wasn't looking for a brand name on a diploma. I was looking for formal marketing frameworks to complement what I was learning by doing every day.
 
 The combination was powerful in a way that either experience alone wouldn't have been. I was studying marketing theory at night and applying it to a real product with real users during the day. Pricing strategy wasn't an abstract case study — it was a decision I had to make about HELOC rates that would show up on a live platform by Friday. Consumer behavior wasn't a chapter in a textbook — it was something I could measure in real time through EquityOnline's analytics.
 

@@ -34,10 +34,17 @@ Bill's call: the blog was AI-written and never held to the QC standard this doma
 
 **The mechanism that failed, and the rule that replaces it:** the ten were staged with staggered `publishedAt` and auto-published on a Sanity time-gate while the plan still recorded them as "awaiting Bill's review." The gate wasn't skipped, it was scheduled around. **Nothing on this domain goes live on a date. Only on a merge.**
 
-Still open, needs Bill:
-- [ ] `building-equityonline-quicken-loans` omits the **Rock Bank COO** step — Bill joined Quicken Loans in 2004 as COO of the Rock Bank project and moved to VP National Home Equity when it wound down. The post jumps straight to EquityOnline.
-- [ ] Same post dates the **MBA to 2003** ("during this same period") while narrating 2004–2005. One of the two is wrong.
-- [ ] Decide whether `springeq-launch-gtm-case-study` belongs in `/essays` — it's first-person and fact-clean, but a case study rather than a career story.
+Answered by Bill 2026-07-30 and applied:
+- [x] **The Rock Bank story is now in the essay.** It previously read "This wasn't to be - a story for another time." Bill's account: he led the effort to get an OTS charter; Dan Gilbert wanted to own a professional sports franchise; the OTS was not comfortable with that adjacent risk next to a bank charter; Gilbert turned down the bank. That is what moved him to VP National Home Equity and produced EquityOnline.
+- [x] **MBA corrected 2003 → 2004** everywhere (`/api/bio`, `llms.txt`, `/about` fallback + timeline, `seed-about-page.ts`, the aboutPage doc in Sanity, and the essay). 2003 predated the Quicken tenure it was described as happening "during," so it contradicted the narrative it sat inside.
+- [x] **SpringEQ stays in `/essays`** — Bill: "another defining moment... once again helping to build another consumer direct online home equity platform."
+
+### Canonical fact corrections (2026-07-30)
+
+Supersedes the prior record. Both are now consistent across every surface:
+
+- **MBA Marketing, University of Phoenix — 2004** (was 2003).
+- **Rock Bank did not "wind down."** Bill led the OTS charter effort and Dan Gilbert turned it down rather than give up owning a professional sports franchise, which the OTS treated as adjacent risk to a bank charter.
 
 ---
 
