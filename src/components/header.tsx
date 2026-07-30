@@ -26,6 +26,12 @@ export function Header() {
               Book
             </Link>
             <Link
+              href="/essays"
+              className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
+            >
+              Essays
+            </Link>
+            <Link
               href="/blog"
               className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
             >

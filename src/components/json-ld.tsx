@@ -1,3 +1,5 @@
+import { BILL_RICE_ID } from '@/lib/identity'
+
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (
     <script
@@ -59,5 +61,45 @@ export function breadcrumbJsonLd(
       name: item.name,
       item: item.url,
     })),
+  }
+}
+
+/**
+ * Essay JSON-LD.
+ *
+ * Unlike `articleJsonLd` above, this does NOT inline a Person — it references
+ * the canonical `@id` established in src/lib/identity.ts, so an essay attaches
+ * to the one Bill Rice node the rest of the estate already points at rather
+ * than minting a look-alike. See ~/Code/_shared-docs/bill-rice-identity.md.
+ *
+ * `datePublished` is emitted because schema.org consumers expect it and the
+ * date is real — it is simply never rendered on the page.
+ */
+export function essayJsonLd({
+  title,
+  standfirst,
+  url,
+  imageUrl,
+  publishedAt,
+}: {
+  title: string
+  standfirst: string
+  url: string
+  imageUrl?: string
+  publishedAt?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#essay`,
+    headline: title,
+    description: standfirst,
+    url,
+    ...(imageUrl && { image: imageUrl }),
+    ...(publishedAt && { datePublished: publishedAt }),
+    author: { '@id': BILL_RICE_ID },
+    publisher: { '@id': BILL_RICE_ID },
+    isPartOf: { '@id': `${baseUrl}/#website` },
+    mainEntityOfPage: url,
   }
 }

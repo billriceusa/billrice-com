@@ -219,3 +219,42 @@ export const ABOUT_PAGE_QUERY = defineQuery(/* groq */ `
     speakingWriting
   }
 `)
+
+/**
+ * Essays — the durable tier. Ordered editorially (order asc), NOT by date.
+ * `publishedAt` is a gate only: it filters, it never sorts the display and is
+ * never rendered. Essays without an explicit order fall to the end, newest first.
+ */
+export const ESSAYS_QUERY = defineQuery(/* groq */ `
+  *[_type == "essay" && defined(slug.current) && defined(publishedAt) && publishedAt <= now()]
+  | order(coalesce(order, 9999) asc, publishedAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    standfirst,
+    order
+  }
+`)
+
+export const ESSAY_BY_SLUG_QUERY = defineQuery(/* groq */ `
+  *[_type == "essay" && slug.current == $slug && defined(publishedAt) && publishedAt <= now()][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    standfirst,
+    order,
+    publishedAt,
+    body,
+    ogImage {
+      asset->{ _id, url },
+      alt
+    },
+    seo { metaTitle, metaDescription }
+  }
+`)
+
+export const ESSAY_SLUGS_QUERY = defineQuery(/* groq */ `
+  *[_type == "essay" && defined(slug.current) && defined(publishedAt) && publishedAt <= now()] {
+    "slug": slug.current
+  }
+`)

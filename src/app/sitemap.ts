@@ -35,6 +35,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/essays`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/now`,
       lastModified,
       changeFrequency: 'monthly',
@@ -72,6 +78,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   } catch {
     // Sanity unavailable — static pages only
+  }
+
+  // Essays from Sanity — undated on the page, but publishedAt is a real value
+  // and is the correct lastmod signal.
+  let essayPages: MetadataRoute.Sitemap = []
+  try {
+    const essays: { slug: string; publishedAt: string }[] = await client.fetch(
+      `*[_type == "essay" && defined(slug.current) && defined(publishedAt) && publishedAt <= now()]
+       | order(coalesce(order, 9999) asc) [0...100] {
+         "slug": slug.current,
+         publishedAt
+       }`
+    )
+    essayPages = (essays || []).map((essay) => ({
+      url: `${BASE_URL}/essays/${essay.slug}`,
+      lastModified: new Date(essay.publishedAt),
+      changeFrequency: 'yearly' as const,
+      priority: 0.8,
+    }))
+  } catch {
+    // Sanity unavailable
   }
 
   // Blog categories from Sanity
@@ -124,6 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...essayPages,
     ...blogPages,
     ...categoryPages,
     ...companyPages,

@@ -33,3 +33,19 @@ export type Category = {
   description: string | null
   postCount: number
 }
+
+export type EssaySummary = {
+  _id: string
+  title: string | null
+  slug: string | null
+  standfirst: string | null
+  order: number | null
+}
+
+export type EssayDetail = EssaySummary & {
+  /** Gate only — never rendered. Essays are deliberately undated. */
+  publishedAt: string | null
+  body: SanityImage
+  ogImage: { asset: { _id: string; url: string } | null; alt: string | null } | null
+  seo: { metaTitle: string | null; metaDescription: string | null } | null
+}

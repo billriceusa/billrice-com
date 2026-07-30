@@ -2,6 +2,7 @@ import { blockContent } from './block-content'
 import { author } from './author'
 import { category } from './category'
 import { post } from './post'
+import { essay } from './essay'
 import { siteSettings } from './site-settings'
 import { company } from './company'
 import { project } from './project'
@@ -17,6 +18,7 @@ export const schemaTypes = [
   author,
   category,
   post,
+  essay,
   siteSettings,
   company,
   project,

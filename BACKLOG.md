@@ -20,12 +20,23 @@ Everything on the site should be judged against that. Concretely:
 ### Open — essays direction
 
 - [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation.
-- [ ] **Decide the surface.** Do essays live in `/blog` alongside career stories, or get their own `/essays` route with distinct typography and no dates? Undated reads as durable; dated reads as current. Recommend `/essays`, undated, with a short standfirst each.
+- [x] **Decide the surface — done 2026-07-30. Built `/essays`, undated, standfirst each.** New `essay` Sanity type (deliberately not a `post`), `/essays` index + `/essays/[slug]`, nav entry, sitemap wiring. Key constraint baked into the schema and worth preserving: `publishedAt` is a **gate only** — it filters and supplies sitemap `lastmod`, and is never rendered. A visible date turns a durable essay back into a perishable post. Ordering is editorial (`order` asc), not chronological. Essay JSON-LD references the canonical `@id` from `src/lib/identity.ts` rather than inlining a Person, so essays attach to the one Bill Rice node instead of minting a look-alike.
 - [ ] **Retire or re-frame the chronological blog** once the essay set exists.
 
 ---
 
 ## Shipped
+
+### Identity graph + canonical URI (PRs #6–#11, 2026-07-28 → 07-29)
+Six PRs that made billrice.com the authoritative record for the Bill Rice entity across the estate. Previously unrecorded here.
+- `#6` prep billrice.com as the single podcast/speaking CTA
+- `#7` canonical book URLs + Sales Team of One added to the machine-readable record
+- `#8` cleaned the `sameAs` graph; dropped Gumroad and dead DemoLeadGen
+- `#9` canonicalized social + project URLs everywhere, not just in `sameAs`
+- `#10` modelled the entity graph to spec; server-rendered the JSON-LD
+- `#11` established one canonical identity URI (`https://billrice.com/#person`) across the estate — new `src/lib/identity.ts`
+
+State as of 2026-07-30, verified by parsing the live page: the homepage serves a single `@graph` of **7 nodes, every one fully typed** — Person, WebSite, three Organizations (Kaleidico, BRSG, Verified Vector), two Books. No reference-only nodes, so nothing dangles. kaleidico.com and billricestrategy.com each emit their own matching `#organization`, so those merge cross-domain; billricestrategy.com also carries the canonical `#person`. verifiedvector.com emits no JSON-LD at all, so that entity rests solely on billrice.com's assertion — a verifiedvector.com decision, **not** a defect here.
 
 ### Infrastructure
 - Sanity CMS migration (schemas: post, project, company, book, tool, author, category, nowPage, aboutPage, siteSettings, blockContent)
@@ -77,7 +88,7 @@ Everything on the site should be judged against that. Concretely:
 ## Next up
 
 ### Single-source-of-truth hardening
-- [ ] Verify each staged post renders correctly on its `publishedAt` date (spot-check 2-3 in the next two weeks)
+- [x] Verify each staged post renders correctly on its `publishedAt` date — **done 2026-07-30**: all 10 staged slugs return HTTP 200 live (not a spot-check; every one was hit). All `publishedAt` dates have passed, so the Sanity time-gate + ISR path is proven end to end.
 - [x] `/api/bio` updated with full editorial-rule-compliant bios, companies, career highlights (2026-04-15)
 - [x] `llms.txt` timeline + About Bill Rice section + Companies section updated (2026-04-15)
 - [x] `/about` fallback content (timeline, differentiators, ventures) brought into alignment with canonical facts (2026-04-15)
