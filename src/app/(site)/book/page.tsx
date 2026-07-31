@@ -3,6 +3,7 @@ import { sanityFetch } from '@/sanity/lib/live'
 import { BOOK_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
 import { JsonLd } from '@/components/json-ld'
+import { AMAZON_LBP_URL } from '@/lib/books'
 
 export const metadata: Metadata = {
   title: "The Lead Buyer's Playbook",
@@ -97,7 +98,7 @@ export default async function BookPage() {
               </a>
             )) || (
               <a
-                href="https://www.amazon.com/dp/B0DRBK6QJZ"
+                href={AMAZON_LBP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-black hover:bg-black hover:text-white text-black px-8 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {
   siteEntityGraph,
 } from '@/lib/structured-data'
+import { AMAZON_LBP_URL } from '@/lib/books'
 import { sanityFetch } from '@/sanity/lib/live'
 import {
   SITE_SETTINGS_QUERY,
@@ -136,7 +137,6 @@ const FALLBACK_HERO_SUBTEXT =
 const LEAD_BUYERS_PLAYBOOK_URL = 'https://leadbuyersplaybook.com'
 const SALES_TEAM_OF_ONE_URL = 'https://salesteamofone.com'
 const LEAD_BRIEF_URL = 'https://theleadbrief.com/'
-const AMAZON_LBP_URL = 'https://www.amazon.com/dp/B0DRBK6QJZ'
 
 const ExternalLinkIcon = () => (
   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { AMAZON_LBP_URL, AMAZON_STOO_URL } from '@/lib/books';
 
 const bioData = {
   name: 'Bill Rice',
@@ -70,7 +71,7 @@ const bioData = {
       year: 2025,
       status: 'published',
       url: 'https://leadbuyersplaybook.com/',
-      amazon: 'https://www.amazon.com/dp/B0DRBK6QJZ',
+      amazon: AMAZON_LBP_URL,
     },
     {
       title: 'Sales Team of One',
@@ -78,7 +79,7 @@ const bioData = {
       year: 2026,
       status: 'forthcoming — free chapters available now',
       url: 'https://salesteamofone.com/',
-      amazon: null,
+      amazon: AMAZON_STOO_URL,
     },
   ],
 
