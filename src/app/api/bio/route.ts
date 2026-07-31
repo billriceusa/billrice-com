@@ -5,7 +5,7 @@ const bioData = {
   name: 'Bill Rice',
   url: 'https://billrice.com',
   email: 'bill@billrice.com',
-  location: 'Ocala, FL',
+  location: 'Monroe, MI',
   headshot: 'https://billrice.com/bill-rice-headshot.jpg',
 
   bios: {
@@ -33,6 +33,7 @@ const bioData = {
     twitter: 'https://x.com/billrice',
     youtube: 'https://www.youtube.com/@billricestrategy',
     medium: 'https://medium.com/@billrice',
+    substack: 'https://substack.com/@billrice',
   },
 
   companies: [

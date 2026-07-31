@@ -24,13 +24,19 @@ export const BILL_RICE_ID = 'https://billrice.com/#person'
 export const BILL_RICE_URL = 'https://billrice.com'
 
 /**
- * Identity profiles only. Every entry verified 2026-07-29:
+ * Identity profiles only. First five verified 2026-07-29:
  *  - Wikidata Q139037772 "Bill Rice, American marketing strategist and lead
  *    generation expert", official website billrice.com. The strongest
  *    disambiguator in the set — an authority-controlled entity ID.
  *  - LinkedIn /in/billrice is canonical. /in/billricemortgage has no evidence
  *    of existing and must never be reintroduced.
  *  - YouTube channel UCybXcF5WUxxwjhefKItztsA resolves to this same handle.
+ *
+ * Substack verified and added 2026-07-31. It earns its slot for a specific
+ * reason: theleadbrief.com is a Substack, and every post there emits an
+ * anonymous Person for Bill — no @id, stale description — that we cannot
+ * edit. Profile user 62504742 matches the identifier in that node, so this
+ * entry is the only edge tying it back to this entity.
  */
 export const BILL_RICE_SAME_AS = [
   'https://www.wikidata.org/wiki/Q139037772',
@@ -38,6 +44,7 @@ export const BILL_RICE_SAME_AS = [
   'https://x.com/billrice',
   'https://www.youtube.com/@billricestrategy',
   'https://medium.com/@billrice',
+  'https://substack.com/@billrice',
 ] as const
 
 /**
