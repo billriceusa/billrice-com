@@ -87,22 +87,73 @@ So the essay is **"it worked, and here is the expensive thing I learned anyway"*
 
 ---
 
-## Outstanding — Round 2
+## Verified — Round 2, Bill's own account, 2026-08-05
 
-Not yet answered. Do not draft the corresponding sections until these land.
+### Software (icoSales, 2005) — right about the constraint, wrong about who to build for
 
-1. **Software (icoSales, 2005)** — what did Bill believe the problem was while building
-   it, versus what it actually was? The old spec guesses "routing and speed"; unverified.
-2. **Agency (Kaleidico + MPL)** — what does the agency seat systematically fail to see
-   about the lender's side? Inability to see the sales floor, or something worse —
-   optimizing a number that reports well but does not fund loans?
-3. **Agency, concrete change** — what actually changed in how Kaleidico operates after
-   Velocity? A report, a question asked of clients, a metric no longer led with.
-4. **Author (The Lead Buyer's Playbook)** — is it fair that the book places last, and
-   what does it genuinely not cover? Working hypothesis, unconfirmed: it can teach someone
-   to buy leads well, but cannot hand them a sales operation or a partnership temperament.
-5. **The Monday-morning action** — the one thing a lender should do differently, so the
-   essay ends on something actionable rather than on the four-seats conceit.
+Bill assumed routing and speed was the problem, "and it was." But underneath it:
+
+> "Choice and sales instinct was paralyzing and often wrong."
+
+They solved it with intelligent prioritization based on conversion patterns. The finding:
+
+> "The 'desirability' of the lead (high loan amounts and high credit scores — big
+> commissions and smooth processing) was not correlated to 'convertibility' — revenue."
+
+Most lead management companies — where they did prioritization at all, "most were just
+fancy spreadsheets and lists" — prioritized on **what LOs wanted**, i.e. desirability. The
+data showed that was hurting them. **The conversions were sitting in the messy middle.**
+Bill's claim: "We were the first to see and set this pattern."
+
+### Agency — the CPL race externalizes cost onto the client's sales floor
+
+Without true partnership, agencies lack the data to model convertibility, so they are
+forced into a race to the bottom on Cost Per Lead. Bill's mechanism for why that backfires:
+
+> "Lead generation is a marketplace, much like stock. Higher quality leads and stock most
+> often in an efficient market cost more. If we are pushing for the lowest cost we are
+> making a tradeoff for lower quality leads that we (sales operations) become the filter
+> for."
+
+The receipt, from Velocity: he got **aged leads and real-time leads to convert at the same
+CAC** — but with real-time he only had to sales-process **hundreds versus thousands** to
+hit the same LO production goals. Automation is what buys margin for quality shifts.
+
+### Agency — what concretely changed at Kaleidico after Velocity
+
+- Discovery calls now dig deep on **sales process**.
+- **Will not sell to a client without a CRM** and without a defensible sales operation
+  that will convert.
+- Marketing **and sales** benchmarks are shared, agreed, and expected to be hit.
+- The pre-engagement model makes it visible what isn't working, so it can be identified
+  and worked — "us and them."
+
+### Author — the book places last, and the next book is the concession
+
+Confirmed: *The Lead Buyer's Playbook* can teach someone to buy leads well but cannot hand
+them a sales operation or the partnership temperament. Bill: **that gap is precisely what
+*Sales Team of One* exists to start closing.** (Status: first draft complete, editorial
+phase — not yet published. Reference it as forthcoming.)
+
+### The Monday-morning action
+
+> "Make speed to lead a text message, email, and phone sequence in that order. Take this
+> initial contact completely out of the hands of the LO. Systems (technology) works leads
+> and people (LOs) work (talk to) people. #1 = scheduled appointments/app calls."
+
+---
+
+## The through-line (synthesis — mine, not Bill's words)
+
+All four seats keep rediscovering the same thing from a different angle: **the lead is not
+the constraint; the operation that receives it is.**
+
+- *Software* — the LO's instinct about which lead to work is wrong. (Operation.)
+- *Agency* — the CPL race pushes filtering load onto the sales floor. (Operation.)
+- *Lender* — ~30 days assumed, ~6 months actual to stand the thing up. (Operation.)
+- *Author* — the book can't hand you one. (Operation.)
+
+No seat can see it from inside. That is the essay.
 
 ---
 
