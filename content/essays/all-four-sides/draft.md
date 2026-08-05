@@ -21,7 +21,9 @@ The thing underneath was that choice itself was the problem. Give a loan officer
 
 What came back from the data reorganized how I've thought about leads ever since. **The desirability of a lead was not correlated to its convertibility.** High loan amounts, high credit scores — big commissions, smooth processing, the files every LO wants — did not predict revenue. The conversions were sitting in the messy middle.
 
-Almost nobody else was seeing this, because almost nobody else was prioritizing at all. What passed for lead management in that era was mostly fancy spreadsheets and lists. And where firms *did* prioritize, they prioritized on what the loan officers asked for, which is to say on desirability. They were optimizing for the preference of the person working the lead rather than the behavior of the person on the other end of it. As far as I know, we were the first to see the pattern and build for it.
+Almost nobody else was seeing this, because almost nobody else was prioritizing at all. What passed for lead management in that era was mostly fancy spreadsheets and lists. And where firms *did* prioritize, they prioritized on what the loan officers asked for, which is to say on desirability. They were optimizing for the preference of the person working the lead rather than the behavior of the person on the other end of it. We were the first to see the pattern and build for it.
+
+Twenty years on, I'll make the harder version of that claim: most of this industry still isn't doing it. Salesforce, GoHighLevel, Velocify, Shape — the platforms that own this category are, functionally, expensive spreadsheets. Getting conversion-pattern prioritization to work inside any of them takes a serious pile of professional services, which is why the teams that genuinely have it generally bought a third-party layer to get it. I am still building this pattern by hand today, for my own properties and for the companies I work with.
 
 So: right about routing, right about speed, and building for the wrong party.
 
@@ -59,13 +61,15 @@ And then the part that cost me something to learn. Sitting on the buy side, I di
 
 Velocity worked. It was also brutally hard and a real distraction from what I'm actually best at. I'd do it again, because there is no other way to buy that experience.
 
+And it clarified something I'd never had to say out loud. I have always been better at leading a marketing operation than a sales operation. They are very different animals. I came out of those two years with a genuine, collaborative respect for both — and no illusions about which one is my native ground.
+
 ## 2025: my own book places last
 
 *The Lead Buyer's Playbook* is the fourth seat, and I'll rank it honestly: last.
 
 It will teach you to buy leads well. It cannot hand you a sales operation, and it cannot hand you the temperament to be a good partner to the people generating your demand. Those are the two things that actually decided whether Velocity made money, and the book covers neither.
 
-That gap is why I'm writing the next one.
+That gap is why I'm writing the next one. It's called *Sales Team of One*, and I'm writing it in the open at [SalesTeamofOne.com](https://salesteamofone.com) — drafts, arguments, and the parts I'm still working out.
 
 ## The pattern
 
@@ -84,3 +88,7 @@ Make speed to lead a **text, then email, then phone** sequence, in that order. T
 Systems work leads. People work people.
 
 Then change what you report on. Your number one metric is scheduled appointments and application calls — not dials, not cost per lead. Everything I learned in twenty years of building the front end, and two years of living with the back end, comes down to protecting the moment a human being finally talks to a human being.
+
+---
+
+I write **The Lead Brief** on how this plays out week to week — what's actually working in consumer-direct acquisition, and what only looks like it is. [Subscribe here.](https://theleadbrief.com)
