@@ -1,8 +1,10 @@
 ---
 title: "All Four Sides"
 slug: all-four-sides
+excerpt: "Software, agency, lender, author. Every seat on the consumer-direct lead is confidently wrong about something only the other three can see."
+publishedAt: "2026-08-06"
 standfirst: "I built the software that managed the consumer-direct lead, generated it as an agency, bought it as a lender against my own P&L, and wrote the book on buying it. Every one of those seats is confident about something the other three can see is wrong."
-status: draft
+status: ready
 ---
 
 I say a version of this line in the first two minutes of most podcasts: I've stood on all four sides of the consumer-direct lead.
