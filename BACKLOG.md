@@ -24,7 +24,7 @@ Everything on the site should be judged against that. Concretely:
 - [x] **Retire the chronological blog** (2026-07-30) — see below.
 - [x] **Essay 1: All Four Sides — drafted** (2026-08-06). Unblocked by interview, written, revised. See below.
 - [x] **Essay 1: All Four Sides — PUBLISHED** (2026-08-06). Merged as `ac2baf5` (PR #15), then published to Sanity. Live at `/essays/all-four-sides`, listed on `/essays`, in `sitemap.xml`, IndexNow pinged. Merge first, publish second — the order is the rule, not a preference.
-- [ ] **Add the Amazon Author Central page to the identity `sameAs` set.** `https://www.amazon.com/author/billricestrategy` — Bill's new author page, given 2026-08-06. **Still 404 as of this writing**; do not add an unverified URL to `sameAs`, for the same reason `books.ts` demands a 200 before changing an ASIN. See "Pending — Amazon author sameAs" below for the full file list.
+- [x] **Amazon Author Central added to `sameAs` on billrice.com** (2026-08-06, `c6aa5f1`). Verified live before shipping. **The five BRSG copies are still pending** — different scope, see below.
 - [ ] **New slate entry: "The Regulators Are Behind Your Customers."** Split out of All Four Sides on Bill's call, 2026-08-05 — regulators lagging consumer preference on text messaging. Real and live in the compliance work, but it pulled a 1,300-word argument sideways.
 
 ### Essay 1: "All Four Sides" — drafted 2026-08-06, awaiting publish
@@ -169,38 +169,48 @@ return 200 and all seven essay slugs resolve.
 
 ---
 
-## Pending — Amazon author `sameAs` <!-- 2026-08-06 -->
+## Amazon author `sameAs` — done here, pending on BRSG <!-- 2026-08-06 -->
 
-Bill created an Amazon Author Central page and gave the URL on 2026-08-06:
-`https://www.amazon.com/author/billricestrategy`. It belongs in the identity set — it is
-a profile that *is* Bill, the same class as the Medium and Substack entries, not a retail
-destination (those live in `src/lib/books.ts`).
+Bill created an Amazon Author Central page on 2026-08-06. Added to
+`BILL_RICE_SAME_AS` as the canonical `https://www.amazon.com/stores/author/B0HCDKK6LQ`.
+It is a profile that *is* Bill — same class as Medium and Substack — not a retail
+destination; those stay in `src/lib/books.ts`.
 
-**Blocked on verification, deliberately.** The URL still returned 404 ~30 minutes after
-Bill said it would be live. Author Central pages can take hours to become publicly
-visible. `books.ts` already carries the scar tissue for this exact mistake — a hardcoded
-Amazon ASIN went dead and 404'd the buy button in three places — and its header now
-demands a 200 before the constant changes. A `sameAs` pointing at a 404 is worse than an
-absent one: it is an assertion to a crawler that a nonexistent page is this person.
+This closes the gap the identity spec had carried since 2026-07-31 as its
+**highest-value missing profile**: two published books and no author profile to point at.
 
-**Note that Amazon returns 405 to HEAD.** Verify with a GET and a browser user-agent, or
-you will read a live page as broken.
+**On the URL form.** Bill supplied the vanity `amazon.com/author/billricestrategy`. That
+form 302s, and the page declares `rel=canonical` to the `/stores/author/` form, so the
+canonical is what we list. Both were fetched and serve the same page.
 
-When it returns 200, add it to `BILL_RICE_SAME_AS`. The file is mirrored, so this is
-**seven edits, not one** — the spec plus six copies:
+**Verification took ~45 minutes and was worth waiting for.** The URL 404'd well past the
+~30 minutes Bill expected. It was not added until it returned 200 *and* the body was
+read — title "Amazon.com: Bill Rice: books, biography, latest update". `books.ts` already
+carries the scar tissue for shipping an unverified Amazon URL, and a `sameAs` pointing at
+a 404 is worse than an absent one: it asserts to a crawler that a nonexistent page is
+this person.
 
-- [ ] `~/Code/_shared-docs/bill-rice-identity.md` — the spec; change it first
-- [ ] `sites/personal/billrice.com/src/lib/identity.ts` (this repo — Personal scope)
+Two traps for whoever re-verifies an Amazon URL by hand:
+
+- **Amazon answers `HEAD` with 405.** A status-only check reads a live page as broken.
+- **Repeated polling earns a 503.** That is throttling, not a dead page. Back off.
+
+### Still to do — five BRSG copies
+
+`identity.ts` is mirrored. Spec and this repo are done; the rest are **not**:
+
+- [x] `~/Code/_shared-docs/bill-rice-identity.md` — spec updated, gap marked closed
+- [x] `sites/personal/billrice.com/src/lib/identity.ts` — this repo (`c6aa5f1`)
 - [ ] `sites/brsg/owned/billricestrategy.com/src/lib/identity.ts`
 - [ ] `sites/brsg/owned/agedleadsales.com/lib/identity.ts` (note: `lib/`, not `src/lib/`)
 - [ ] `sites/brsg/owned/proinvestorhub.com/src/lib/identity.ts`
 - [ ] `sites/brsg/owned/leadcompliancehub.com/src/lib/identity.ts`
 - [ ] `sites/brsg/owned/cryptolendinghub.com/src/lib/identity.ts`
 
-The five BRSG copies are a **different business scope** and should be done from a BRSG
-session, not this one. Divergence here is additive rather than entity-splitting — the
-`@id` is what merges the graph, and that stays identical — but the file's own header is
-explicit that copies must not drift, so finish the set.
+Those five are a **different business scope** and should be done from a BRSG session, not
+this one. The drift is additive rather than entity-splitting — the `@id` is identical
+everywhere and `@id` is what merges the graph — so this is a reason not to panic, not a
+reason to leave it.
 
 Worth checking while there: `selfemployedlendinghub.com`, `theestategap.com`, and
 `verifiedvector.com` have **no `identity.ts` at all** and so emit no reference node.
