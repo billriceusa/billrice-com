@@ -194,7 +194,17 @@ export default async function HomePage() {
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl md:text-7xl">
             {heroTitle}
           </h1>
-          <p className="mt-6 text-2xl text-gray-600 max-w-3xl mx-auto">{heroTagline}</p>
+          {/* The claim links to the essay that argues it. Before this existed the
+              hero was a dead end — the only two buttons on the page both leave
+              the domain, so a reader thinking "prove it" had nowhere to go. */}
+          <p className="mt-6 text-2xl text-gray-600 max-w-3xl mx-auto">
+            <Link
+              href="/essays/all-four-sides"
+              className="underline decoration-[#E6BB00] decoration-2 underline-offset-4 hover:text-gray-900 transition-colors"
+            >
+              {heroTagline}
+            </Link>
+          </p>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">{heroSubtext}</p>
 
           <nav className="mt-10 flex flex-col sm:flex-row justify-center gap-4" aria-label="Primary navigation">

@@ -79,7 +79,6 @@ export default async function EssayPage({ params }: Props) {
             ? urlFor(post.mainImage).width(1200).height(630).url()
             : 'https://billrice.com/default-featured.jpg',
           publishedAt: post.publishedAt || '',
-          authorName: post.author?.name || 'Bill Rice',
         })}
       />
       <JsonLd

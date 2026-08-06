@@ -19,20 +19,57 @@ Everything on the site should be judged against that. Concretely:
 
 ### Open — essays direction
 
-- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation. Proposed slate + sequencing: `~/.buzz/PLANS/BILLRICE_COM_ESSAY_SLATE.md`.
+- [ ] **Define the essay set.** 3–5 pieces, each one Bill's thinking rather than industry commentary. Leading candidates from current work: the four-sides thesis; "contact isn't scarce anymore, welcome is"; the conversation becoming the unit of commerce; what 30 years says about which parts of selling survive automation. **The referenced slate file `~/.buzz/PLANS/BILLRICE_COM_ESSAY_SLATE.md` does not exist** (checked 2026-08-06) — this list is the only surviving record of the slate. Treat it as canonical or rebuild the file.
 - [x] **Decide the surface** (2026-07-30) — `/essays` is now the only writing surface. `/blog` is gone; nav reads Essays.
 - [x] **Retire the chronological blog** (2026-07-30) — see below.
-- [ ] **Essay 1: All Four Sides** — blocked on Bill. Full spec below.
+- [x] **Essay 1: All Four Sides — drafted** (2026-08-06). Unblocked by interview, written, revised. See below.
+- [ ] **Essay 1: All Four Sides — publish.** Sanity `post` + merge + the ships-with items. Only remaining work.
+- [ ] **New slate entry: "The Regulators Are Behind Your Customers."** Split out of All Four Sides on Bill's call, 2026-08-05 — regulators lagging consumer preference on text messaging. Real and live in the compliance work, but it pulled a 1,300-word argument sideways.
 
-### Next up — Essay 1: "All Four Sides"
+### Essay 1: "All Four Sides" — drafted 2026-08-06, awaiting publish
 
-**Status:** blocked on one input from Bill (the Velocity Lending receipt). Everything else
-is ready to draft. Opened 2026-07-30 at Bill's direction — "I love this insight and
-recommendation, but I don't have time right now to give you this detail."
+**Status:** written. `content/essays/all-four-sides/draft.md` on branch
+`essay-all-four-sides`, 1,632 words. Source interview captured alongside it in
+`interview.md` (working notes, not for publication). Unblocked 2026-08-05 by a two-round
+interview with Bill; every number in the essay is his, verbatim from that interview.
 
 **Why this essay first:** cheapest to write (source material already assembled in
 `~/Code/memory/shared/reference_bill_positioning_four_sides.md`), and it is the only
 essay that fixes a live defect on the homepage.
+
+#### Two premises in the original spec were wrong — corrected by the interview
+
+The spec below is preserved because its *diagnosis* was right. Two of its *assumptions*
+were not, and the essay had to go elsewhere:
+
+1. **The CAC premise was wrong.** The spec assumed the buyer-leg receipt was "what a
+   funded loan actually cost versus what he assumed going in." It wasn't. Bill had a good
+   read going in and held Velocity to a consistent **~$1,500 CAC per funded loan**. He was
+   not humbled on price. The real receipt is that he budgeted ~30 days to stand up the
+   sales operation and it took **~6 months** — he knew leads cold and underestimated the
+   machine that receives them.
+2. **"The cost of the twelfth dial" was not Bill's.** The phrase appeared in the spec
+   unattributed; flagged as possibly invented by a prior session, and it was. Bill's
+   actual mechanism: speed to *contact* (text first), then whether the LO could take a
+   clean app and file on the first call — which put pull-through over 50%. Not dial count.
+   **Do not reuse the twelfth-dial phrasing anywhere.**
+
+#### Editorial decisions on the draft (Bill, 2026-08-06)
+
+- **CTA:** one, The Lead Brief, with a subscription ask. Set below the closing line.
+- **Named the next book.** *Sales Team of One* is named and linked to SalesTeamofOne.com
+  as written-in-the-open.
+- **The "we were first" claim stands flat**, with a present-day defense rather than a
+  hedge: the platforms that own the category (Salesforce, GoHighLevel, Velocify, Shape)
+  are functionally expensive spreadsheets, and conversion-pattern prioritization inside
+  them takes a pile of professional services.
+- **Client build-examples held back — Bill approved the holdback 2026-08-06.** He offered
+  ProPair plus four current engagements as supporting evidence. Naming vendors under
+  critique is fair; naming clients as build examples is disclosure. The text says "a
+  third-party layer" and "the companies I work with" instead. See
+  `feedback_critique_vendors_by_name_never_clients`.
+- **Length accepted at 1,632** against the spec's 1,500 ceiling. Every word over came from
+  the rulings above.
 
 #### The three problems it solves
 
@@ -58,7 +95,8 @@ essay that fixes a live defect on the homepage.
 - *Software* (icoSales, 2005) thinks the problem is routing and speed. It isn't.
 - *Agency* (Kaleidico + MPL) thinks it's volume and source mix.
 - *Lender* (Velocity Lending, 2016–2018, Bill's own P&L) thinks it's price per lead —
-  then finds out it's the cost of the twelfth dial.
+  ~~then finds out it's the cost of the twelfth dial.~~ **Superseded, see above:** he was
+  right about price and wrong about how long the receiving operation takes to build.
 - *Author* (**The Lead Buyer's Playbook**, Nov 2025) thinks it's process, and has to
   concede process is the last 20%.
 
@@ -66,32 +104,30 @@ Payoff: everyone on every panel is optimizing their own blind spot. The fourth b
 what makes it credible — an essay where the author's own book places last is not a brag,
 and readers can tell.
 
-#### BLOCKER — what only Bill can supply
+#### ~~BLOCKER~~ — RESOLVED 2026-08-05 by interview
 
-The buyer leg needs a real, specific, preferably unflattering receipt from **Velocity
-Lending (2016–2018)**. Do not invent or estimate this. Any one of these is enough:
-
-- What a funded loan actually cost in acquisition, versus what he assumed going in.
-- The month he learned the leads were fine and the follow-up wasn't — and how he learned it.
-- A number he was buying against that turned out to be measuring the wrong thing.
-- The dial-count/contact-rate reality that cost more than the lead price ever did.
-
-Decision already made (Bill's call, 2026-07-30): **carry this inside the Four Sides
-essay** rather than writing a standalone eighth career essay. It is stronger as evidence
-inside an argument than as its own story.
+Bill supplied the Velocity receipt directly. Captured verbatim in
+`content/essays/all-four-sides/interview.md`. Decision from 2026-07-30 held: **carried
+inside the Four Sides essay**, not written as a standalone eighth career essay.
 
 #### Ships with the essay — do not ship separately
 
-- **Link the homepage hero line to `/essays/all-four-sides`.** This is the whole point of
-  the piece; an unlinked hero sentence after this essay exists is a bug.
-- **Exactly one CTA on the essay: The Lead Brief.** Never two. Per the one-capture-per-
-  essay rule — and audit whether it can stay on-domain instead of opening
+- [ ] **Link the homepage hero line to `/essays/all-four-sides`.** Still unlinked —
+  re-verified against production 2026-08-06, it is a bare `<p>` with no anchor
+  (`src/app/(site)/page.tsx:132`, `FALLBACK_HERO_TAGLINE`). An unlinked hero sentence
+  after this essay exists is a bug.
+- [x] **Exactly one CTA on the essay: The Lead Brief.** Done in the draft.
+- [ ] **Audit whether the Lead Brief CTA can stay on-domain** rather than opening
   `theleadbrief.com` in a new tab, so a piece that lands well doesn't leak.
-- **Article schema**, `author` pointed at the canonical Person URI (PR #11).
-- Link the existing seven `/essays` pieces as the supporting receipts for legs 1–3.
+- [ ] **Article schema `author` → canonical Person URI.** Still not done, and it is
+  broader than this essay: `src/app/(site)/essays/[slug]/page.tsx:82` passes
+  `authorName: post.author?.name || 'Bill Rice'`, which inlines a fresh Person on all
+  seven live essay pages instead of referencing `BILL_RICE_ID`. Partially undoes PR #11.
+- [ ] Link the existing seven `/essays` pieces as the supporting receipts for legs 1–3.
 
-**Length:** 1,200–1,500. **Sequencing after this:** I Work in Code → Contact/Welcome →
-What Survives → Conversation. One every 4–6 weeks; if it slips, let it.
+**Length:** spec said 1,200–1,500; **shipped at 1,632 with Bill's approval.**
+**Sequencing after this:** I Work in Code → Contact/Welcome → What Survives →
+Conversation, plus the new Regulators piece. One every 4–6 weeks; if it slips, let it.
 
 ### 2026-07-30 — the blog is gone
 
@@ -115,6 +151,27 @@ Supersedes the prior record. Both are now consistent across every surface:
 
 - **MBA Marketing, University of Phoenix — 2004** (was 2003).
 - **Rock Bank did not "wind down."** Bill led the OTS charter effort and Dan Gilbert turned it down rather than give up owning a professional sports franchise, which the OTS treated as adjacent risk to a bank charter.
+
+---
+
+## P2 — queue <!-- added 2026-08-06 /session -->
+
+Found in a live spot-audit 2026-08-06. Nothing here is bleeding: `/` and `/essays` both
+return 200 and all seven essay slugs resolve.
+
+- [ ] **Article schema inlines an author** — see the ships-with list above. Highest-value
+  item here; it silently degrades the canonical-identity work of PR #11 on seven pages.
+- [ ] **Delete `public/sitemap.xml`.** Still on `main` (blob `57cc0b18`). It shadows the
+  dynamic `MetadataRoute.Sitemap` *locally only* — production correctly serves the
+  21-URL dynamic sitemap including `/essays`, verified 2026-08-06. Not a live defect; a
+  trap for whoever next debugs a sitemap locally.
+- [ ] **Close PR #12** ("Add /essays — the durable tier"). Open as a draft and
+  unmergeable: it added a separate `essay` Sanity type, and PRs #13/#14 superseded that
+  architecture by deleting `/blog` and rendering `post` documents at `/essays`. Merging
+  it would undo shipped decisions. Its two salvageable fixes are the sitemap deletion and
+  the author-URI fix, both listed here — take those and close it.
+- [ ] **`vercel.json` pins `NODE_VERSION: "18.x"`** under Next.js 16, which needs 20+.
+- [ ] **`/api/bio` has no `tools` key** — it exposes `companies`, `projects`, `books`.
 
 ---
 
