@@ -23,7 +23,8 @@ Everything on the site should be judged against that. Concretely:
 - [x] **Decide the surface** (2026-07-30) — `/essays` is now the only writing surface. `/blog` is gone; nav reads Essays.
 - [x] **Retire the chronological blog** (2026-07-30) — see below.
 - [x] **Essay 1: All Four Sides — drafted** (2026-08-06). Unblocked by interview, written, revised. See below.
-- [ ] **Essay 1: All Four Sides — publish.** Sanity `post` + merge + the ships-with items. Only remaining work.
+- [x] **Essay 1: All Four Sides — PUBLISHED** (2026-08-06). Merged as `ac2baf5` (PR #15), then published to Sanity. Live at `/essays/all-four-sides`, listed on `/essays`, in `sitemap.xml`, IndexNow pinged. Merge first, publish second — the order is the rule, not a preference.
+- [ ] **Add the Amazon Author Central page to the identity `sameAs` set.** `https://www.amazon.com/author/billricestrategy` — Bill's new author page, given 2026-08-06. **Still 404 as of this writing**; do not add an unverified URL to `sameAs`, for the same reason `books.ts` demands a 200 before changing an ASIN. See "Pending — Amazon author sameAs" below for the full file list.
 - [ ] **New slate entry: "The Regulators Are Behind Your Customers."** Split out of All Four Sides on Bill's call, 2026-08-05 — regulators lagging consumer preference on text messaging. Real and live in the compliance work, but it pulled a 1,300-word argument sideways.
 
 ### Essay 1: "All Four Sides" — drafted 2026-08-06, awaiting publish
@@ -159,19 +160,50 @@ Supersedes the prior record. Both are now consistent across every surface:
 Found in a live spot-audit 2026-08-06. Nothing here is bleeding: `/` and `/essays` both
 return 200 and all seven essay slugs resolve.
 
-- [ ] **Article schema inlines an author** — see the ships-with list above. Highest-value
-  item here; it silently degrades the canonical-identity work of PR #11 on seven pages.
-- [ ] **Delete `public/sitemap.xml`.** Still on `main` (blob `57cc0b18`). It shadows the
-  dynamic `MetadataRoute.Sitemap` *locally only* — production correctly serves the
-  21-URL dynamic sitemap including `/essays`, verified 2026-08-06. Not a live defect; a
-  trap for whoever next debugs a sitemap locally.
-- [ ] **Close PR #12** ("Add /essays — the durable tier"). Open as a draft and
-  unmergeable: it added a separate `essay` Sanity type, and PRs #13/#14 superseded that
-  architecture by deleting `/blog` and rendering `post` documents at `/essays`. Merging
-  it would undo shipped decisions. Its two salvageable fixes are the sitemap deletion and
-  the author-URI fix, both listed here — take those and close it.
+- [x] **Article schema inlines an author** — fixed in PR #15, verified live: every essay
+  now emits `"author":{"@id":"https://billrice.com/#person"}`.
+- [x] **Delete `public/sitemap.xml`** — done in PR #15. `/sitemap.xml` serves as a route.
+- [x] **Close PR #12** — closed 2026-08-06 with a comment recording what superseded it.
 - [ ] **`vercel.json` pins `NODE_VERSION: "18.x"`** under Next.js 16, which needs 20+.
 - [ ] **`/api/bio` has no `tools` key** — it exposes `companies`, `projects`, `books`.
+
+---
+
+## Pending — Amazon author `sameAs` <!-- 2026-08-06 -->
+
+Bill created an Amazon Author Central page and gave the URL on 2026-08-06:
+`https://www.amazon.com/author/billricestrategy`. It belongs in the identity set — it is
+a profile that *is* Bill, the same class as the Medium and Substack entries, not a retail
+destination (those live in `src/lib/books.ts`).
+
+**Blocked on verification, deliberately.** The URL still returned 404 ~30 minutes after
+Bill said it would be live. Author Central pages can take hours to become publicly
+visible. `books.ts` already carries the scar tissue for this exact mistake — a hardcoded
+Amazon ASIN went dead and 404'd the buy button in three places — and its header now
+demands a 200 before the constant changes. A `sameAs` pointing at a 404 is worse than an
+absent one: it is an assertion to a crawler that a nonexistent page is this person.
+
+**Note that Amazon returns 405 to HEAD.** Verify with a GET and a browser user-agent, or
+you will read a live page as broken.
+
+When it returns 200, add it to `BILL_RICE_SAME_AS`. The file is mirrored, so this is
+**seven edits, not one** — the spec plus six copies:
+
+- [ ] `~/Code/_shared-docs/bill-rice-identity.md` — the spec; change it first
+- [ ] `sites/personal/billrice.com/src/lib/identity.ts` (this repo — Personal scope)
+- [ ] `sites/brsg/owned/billricestrategy.com/src/lib/identity.ts`
+- [ ] `sites/brsg/owned/agedleadsales.com/lib/identity.ts` (note: `lib/`, not `src/lib/`)
+- [ ] `sites/brsg/owned/proinvestorhub.com/src/lib/identity.ts`
+- [ ] `sites/brsg/owned/leadcompliancehub.com/src/lib/identity.ts`
+- [ ] `sites/brsg/owned/cryptolendinghub.com/src/lib/identity.ts`
+
+The five BRSG copies are a **different business scope** and should be done from a BRSG
+session, not this one. Divergence here is additive rather than entity-splitting — the
+`@id` is what merges the graph, and that stays identical — but the file's own header is
+explicit that copies must not drift, so finish the set.
+
+Worth checking while there: `selfemployedlendinghub.com`, `theestategap.com`, and
+`verifiedvector.com` have **no `identity.ts` at all** and so emit no reference node.
 
 ---
 
@@ -192,7 +224,13 @@ return 200 and all seven essay slugs resolve.
 - Branded default featured image for blog posts
 
 ### Scripts
-- `publish-post.ts` — markdown → Sanity (upsert by slug)
+- `publish-post.ts` — markdown → Sanity (upsert by slug). **Go-live action**, not a
+  staging step: it writes straight to the published dataset and pings IndexNow. Two
+  gotchas fixed 2026-08-06 (`53be536`): it emitted a literal `---` paragraph for a
+  markdown horizontal rule (caught on the live all-four-sides page, republished same
+  day), and its header wrongly claimed `SANITY_API_TOKEN` could live in `.env.local` —
+  tsx never reads that file. The Sanity CLI login token on disk works; the exact
+  invocation is now in the script header.
 - `audit-posts.ts` — read-only post inventory
 - `fetch-mortgage-posts.ts` — inspect post body
 - `seed-*.ts` — siteSettings, aboutPage, nowPage, tools (all idempotent)
