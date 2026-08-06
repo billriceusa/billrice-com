@@ -37,6 +37,21 @@ export const BILL_RICE_URL = 'https://billrice.com'
  * anonymous Person for Bill — no @id, stale description — that we cannot
  * edit. Profile user 62504742 matches the identifier in that node, so this
  * entry is the only edge tying it back to this entity.
+ *
+ * Amazon Author Central verified and added 2026-08-06. Bill supplied the vanity
+ * URL amazon.com/author/billricestrategy; that form 302s, and the page itself
+ * declares rel=canonical amazon.com/stores/author/B0HCDKK6LQ, so the canonical
+ * is what goes here. Both forms were fetched and return the same page, titled
+ * "Amazon.com: Bill Rice: books, biography, latest update".
+ *
+ * This is a profile that IS Bill, so it belongs in sameAs. The Amazon *product*
+ * pages for his books are a different thing entirely and live in
+ * src/lib/books.ts — a retail destination is not an identity.
+ *
+ * Two traps if you ever re-verify these by hand:
+ *  - Amazon answers HEAD with 405. Check with GET and a browser UA or you will
+ *    read a live page as broken.
+ *  - Repeated polling earns a 503. Back off; it is throttling, not a dead page.
  */
 export const BILL_RICE_SAME_AS = [
   'https://www.wikidata.org/wiki/Q139037772',
@@ -45,6 +60,7 @@ export const BILL_RICE_SAME_AS = [
   'https://www.youtube.com/@billricestrategy',
   'https://medium.com/@billrice',
   'https://substack.com/@billrice',
+  'https://www.amazon.com/stores/author/B0HCDKK6LQ',
 ] as const
 
 /**
