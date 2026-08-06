@@ -3,7 +3,18 @@
  *
  * Usage: npx tsx scripts/publish-post.ts content/posts/my-post.md
  *
- * Requires SANITY_API_TOKEN in .env.local (must have write access to project st1plnki)
+ * Requires a write-access SANITY_API_TOKEN for project st1plnki in the
+ * environment. Note that tsx does NOT read .env.local, so putting it there does
+ * nothing on its own -- it has to be exported or passed inline. The Sanity CLI's
+ * own login token works and is already on disk once you have run `sanity login`:
+ *
+ *   SANITY_API_TOKEN=$(node -e "process.stdout.write(require(require('os').homedir()+'/.config/sanity/config.json').authToken)") \
+ *     npx tsx scripts/publish-post.ts content/essays/my-essay/draft.md
+ *
+ * This script goes live. createOrReplace writes straight to the published
+ * dataset and the queries gate only on `publishedAt <= now()`, so the post is
+ * reachable within one ISR window. It also pings IndexNow. Run it after the
+ * merge, never before.
  *
  * Markdown frontmatter format:
  * ---
@@ -79,6 +90,15 @@ function markdownToBlocks(markdown: string) {
 
     // Skip empty lines
     if (line.trim() === '') {
+      i++
+      continue
+    }
+
+    // Skip horizontal rules. Portable text has no divider block, and the
+    // paragraph collector below would otherwise emit a block whose text is the
+    // literal "---". That shipped on all-four-sides and was visible on the live
+    // page until it was republished the same day.
+    if (/^\s*([-*_])\1{2,}\s*$/.test(line)) {
       i++
       continue
     }
