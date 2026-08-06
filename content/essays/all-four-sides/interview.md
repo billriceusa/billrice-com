@@ -2,8 +2,8 @@
 
 Working notes for `/essays/all-four-sides`. Not for publication.
 
-Interview conducted 2026-08-05. Round 1 (buyer seat) complete; Round 2 (software /
-agency / author seats) outstanding.
+Interview conducted 2026-08-05, both rounds complete. Draft written and revised against
+Bill's editorial rulings 2026-08-06. Every number in the essay traces to this file.
 
 ---
 
@@ -165,14 +165,33 @@ No seat can see it from inside. That is the essay.
 - **Carried inside this essay, not standalone:** the Velocity story itself. Bill's call,
   2026-07-30 — stronger as evidence inside an argument than as an eighth career piece.
 
+## Editorial rulings on the draft — Bill, 2026-08-06
+
+1. **CTA → The Lead Brief, with a subscription ask.** Applied; set below the closing line.
+2. **Name the next book.** Applied — *Sales Team of One*, linked to SalesTeamofOne.com as
+   written-in-the-open.
+3. **Restore the flat "we were the first" claim, with a defense.** Applied. Bill's
+   supporting argument: "Even today people aren't doing this without third-party add-ons
+   like ProPair. Salesforce, Go High Level, Velocify, Shape Software, etc are all still
+   just fancy - high priced - spreadsheets that take a ton of professional services to
+   replicate this pattern. Meanwhile, I'm still building these for myself and clients
+   dropprivacy, agedleadstore, billricestrategy and soon Kaleidico."
+
+   **Applied with a deliberate holdback, which Bill approved 2026-08-06.** The platform
+   critique is in by name — those are vendors under public critique, fair game. **ProPair
+   and the four client engagements are out.** Naming what you build *for a client* is
+   disclosure of that client's tactics, which is a different act from criticizing a
+   vendor. The text reads "a third-party layer" and "the companies I work with." The
+   claim survives intact without them. Generalized to
+   `feedback_critique_vendors_by_name_never_clients`.
+4. **Keep the "distracted from my core competency" admission**, plus the
+   marketing-operation-vs-sales-operation line. Applied verbatim to Bill's framing.
+
+**Length:** 1,632 words against a 1,500 spec ceiling. Bill accepted it 2026-08-06 — every
+word over came from rulings 1–4.
+
 ## Ships with the essay
 
-Unchanged from the BACKLOG spec, all still open:
-
-- Link the homepage hero line to `/essays/all-four-sides`. An unlinked hero sentence after
-  this essay exists is a bug.
-- Exactly one CTA: The Lead Brief. Audit whether it can stay on-domain rather than opening
-  `theleadbrief.com` in a new tab.
-- Article schema with `author` pointed at the canonical Person URI. **Still not done** —
-  `/essays/[slug]` currently inlines an author via `articleJsonLd({ authorName })`.
-- Link the seven existing `/essays` pieces as the receipts for legs 1–3.
+Tracked in `BACKLOG.md` (the canonical list). Status as of 2026-08-06: the single CTA is
+done; the homepage hero link, the on-domain CTA audit, the Article-schema author URI, and
+the cross-links to the seven existing essays are all still open.
