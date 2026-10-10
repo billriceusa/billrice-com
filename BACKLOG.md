@@ -1,6 +1,6 @@
 # billrice.com Backlog
 
-Single source of truth for billrice.com work. Last updated 2026-07-30.
+Single source of truth for billrice.com work. Last updated 2026-10-10.
 
 **Stack**: Next.js 16 + Sanity.io (`st1plnki`) + Tailwind v4 + Resend
 **Repo**: `~/Code/sites/personal/billrice.com` (canonical)
@@ -113,17 +113,15 @@ inside the Four Sides essay**, not written as a standalone eighth career essay.
 
 #### Ships with the essay — do not ship separately
 
-- [ ] **Link the homepage hero line to `/essays/all-four-sides`.** Still unlinked —
-  re-verified against production 2026-08-06, it is a bare `<p>` with no anchor
-  (`src/app/(site)/page.tsx:132`, `FALLBACK_HERO_TAGLINE`). An unlinked hero sentence
-  after this essay exists is a bug.
+- [x] **Link the homepage hero line to `/essays/all-four-sides`.** Done — shipped in
+  PR #15 and verified in code 2026-10-10: the tagline is wrapped in a `Link` to the
+  essay. This box was left open after the work landed.
 - [x] **Exactly one CTA on the essay: The Lead Brief.** Done in the draft.
 - [ ] **Audit whether the Lead Brief CTA can stay on-domain** rather than opening
   `theleadbrief.com` in a new tab, so a piece that lands well doesn't leak.
-- [ ] **Article schema `author` → canonical Person URI.** Still not done, and it is
-  broader than this essay: `src/app/(site)/essays/[slug]/page.tsx:82` passes
-  `authorName: post.author?.name || 'Bill Rice'`, which inlines a fresh Person on all
-  seven live essay pages instead of referencing `BILL_RICE_ID`. Partially undoes PR #11.
+- [x] **Article schema `author` → canonical Person URI.** Done — `articleJsonLd`
+  references `billRiceRef` and the per-essay `authorName` argument is gone. Duplicated
+  the already-ticked entry in the P2 queue below; both were the same item.
 - [ ] Link the existing seven `/essays` pieces as the supporting receipts for legs 1–3.
 
 **Length:** spec said 1,200–1,500; **shipped at 1,632 with Bill's approval.**
@@ -164,8 +162,111 @@ return 200 and all seven essay slugs resolve.
   now emits `"author":{"@id":"https://billrice.com/#person"}`.
 - [x] **Delete `public/sitemap.xml`** — done in PR #15. `/sitemap.xml` serves as a route.
 - [x] **Close PR #12** — closed 2026-08-06 with a comment recording what superseded it.
-- [ ] **`vercel.json` pins `NODE_VERSION: "18.x"`** under Next.js 16, which needs 20+.
+- [x] **`vercel.json` pinned `NODE_VERSION: "18.x"`** — fixed 2026-10-10, and the
+  diagnosis was understated in one direction and overstated in the other. Vercel has no
+  Node version key in `vercel.json` at all; `NODE_VERSION` as a build env var is a
+  Netlify convention. So nothing was pinned to 18 — the block was inert, and all it did
+  was tell a reader Node was pinned when it was not. Vercel reads Project Settings or
+  `engines.node`; it now supports 20.x, 22.x and 24.x, and 18.x is off the list. Dropped
+  the block, set `engines.node` to `"22.x"`.
 - [ ] **`/api/bio` has no `tools` key** — it exposes `companies`, `projects`, `books`.
+
+---
+
+## 2026-10-10 — session log
+
+### Shipped
+
+- **The lint script had been dead since the Next 16 upgrade.** `next lint` was removed in
+  Next 16, so `npm run lint` failed with "Invalid project directory ... /lint" — an error
+  that reads like a path bug. `eslint .` did not work either: `eslint.config.mjs` built
+  its config through `FlatCompat`, and the translated `next/core-web-vitals` object
+  contains a cycle, which the eslintrc validator hit while JSON.stringify-ing the config
+  to format errors. Both fixed; `@eslint/eslintrc` dropped, flat configs spread directly.
+  Added `typecheck`. With lint running it immediately found a dead `baseUrl` in
+  `json-ld.tsx`. **Run `npm run lint` before pushing — it works now.**
+- **Aged-lead domains consolidated.** `agedleadsales.com` and `howtoworkleads.com` both
+  301 to `workagedleads.com` (both fetched 2026-10-10). Merged into a single **Work Aged
+  Leads** entry rather than repointing two cards at one site. Live on `/api/bio` and
+  `llms.txt` (both static). Also dropped DemoLeadGen from a retired post that still
+  listed it.
+- **Books are addressed by slug, not position.** `BOOK_QUERY` was `*[_type=="book"][0]`
+  with no ordering — GROQ promises no order, so the day a second book document landed
+  `/book` could have rendered the wrong book under Playbook metadata, a Playbook
+  canonical and a Playbook JSON-LD node, silently. Replaced with `BOOK_BY_SLUG_QUERY` and
+  an explicitly totally-ordered `BOOKS_QUERY`. Added `/books` and `/books/[slug]`; `/book`
+  keeps its URL, its fallbacks and its place in the nav. Fixed an inlined anonymous
+  Person in the Book JSON-LD on the way — same entity-splitting the essays were fixed for.
+- **The scripts no longer let the shell choose the project.** See below; this one was
+  close to a live incident.
+
+### The script project-id hazard — what it actually was
+
+All twelve scripts took `projectId` from `NEXT_PUBLIC_SANITY_PROJECT_ID` with
+`'st1plnki'` only as a fallback, and ten of them mutate the published dataset. **The
+cloud container this ran in had that variable set to a different project entirely**, so
+every script here was one command away from writing Bill's canonical content somewhere
+unknown, with no dry run and no confirmation.
+
+Project and dataset are now pinned in `scripts/sanity-client.ts` and a disagreeing
+environment variable is a hard stop, not an override. The nine scripts telling readers to
+put the token in `.env.local` were corrected too — tsx never reads it, so that advice
+fails in a way that looks like a bad token rather than an unset one.
+
+### Stale checkboxes corrected
+
+Both of these were already done in code and still showed open above:
+
+- **Homepage hero link** — shipped in PR #15. `page.tsx` wraps the tagline in a `Link` to
+  `/essays/all-four-sides`. The open box under "Ships with the essay" was wrong.
+- **Article schema `author` → canonical Person URI** — done. `articleJsonLd` references
+  `billRiceRef`; the per-essay `authorName` argument is gone.
+
+### Open — needs Sanity access
+
+Nothing below can be done from a cloud session as currently configured: **the Sanity API
+is blocked by the environment's network policy** (403 on CONNECT to `*.api.sanity.io`,
+confirmed both by curl and through the Sanity client itself). There is also no write
+token here, only `SANITY_API_READ_TOKEN`. Both need fixing before any of this runs.
+
+- [ ] **`scripts/patch-author-pillar.ts` does not exist.** Handed over as the first task
+  of this session — review its seven-field diff, then `--apply`. It is not on disk, not
+  in any branch, and not in history on any ref; the session that wrote it never committed
+  it, and the container was a fresh clone. It has to be rewritten. Until something runs,
+  `/book` still renders the superseded subtitle from Sanity, which wins over the code
+  fallback.
+- [ ] **Confirm `LEAD_BUYERS_PLAYBOOK_SLUG`** in `src/lib/books.ts` against the dataset.
+  Written as `the-lead-buyers-playbook` but never read back. If it is wrong, `/book`
+  serves its hardcoded fallbacks — the same page a reader sees today, so the failure is
+  invisible rather than loud. Delete the caveat on the constant once checked.
+- [ ] **Patch the two stale `project` documents in Sanity** to the merged Work Aged Leads
+  entry. The homepage reads `PROJECTS_QUERY` and only falls back to the array in
+  `page.tsx`, so the live homepage still shows the two old cards.
+- [ ] **The Sanity bodies of the two retired posts** still carry the old aged-lead URLs.
+  Inert while they stay unpublished; both 301 anyway.
+
+### Other open items from this session
+
+- [ ] **Decide when the nav moves from `/book` to `/books`.** Right while one book is
+  published; wrong once the second ships. `/books` is currently linked only from `/book`,
+  which keeps it off the orphan list but is thin.
+- [ ] **`colorScheme`, `themeColor` and `viewport` sit in a `metadata` export**, which
+  Next 16 warns about on every build and wants in a `viewport` export instead.
+  Pre-existing, cosmetic today, a deprecation later. Small fix, not taken.
+- [ ] **An unknown dynamic slug 500s rather than 404s when Sanity is unreachable** —
+  `sanityFetch` throws before `notFound()`. Pre-existing and identical on `/essays/*` and
+  `/projects/*`, so `/books/[slug]` matches the house pattern rather than fixing it
+  alone. Arguably correct (a 500 asks a crawler to retry; a 404 tells it to drop the
+  page) but worth a deliberate decision.
+
+### Carried over verbatim from the previous session
+
+**The series is "Team of One," not "The Founder's Library."** Decided 9 Oct 2026 in
+`books-shared/series/SERIES-BIBLE.md`, which explicitly rejected the latter. The stale
+name still sits in `broke-at-a-million`'s `CLAUDE.md` and `README`, so a fresh session
+reading those will repeat the mistake. **That is a different repo and out of scope from
+here** — recorded so it is not lost a second time. Nothing in billrice.com uses either
+name; checked.
 
 ---
 
