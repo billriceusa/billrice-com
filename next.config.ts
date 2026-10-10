@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { LEAD_BUYERS_PLAYBOOK_SLUG } from "./src/lib/books";
 
 // Slugs of the industry posts unpublished on 2026-07-30. Kept here so the
 // redirect list and scripts/unpublish-industry-posts.ts can be diffed against
@@ -80,6 +81,18 @@ const nextConfig: NextConfig = {
       {
         source: '/home',
         destination: '/',
+        permanent: true,
+      },
+      // The Playbook is canonical at /book, which predates the /books library
+      // and is what the nav, the sitemap and llms.txt point at. This lives here
+      // rather than as a redirect() inside the page because /books/[slug] is
+      // statically generated: a redirect() in a prerendered route cannot carry
+      // an HTTP status, so Next emits a meta-refresh page instead, which search
+      // engines treat as a soft redirect. At the routing layer it is a real 308
+      // and the page is never rendered at all.
+      {
+        source: `/books/${LEAD_BUYERS_PLAYBOOK_SLUG}`,
+        destination: '/book',
         permanent: true,
       },
       // Retired 2026-07-30. Ten machine-drafted industry posts were removed from
