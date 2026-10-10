@@ -3,7 +3,15 @@ import { sanityFetch } from '@/sanity/lib/live'
 import { BOOK_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
 import { JsonLd } from '@/components/json-ld'
-import { AMAZON_LBP_URL } from '@/lib/books'
+import {
+  AMAZON_LBP_URL,
+  AMAZON_STOO_URL,
+  BROKE_AT_A_MILLION,
+  LEAD_BUYERS_PLAYBOOK,
+  SALES_TEAM_OF_ONE,
+  SERIES_NAME,
+  SERIES_PLANNED_VOLUMES,
+} from '@/lib/books'
 
 export const metadata: Metadata = {
   title: "The Lead Buyer's Playbook",
@@ -46,7 +54,7 @@ export default async function BookPage() {
           '@context': 'https://schema.org',
           '@type': 'Book',
           name: book?.title || "The Lead Buyer's Playbook",
-          alternateName: book?.subtitle || 'The Enterprise Guide to Buying and Converting Leads Profitably',
+          alternateName: book?.subtitle || LEAD_BUYERS_PLAYBOOK.subtitle,
           author: { '@type': 'Person', name: 'Bill Rice', url: baseUrl },
           url: `${baseUrl}/book`,
           datePublished: book?.publishedDate || '2025-11',
@@ -66,11 +74,9 @@ export default async function BookPage() {
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
               {book?.title || "The Lead Buyer's Playbook"}
             </h1>
-            {(book?.subtitle || true) && (
-              <p className="mt-4 text-xl text-gray-500">
-                {book?.subtitle || 'The Enterprise Guide to Buying and Converting Leads Profitably'}
-              </p>
-            )}
+            <p className="mt-4 text-xl text-gray-500">
+              {book?.subtitle || LEAD_BUYERS_PLAYBOOK.subtitle}
+            </p>
             <p className="mt-2 text-gray-400">
               By {book?.author?.name || 'Bill Rice'} &middot; {book?.publishedDate ? new Date(book.publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : 'November 2025'}
             </p>
@@ -152,25 +158,53 @@ export default async function BookPage() {
           <div className="max-w-3xl mx-auto mt-16">
             <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-black rounded-lg p-7">
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                Also from Bill Rice · Free chapters available now
+                Also from Bill Rice ·{' '}
+                {SALES_TEAM_OF_ONE.status === 'preorder' ? 'Pre-order now' : 'Available now'}
+                {SALES_TEAM_OF_ONE.releaseDate
+                  ? ` · ships ${new Date(`${SALES_TEAM_OF_ONE.releaseDate}T00:00:00Z`).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric',
+                      timeZone: 'UTC',
+                    })}`
+                  : ''}
               </p>
-              <h2 className="text-2xl font-bold text-gray-900">Sales Team of One</h2>
-              <p className="mt-1 text-gray-500">
-                How to Stay Irreplaceable When AI Comes for the Sales Team
-              </p>
+              <h2 className="text-2xl font-bold text-gray-900">{SALES_TEAM_OF_ONE.title}</h2>
+              <p className="mt-1 text-gray-500">{SALES_TEAM_OF_ONE.subtitle}</p>
               <p className="mt-4 text-gray-600">
                 The Playbook is about buying the lead. This one is about who is left to work it — and how to stay the
-                person who can, while the org around the seller collapses into software.
+                person who can, while the org around the seller collapses into software. It is the flagship of{' '}
+                {SERIES_NAME}, a planned {SERIES_PLANNED_VOLUMES} short books for the person who is the whole company.
               </p>
-              <a
-                href="https://salesteamofone.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-5 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                aria-label="Read the opening of Sales Team of One free (opens in new tab)"
-              >
-                Read the Opening — salesteamofone.com
-              </a>
+              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={AMAZON_STOO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                  aria-label="Pre-order Sales Team of One on Amazon (opens in new tab)"
+                >
+                  Pre-order on Amazon
+                </a>
+                <a
+                  href={SALES_TEAM_OF_ONE.freeReadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-black hover:bg-black hover:text-white text-black px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                  aria-label="Read the opening of Sales Team of One free (opens in new tab)"
+                >
+                  Read the Opening Free
+                </a>
+              </div>
+
+              {/* Book two. No subtitle and no date on purpose — see books.ts. */}
+              <div className="mt-7 border-t border-gray-200 pt-5">
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                  Next · {SERIES_NAME}, book two · In development
+                </p>
+                <p className="text-lg font-bold text-gray-900">{BROKE_AT_A_MILLION.title}</p>
+                <p className="mt-2 text-gray-600">{BROKE_AT_A_MILLION.blurb}</p>
+              </div>
             </div>
           </div>
         </div>

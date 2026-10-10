@@ -5,14 +5,19 @@ import { sanityFetch } from '@/sanity/lib/live'
 import { ABOUT_PAGE_QUERY, SITE_SETTINGS_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
 import { aboutProfilePageStructuredData } from '@/lib/structured-data'
+import { BROKE_AT_A_MILLION, SERIES_NAME, SERIES_PLANNED_VOLUMES } from '@/lib/books'
 import { JsonLd } from '@/components/json-ld'
 
 export const metadata: Metadata = {
-  title: 'About Bill Rice | Career, Experience & Expertise',
+  title: 'About Bill Rice | Author, Founder & Fintech Marketing Pioneer',
   description:
-    'Bill Rice is a fintech marketing pioneer who coined "lead management," built platforms at DeepGreen Bank and Quicken Loans, and has spent 30+ years building lead generation systems for financial services companies.',
+    'Bill Rice is the author of The Lead Buyer\'s Playbook and Sales Team of One, founder and CRO of Kaleidico, and principal of Bill Rice Strategy Group. He coined "lead management," built platforms at DeepGreen Bank and Quicken Loans, and has spent 30+ years building lead generation systems for financial services companies.',
   keywords: [
     'Bill Rice',
+    'Bill Rice author',
+    'The Lead Buyer\'s Playbook',
+    'Sales Team of One',
+    'Team of One series',
     'fintech marketing',
     'lead management',
     'Kaleidico',
@@ -124,9 +129,16 @@ const FALLBACK_TIMELINE = [
   {
     year: '2025',
     title: "Published The Lead Buyer's Playbook",
-    subtitle: 'Enterprise guide to lead buying',
+    subtitle: 'How to turn third-party leads into a predictable revenue engine',
     description:
-      "Published The Lead Buyer's Playbook, the enterprise guide to buying and converting leads profitably. Drawing on 30+ years in lead generation, the book covers strategic foundations, vendor management, compliance, financial modeling, and scaling operations.",
+      "Published The Lead Buyer's Playbook. Drawing on 30+ years in lead generation, the book covers strategic foundations, vendor portfolio risk, validation, compliance, true cost per lead, and scaling operations — the systems a company needs before it buys another lead.",
+  },
+  {
+    year: '2026',
+    title: 'Full author mode — Sales Team of One and the Team of One library',
+    subtitle: 'Eight short books for the person who is the whole company',
+    description:
+      'Published Sales Team of One, on staying irreplaceable when AI comes for the sales team, and began Team of One — a planned eight-volume library for solo consultants and bootstrapping founders. Each book is named for the constraint currently binding the business rather than for a department, and each stands alone. Book two, Broke at a Million, is in development.',
   },
   {
     year: '2025-Present',
@@ -419,7 +431,11 @@ export default async function AboutPage() {
                   <p>
                     Author of{' '}
                     <a href="https://leadbuyersplaybook.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">The Lead Buyer&rsquo;s Playbook</a>{' '}
-                    (2025). Publisher of{' '}
+                    (2025) and{' '}
+                    <a href="https://salesteamofone.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">Sales Team of One</a>{' '}
+                    (2026), and author of {SERIES_NAME} — a planned {SERIES_PLANNED_VOLUMES} short books for solo
+                    consultants and bootstrapping founders, of which {BROKE_AT_A_MILLION.title} is book two, in
+                    development. Publisher of{' '}
                     <a href="https://theleadbrief.com/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700">The Lead Brief</a>{' '}
                     newsletter. Regular speaker at Lead Generation World and fintech industry conferences. Featured guest on 30+ marketing and business podcasts.
                   </p>

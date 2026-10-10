@@ -12,6 +12,14 @@
  */
 
 import { BILL_RICE_ID, BILL_RICE_SAME_AS } from './identity'
+import {
+  BOOKS,
+  SERIES_ID,
+  SERIES_NAME,
+  SERIES_PLANNED_VOLUMES,
+  bookNodeId,
+  type Book,
+} from './books'
 
 /**
  * billrice.com is the AUTHORITATIVE description of the person. Every other
@@ -23,15 +31,13 @@ export const WEBSITE_ID = 'https://billrice.com/#website'
 export const KALEIDICO_ID = 'https://kaleidico.com/#organization'
 export const BRSG_ID = 'https://billricestrategy.com/#organization'
 export const VERIFIED_VECTOR_ID = 'https://verifiedvector.com/#organization'
-export const LEAD_BUYERS_PLAYBOOK_ID = 'https://leadbuyersplaybook.com/#book'
-export const SALES_TEAM_OF_ONE_ID = 'https://salesteamofone.com/#book'
 
 export const personStructuredData = {
   "@type": "Person",
   "@id": PERSON_ID,
   "name": "Bill Rice",
-  "jobTitle": "Fintech Marketing Strategist & Lead Generation Pioneer",
-  "description": "Fintech marketing pioneer who coined 'lead management,' was Employee #7 at DeepGreen Bank, built EquityOnline at Quicken Loans, and owned Velocity Lending, a DTC mortgage lender. 30+ years building lead generation platforms for financial services companies. Author of The Lead Buyer's Playbook.",
+  "jobTitle": "Author · Founder & CRO, Kaleidico · Principal, Bill Rice Strategy Group",
+  "description": "Author of The Lead Buyer's Playbook and Sales Team of One, and of the Team of One library for solo operators and bootstrapping founders. Founder, CRO and co-owner of Kaleidico; founder, principal and owner of Bill Rice Strategy Group. Coined 'lead management,' was Employee #7 at DeepGreen Bank, built EquityOnline at Quicken Loans, and owned Velocity Lending, a DTC mortgage lender — 30+ years on every side of the consumer-direct lead.",
   "url": "https://billrice.com",
   "mainEntityOfPage": { "@id": WEBSITE_ID },
   "nationality": { "@type": "Country", "name": "United States" },
@@ -50,9 +56,12 @@ export const personStructuredData = {
     { "@id": BRSG_ID },
     { "@id": VERIFIED_VECTOR_ID }
   ],
+  // Every book, plus the series itself, by reference. Generated from
+  // src/lib/books.ts so a new title cannot be added to the site without also
+  // being claimed here — the drift that left Sales Team of One unlisted.
   "author": [
-    { "@id": LEAD_BUYERS_PLAYBOOK_ID },
-    { "@id": SALES_TEAM_OF_ONE_ID }
+    ...BOOKS.map((book) => ({ "@id": bookNodeId(book) })),
+    { "@id": SERIES_ID }
   ],
   "knowsAbout": [
     "Lead Generation",
@@ -64,7 +73,11 @@ export const personStructuredData = {
     "Demand Generation",
     "Aged Leads",
     "Go-to-Market Strategy",
-    "AI-powered Marketing"
+    "AI-powered Marketing",
+    // The subjects of the Team of One library, so the author pillar and the
+    // expertise claims describe the same person.
+    "Founder-Led Sales",
+    "Small Business Cash Flow"
   ],
   "alumniOf": [
     {
@@ -79,6 +92,21 @@ export const personStructuredData = {
     }
   ],
   "hasOccupation": [
+    // Author leads the list on purpose. It is the pillar this site is being
+    // built around, and the first occupation is what most consumers of this
+    // graph surface as the person's primary role.
+    {
+      "@type": "Occupation",
+      "name": "Author",
+      "occupationalCategory": "Business Nonfiction",
+      "description": "Author of The Lead Buyer's Playbook (2025) and Sales Team of One (2026), and of the Team of One library — a planned eight volumes for solo operators and bootstrapping founders, each named for the constraint currently binding the business"
+    },
+    {
+      "@type": "Occupation",
+      "name": "Principal & Owner",
+      "occupationalCategory": "B2B Strategy Consulting",
+      "description": "Founder, principal and owner of Bill Rice Strategy Group, a B2B strategic agency serving fintech companies"
+    },
     {
       "@type": "Occupation",
       "name": "AFOSI Special Agent & Case Officer",
@@ -99,9 +127,9 @@ export const personStructuredData = {
     },
     {
       "@type": "Occupation",
-      "name": "Founder & CRO",
+      "name": "Founder, CRO & Co-Owner",
       "occupationalCategory": "Marketing Agency Founder",
-      "description": "Founded Kaleidico, coined 'lead management', built icoSales"
+      "description": "Founded Kaleidico in 2005, coined 'lead management', built icoSales; continues as CRO and co-owner following the agency's acquisition"
     }
   ],
   "memberOf": [
@@ -165,36 +193,71 @@ export const organizationNodes = [
   }
 ];
 
-export const bookNodes = [
-  {
+/**
+ * One Book node per entry in src/lib/books.ts.
+ *
+ * Built rather than hand-written so the graph cannot disagree with the buy
+ * buttons. Every optional field is emitted only when the fact is actually
+ * known — a forthcoming book with no date is honest, a guessed datePublished
+ * is a false claim that outlives the guess.
+ */
+function toBookNode(book: Book): Record<string, unknown> {
+  return {
     "@type": "Book",
-    "@id": LEAD_BUYERS_PLAYBOOK_ID,
-    "name": "The Lead Buyer's Playbook",
-    "alternateName": "The Enterprise Guide to Buying and Converting Leads Profitably",
+    "@id": bookNodeId(book),
+    "name": book.title,
+    // alternateName is the real subtitle, never a superseded working one.
+    ...(book.subtitle ? { "alternateName": book.subtitle } : {}),
     "author": { "@id": PERSON_ID },
     "publisher": { "@id": PERSON_ID },
-    "url": "https://leadbuyersplaybook.com/",
-    "datePublished": "2025-11",
-    "bookEdition": "First Edition",
-    "bookFormat": "https://schema.org/EBook",
-    "description": "The enterprise guide to buying and converting leads profitably. A systematic approach that turns lead buying from a cost center into a competitive advantage.",
-    "genre": "Business",
-    "inLanguage": "en"
-  },
-  {
-    "@type": "Book",
-    "@id": SALES_TEAM_OF_ONE_ID,
-    "name": "Sales Team of One",
-    "alternateName": "How to Stay Irreplaceable When AI Comes for the Sales Team",
-    "author": { "@id": PERSON_ID },
-    "publisher": { "@id": PERSON_ID },
-    "url": "https://salesteamofone.com/",
-    "bookFormat": "https://schema.org/EBook",
-    "description": "The sales org that used to feed a seller is being automated out from under the people standing on it. A field guide to being the whole team yourself — and wielding the thing that is coming for everyone else.",
+    "url": book.url,
+    ...(book.datePublished ? { "datePublished": book.datePublished } : {}),
+    ...(book.isbn ? { "isbn": book.isbn } : {}),
+    ...(book.inSeries ? { "isPartOf": { "@id": SERIES_ID } } : {}),
+    // A pre-order is a real, priced offer with a start date. Emitting it is
+    // what makes the listing eligible to show as orderable rather than as an
+    // announcement.
+    ...(book.status === 'preorder' && book.amazonUrl
+      ? {
+          "offers": {
+            "@type": "Offer",
+            "url": book.amazonUrl,
+            "price": book.priceUsd,
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
+            ...(book.releaseDate ? { "availabilityStarts": book.releaseDate } : {}),
+            "seller": { "@type": "Organization", "name": "Amazon.com" }
+          }
+        }
+      : {}),
+    "description": book.blurb,
     "genre": "Business",
     "inLanguage": "en"
   }
-];
+}
+
+export const bookNodes = BOOKS.map(toBookNode)
+
+/**
+ * The series as its own entity, so "author of a body of work" is a claim the
+ * graph can actually represent — not just three unrelated Book nodes.
+ *
+ * No `position` on any member and no numberOfItems: per the series bible this
+ * is a library with no reading order, and every volume opens cold.
+ */
+export const seriesNode = {
+  "@type": "BookSeries",
+  "@id": SERIES_ID,
+  "name": SERIES_NAME,
+  "author": { "@id": PERSON_ID },
+  "publisher": { "@id": PERSON_ID },
+  "description": `A library of ${SERIES_PLANNED_VOLUMES} short books for the solo consultant and the bootstrapping founder — one person, or one person plus a few. Each volume is named for the constraint that is currently binding the business rather than for a department, and each stands alone: there is no reading order.`,
+  "genre": "Business",
+  "inLanguage": "en",
+  "hasPart": BOOKS.filter((book) => book.inSeries).map((book) => ({
+    "@id": bookNodeId(book)
+  }))
+};
 
 /** The single graph emitted on the homepage. */
 export const siteEntityGraph = {
@@ -203,6 +266,7 @@ export const siteEntityGraph = {
     personStructuredData,
     websiteStructuredData,
     ...organizationNodes,
+    seriesNode,
     ...bookNodes
   ]
 };
@@ -219,7 +283,12 @@ export const aboutProfilePageStructuredData = {
       "isPartOf": { "@id": WEBSITE_ID },
       "mainEntity": { "@id": PERSON_ID }
     },
-    personStructuredData
+    personStructuredData,
+    // The Person node claims authorship by @id. Without these, those refs
+    // dangle on the one page that is meant to be the authoritative
+    // description of the person — so the books ride along here too.
+    seriesNode,
+    ...bookNodes
   ]
 };
 

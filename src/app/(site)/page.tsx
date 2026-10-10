@@ -3,7 +3,14 @@ import Image from 'next/image'
 import {
   siteEntityGraph,
 } from '@/lib/structured-data'
-import { AMAZON_LBP_URL } from '@/lib/books'
+import {
+  AMAZON_LBP_URL,
+  AMAZON_STOO_URL,
+  BROKE_AT_A_MILLION,
+  SALES_TEAM_OF_ONE,
+  SERIES_NAME,
+  SERIES_PLANNED_VOLUMES,
+} from '@/lib/books'
 import { sanityFetch } from '@/sanity/lib/live'
 import {
   SITE_SETTINGS_QUERY,
@@ -238,10 +245,11 @@ export default async function HomePage() {
               <div className="text-center mb-10">
                 <p className="text-sm font-semibold text-[#E6BB00] uppercase tracking-wide mb-2">The Books</p>
                 <h2 id="books-heading" className="text-3xl font-bold text-gray-900">
-                  Two field guides for the AI era of selling
+                  The books, and the library behind them
                 </h2>
                 <p className="mt-2 text-lg text-gray-500">
-                  One on buying leads profitably. One on staying irreplaceable when AI comes for the sales team.
+                  One on buying leads profitably. One on staying irreplaceable when AI comes for the sales team. And{' '}
+                  {SERIES_NAME} — {SERIES_PLANNED_VOLUMES} short books for the person who is the whole company.
                 </p>
               </div>
 
@@ -253,7 +261,7 @@ export default async function HomePage() {
                   </p>
                   <h3 className="text-2xl font-bold text-gray-900">The Lead Buyer&apos;s Playbook</h3>
                   <p className="mt-1 text-gray-500">
-                    The Enterprise Guide to Buying and Converting Leads Profitably
+                    How to Turn Third-Party Leads Into a Predictable Revenue Engine
                   </p>
                   <p className="mt-4 text-gray-600 flex-1">
                     Stop treating lead generation as a procurement problem. The systematic approach that turns lead
@@ -286,8 +294,19 @@ export default async function HomePage() {
 
                 {/* Sales Team of One */}
                 <article className="flex flex-col bg-white p-7 border border-gray-200 border-l-4 border-l-black rounded-lg">
+                  {/* Degrades on purpose: releaseDate is dropped from books.ts
+                      the day the book ships, and this must not then render
+                      "Invalid Date" on the homepage. */}
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                    Free chapters available now
+                    {SALES_TEAM_OF_ONE.status === 'preorder' ? 'Pre-order' : 'Published'} · {SERIES_NAME}
+                    {SALES_TEAM_OF_ONE.releaseDate
+                      ? ` · ${new Date(`${SALES_TEAM_OF_ONE.releaseDate}T00:00:00Z`).toLocaleDateString('en-US', {
+                          month: 'long',
+                          day: 'numeric',
+                          year: 'numeric',
+                          timeZone: 'UTC',
+                        })}`
+                      : ''}
                   </p>
                   <h3 className="text-2xl font-bold text-gray-900">Sales Team of One</h3>
                   <p className="mt-1 text-gray-500">
@@ -309,12 +328,13 @@ export default async function HomePage() {
                       Read the Opening
                     </a>
                     <a
-                      href={`${SALES_TEAM_OF_ONE_URL}/#notify`}
+                      href={AMAZON_STOO_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
+                      aria-label="Pre-order Sales Team of One on Amazon (opens in new tab)"
                     >
-                      Get Notified
+                      Pre-order on Amazon
                     </a>
                   </div>
                   <p className="mt-3 text-sm text-gray-500">
@@ -322,6 +342,34 @@ export default async function HomePage() {
                   </p>
                 </article>
               </div>
+
+              {/* The series. Sales Team of One is the flagship, so the library it
+                  belongs to is the part a reader cannot infer from the two cards
+                  above — and it is the thing that makes this an author's shelf
+                  rather than two unrelated titles. */}
+              <aside
+                className="mt-6 bg-white p-7 border border-gray-200 border-l-4 border-l-[#E6BB00] rounded-lg"
+                aria-labelledby="series-heading"
+              >
+                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                  The Series · {SERIES_PLANNED_VOLUMES} volumes planned
+                </p>
+                <h3 id="series-heading" className="text-2xl font-bold text-gray-900">
+                  {SERIES_NAME}
+                </h3>
+                <p className="mt-4 text-gray-600">
+                  Short books for the solo consultant and the bootstrapping founder — one person, or one person plus a
+                  few. Each one is named for the thing that is currently binding the business, not for a department. A
+                  library, not a course: there is no reading order, and every volume opens cold.
+                </p>
+                <div className="mt-6 border-t border-gray-200 pt-5">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">
+                    Book Two · In development
+                  </p>
+                  <p className="text-lg font-bold text-gray-900">{BROKE_AT_A_MILLION.title}</p>
+                  <p className="mt-2 text-gray-600">{BROKE_AT_A_MILLION.blurb}</p>
+                </div>
+              </aside>
             </div>
           </div>
         </section>
