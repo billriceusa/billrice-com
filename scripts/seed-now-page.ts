@@ -3,26 +3,15 @@
  *
  * Usage: npx tsx scripts/seed-now-page.ts
  *
- * Requires SANITY_API_TOKEN in .env.local (write access to st1plnki).
+ * Requires a write-access SANITY_API_TOKEN in the environment. tsx does not read
+ * .env.local -- see scripts/sanity-client.ts for the invocation that works.
  * Safe to re-run — upserts by _id = "nowPage".
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 import { randomUUID } from 'crypto'
 
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN in environment. Set it in .env.local')
-  process.exit(1)
-}
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-})
+const client = sanityScriptClient()
 
 // Minimal helper: build a block-content paragraph from plain text with optional
 // inline link spans. Marks refs use auto-generated keys.

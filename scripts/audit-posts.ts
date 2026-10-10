@@ -7,22 +7,9 @@
  * Read-only — does not modify anything.
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN in environment. Set it in .env.local')
-  process.exit(1)
-}
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-  perspective: 'raw',
-})
+const client = sanityScriptClient({ perspective: 'raw' })
 
 async function main() {
   const posts = await client.fetch<

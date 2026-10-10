@@ -26,15 +26,9 @@
  * ---
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
-
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN in environment. Set it in .env.local')
-  process.exit(1)
-}
 
 const filePath = process.argv[2]
 if (!filePath) {
@@ -42,13 +36,7 @@ if (!filePath) {
   process.exit(1)
 }
 
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-})
+const client = sanityScriptClient()
 
 // Parse frontmatter and body
 function parseMarkdown(content: string) {

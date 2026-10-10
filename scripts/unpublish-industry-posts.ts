@@ -17,24 +17,13 @@
  * `publishedAt <= now()`). Documents are NOT deleted — re-publishable by
  * setting publishedAt back. Same reversible pattern as unpublish-offbrand.ts.
  *
- * Requires SANITY_API_TOKEN in .env.local.
+ * Requires a write-access SANITY_API_TOKEN in the environment. tsx does not read
+ * .env.local -- see scripts/sanity-client.ts for the invocation that works.
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN in environment. Set it in .env.local')
-  process.exit(1)
-}
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-})
+const client = sanityScriptClient()
 
 // Audited 2026-07-30 against content/blog-content-plan.md and the project
 // memory, both of which record these as "awaiting Bill's review" before they

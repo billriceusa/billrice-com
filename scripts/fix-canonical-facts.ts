@@ -16,26 +16,15 @@
  * "already applied" rather than failing. Any needle that matches nothing at all
  * exits non-zero, so a silently-missed fix can't pass for a clean run.
  *
- * Requires SANITY_API_TOKEN in .env.local.
+ * Requires a write-access SANITY_API_TOKEN in the environment. tsx does not read
+ * .env.local -- see scripts/sanity-client.ts for the invocation that works.
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 
 const dryRun = process.argv.includes('--dry')
 
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN in environment. Set it in .env.local')
-  process.exit(1)
-}
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-})
+const client = sanityScriptClient()
 
 type Fix = { before: string; after: string; why: string }
 

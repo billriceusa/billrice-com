@@ -5,21 +5,9 @@
  * Usage: npx tsx scripts/fetch-mortgage-posts.ts
  */
 
-import { createClient } from 'next-sanity'
+import { sanityScriptClient } from './sanity-client'
 
-const token = process.env.SANITY_API_TOKEN
-if (!token) {
-  console.error('Missing SANITY_API_TOKEN')
-  process.exit(1)
-}
-
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'st1plnki',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-03-21',
-  useCdn: false,
-  token,
-})
+const client = sanityScriptClient()
 
 const ids = [
   'mortgage-lenders-measuring-wrong-kpis',
