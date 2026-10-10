@@ -4,8 +4,7 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "regions": ["iad1"],
-  "env": {
-    "NODE_VERSION": "18.x"
-  }
+  "regions": [
+    "iad1"
+  ]
 }

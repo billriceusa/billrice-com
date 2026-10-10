@@ -9,8 +9,6 @@ export function JsonLd({ data }: { data: Record<string, unknown> }) {
   )
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://billrice.com'
-
 /**
  * Article node for an essay.
  *
