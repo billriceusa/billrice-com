@@ -88,21 +88,17 @@ const FALLBACK_PROJECTS: Project[] = [
       'Weekly newsletter and podcast on lead generation strategy. Tactics for buying, generating, and converting more leads.',
     url: 'https://theleadbrief.com/',
   },
+  // Was two entries, agedleadsales.com and howtoworkleads.com. Both domains now
+  // 301 to workagedleads.com (verified 2026-10-10), so listing both would have
+  // pointed two cards at one site — a duplicate is worse than a stale link on
+  // the page that is supposed to be the canonical index of Bill's work.
   {
-    _id: 'f-als',
-    name: 'Aged Lead Sales',
-    slug: 'aged-lead-sales',
+    _id: 'f-wal',
+    name: 'Work Aged Leads',
+    slug: 'work-aged-leads',
     description:
-      'Sales training and education platform for working aged leads. Playbooks, calculators, and industry-specific strategies for insurance, mortgage, legal, and solar professionals.',
-    url: 'https://agedleadsales.com/',
-  },
-  {
-    _id: 'f-htwl',
-    name: 'How to Work Leads',
-    slug: 'how-to-work-leads',
-    description:
-      'Practical strategies and proven techniques for converting leads into customers, from first contact to close.',
-    url: 'https://howtoworkleads.com/',
+      'The aged-lead operator\'s manual — scripts, cadences, and unit economics for records 30 to 365 days old, plus independent provider reviews, a quarterly lead price index, and free pipeline calculators across 15+ verticals.',
+    url: 'https://workagedleads.com/',
   },
   {
     _id: 'f-pih',

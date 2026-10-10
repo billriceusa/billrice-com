@@ -52,10 +52,9 @@ Bill Rice is a fintech marketing pioneer with 30+ years building lead generation
 
 ## Projects
 1. **The Lead Brief** (https://theleadbrief.com/) — Weekly newsletter and podcast on lead generation strategy
-2. **Aged Lead Sales** (https://agedleadsales.com/) — Sales training and education for working aged leads
-3. **How to Work Leads** (https://howtoworkleads.com/) — Practical strategies for converting leads into customers
-4. **ProInvestorHub** (https://proinvestorhub.com/) — Real estate investing education with guides, calculators, and market data
-5. **CryptoLendingHub** (https://cryptolendinghub.com/) — Crypto lending education with platform reviews and rate comparisons
+2. **Work Aged Leads** (https://workagedleads.com/) — Scripts, cadences, and unit economics for working aged leads, plus independent provider reviews and a quarterly lead price index
+3. **ProInvestorHub** (https://proinvestorhub.com/) — Real estate investing education with guides, calculators, and market data
+4. **CryptoLendingHub** (https://cryptolendinghub.com/) — Crypto lending education with platform reviews and rate comparisons
 
 ## Free Tools
 1. **WriteMySalesScript** (https://writemysalesscript.com/) — AI-powered sales script generation

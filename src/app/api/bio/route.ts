@@ -58,8 +58,7 @@ const bioData = {
   ],
 
   projects: [
-    { name: 'Aged Lead Sales', url: 'https://agedleadsales.com/', description: 'Sales training and education for working aged leads.' },
-    { name: 'How to Work Leads', url: 'https://howtoworkleads.com/', description: 'Practical strategies for converting leads into customers.' },
+    { name: 'Work Aged Leads', url: 'https://workagedleads.com/', description: 'Scripts, cadences, and unit economics for working aged leads, plus independent provider reviews and a quarterly lead price index.' },
     { name: 'ProInvestorHub', url: 'https://proinvestorhub.com/', description: 'Real estate investing education with guides, calculators, and market data.' },
     { name: 'CryptoLendingHub', url: 'https://cryptolendinghub.com/', description: 'Crypto lending education with platform reviews and rate comparisons.' },
     { name: 'The Lead Brief', url: 'https://theleadbrief.com/', description: 'Weekly newsletter and podcast on lead generation strategy.' },

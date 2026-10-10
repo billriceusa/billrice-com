@@ -117,6 +117,6 @@ If you run a sales operation and you're dismissive of aged leads, you're probabl
 
 Working aged isn't easy. It requires operational investment, patience, and a different mental model than fresh. But the companies that figure it out tend to scale profitably in ways the fresh-lead shops cannot.
 
-I write about aged lead strategy and lead acquisition economics at [Aged Lead Sales](https://agedleadsales.com/) and [The Lead Brief](https://theleadbrief.com/). If you're thinking about adding aged to your channel mix and want someone who has actually worked this category for two decades, [reach out](https://billricestrategy.com/).
+I write about aged lead strategy and lead acquisition economics at [Work Aged Leads](https://workagedleads.com/) and [The Lead Brief](https://theleadbrief.com/). If you're thinking about adding aged to your channel mix and want someone who has actually worked this category for two decades, [reach out](https://billricestrategy.com/).
 
 Most salespeople get aged leads wrong. The ones who get them right are usually the ones not talking about it.

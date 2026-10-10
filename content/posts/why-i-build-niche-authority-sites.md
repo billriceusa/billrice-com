@@ -10,11 +10,9 @@ publishedAt: "2026-04-29"
 
 I operate a portfolio of niche authority content sites. You might have come across some of them:
 
-- [AgedLeadSales.com](https://agedleadsales.com/) — sales training and education for professionals working aged leads
+- [WorkAgedLeads.com](https://workagedleads.com/) — scripts, cadences, and unit economics for professionals working aged leads
 - [ProInvestorHub.com](https://proinvestorhub.com/) — real estate investing education with calculators, market data, and guides
 - [CryptoLendingHub.com](https://cryptolendinghub.com/) — crypto lending reviews and education
-- [HowToWorkLeads.com](https://www.howtoworkleads.com/) — practical techniques for lead conversion
-- [DemoLeadGen.com](https://demoleadgen.com/) — a lead generation demo and simulation platform
 
 None of these are businesses in the conventional sense — they don't have sales teams, they don't sign retainer agreements, they don't bill hours. They're content properties. But collectively they produce meaningful traffic, generate leads for the rest of my businesses, build my personal authority, and compound an asset that most consultants and operators don't bother to build.
 
