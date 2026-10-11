@@ -49,7 +49,7 @@ const doc = {
       'I\'ve also been a growth marketing consultant for Quizzle (acquired by Bankrate), built the initial GTM strategy and launch for SpringEQ in 2016, and founded Bill Rice Strategy Group to serve fintech companies — many of them longtime referral partners who have been satellites in the same ecosystem Kaleidico has worked in for two decades.',
     ]),
     paragraph([
-      'Today I run three companies. Kaleidico, where I serve as CRO following the agency\'s acquisition and liquidity event — I retained 10% ownership and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees — just AI agents and me, with every deliverable produced in code: strategy, content, presentations, sales, and marketing. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
+      'Today I run two companies. Kaleidico, where I serve as CRO following the agency\'s acquisition and liquidity event — I retained 10% ownership and continue to lead business development, sales, and marketing strategy and execution. And Bill Rice Strategy Group, my B2B strategic agency for fintech clients. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
     ]),
   ],
   differentiators: [
@@ -153,14 +153,6 @@ const doc = {
     },
     {
       _key: randomUUID(),
-      year: '2024',
-      title: 'Founded Verified Vector',
-      subtitle: 'Programmatic SEO & AI marketing agency',
-      description:
-        'Launched Verified Vector, a programmatic SEO and AI marketing agency serving fintech companies. Builds compliance-ready AI-powered content and marketing systems at scale.',
-    },
-    {
-      _key: randomUUID(),
       year: '2025',
       title: "Published The Lead Buyer's Playbook",
       subtitle: 'Enterprise guide to lead buying',
@@ -204,13 +196,6 @@ const doc = {
       role: 'Founder & Chief Strategist',
       url: 'https://billricestrategy.com/',
       description: 'B2B strategic agency for fintech companies — many of them longtime referral partners and friends who have been satellites in the same ecosystem Kaleidico has worked in for two decades. BRSG helps these clients at a more strategic level, bringing the systems and processes that fueled Kaleidico\'s growth from bootstrap to acquisition.',
-    },
-    {
-      _key: randomUUID(),
-      name: 'Verified Vector',
-      role: 'Founder',
-      url: 'https://verifiedvector.com/',
-      description: 'AI-first agency — a playground proving that an agency can be run largely as an AI-first organization. No employees. Just AI agents and me. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code.',
     },
   ],
   speakingWriting: [

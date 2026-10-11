@@ -115,13 +115,6 @@ const FALLBACK_TIMELINE = [
       'Founded Bill Rice Strategy Group to serve fintech companies — many of them longtime referral partners and friends operating as satellites in the same ecosystem Kaleidico has worked in for two decades. BRSG engages at a strategic level, bringing the systems and processes that fueled Kaleidico\'s growth from bootstrap to acquisition.',
   },
   {
-    year: '2024',
-    title: 'Founded Verified Vector',
-    subtitle: 'AI-first agency',
-    description:
-      'Founded Verified Vector as a playground and proof-of-concept that an agency can be run largely as an AI-first organization. No employees — just AI agents and me. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code.',
-  },
-  {
     year: '2025',
     title: "Published The Lead Buyer's Playbook",
     subtitle: 'Enterprise guide to lead buying',
@@ -188,12 +181,6 @@ const FALLBACK_VENTURES = [
     role: 'Founder & Chief Strategist',
     url: 'https://billricestrategy.com/',
     description: "B2B strategic agency for fintech companies — many of them longtime referral partners and friends who have been satellites in the same ecosystem Kaleidico has worked in for two decades. BRSG helps these clients at a more strategic level.",
-  },
-  {
-    name: 'Verified Vector',
-    role: 'Founder',
-    url: 'https://verifiedvector.com/',
-    description: "AI-first agency — a playground proving that an agency can be run largely as an AI-first organization. No employees. Just AI agents and me. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code.",
   },
 ]
 
@@ -310,7 +297,7 @@ export default async function AboutPage() {
                     From 2016 to 2018 I also owned and operated Velocity Lending, a DTC mortgage lender I built as a live proof-of-concept for everything Kaleidico was teaching clients. I&rsquo;ve also been a growth marketing consultant for Quizzle (acquired by Bankrate), built the initial GTM strategy and launch for SpringEQ in 2016, and founded Bill Rice Strategy Group to serve fintech companies&mdash;many of them longtime referral partners who have been satellites in the same ecosystem Kaleidico has worked in for two decades.
                   </p>
                   <p>
-                    Today I run three companies. Kaleidico, where I&rsquo;m CRO following the agency&rsquo;s acquisition and liquidity event&mdash;I retained 10% and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees&mdash;just AI agents and me, with every deliverable produced in code. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.
+                    Today I run two companies. Kaleidico, where I&rsquo;m CRO following the agency&rsquo;s acquisition and liquidity event&mdash;I retained 10% and continue to lead business development, sales, and marketing strategy and execution. And Bill Rice Strategy Group, my B2B strategic agency for fintech clients. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.
                   </p>
                 </div>
               )}

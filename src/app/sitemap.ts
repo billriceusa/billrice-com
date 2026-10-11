@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { client } from '@/sanity/lib/client'
-import { LEAD_BUYERS_PLAYBOOK_SLUG } from '@/lib/books'
+import { BOOKS } from '@/lib/books'
 
 const BASE_URL = 'https://billrice.com'
 
@@ -28,12 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/books`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
     {
       url: `${BASE_URL}/essays`,
@@ -113,24 +107,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Sanity unavailable
   }
 
-  // Book pages from Sanity. The Playbook is skipped: it is already listed above
-  // at /book, and /books/<its slug> redirects there, so including it would put
-  // a redirect in the sitemap.
-  let bookPages: MetadataRoute.Sitemap = []
-  try {
-    const books: { slug: string }[] = await client.fetch(
-      `*[_type == "book" && defined(slug.current) && slug.current != $playbookSlug]{ "slug": slug.current }`,
-      { playbookSlug: LEAD_BUYERS_PLAYBOOK_SLUG }
-    )
-    bookPages = (books || []).map((b) => ({
-      url: `${BASE_URL}/books/${b.slug}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    }))
-  } catch {
-    // Sanity unavailable
-  }
+  // Book pages come from the code registry, not Sanity, so there is nothing to
+  // fail and no try/catch to swallow.
+  const bookPages: MetadataRoute.Sitemap = BOOKS.map((book) => ({
+    url: `${BASE_URL}/book/${book.slug}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   return [
     ...staticPages,

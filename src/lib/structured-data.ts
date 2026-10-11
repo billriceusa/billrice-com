@@ -22,7 +22,6 @@ export const PERSON_ID = BILL_RICE_ID
 export const WEBSITE_ID = 'https://billrice.com/#website'
 export const KALEIDICO_ID = 'https://kaleidico.com/#organization'
 export const BRSG_ID = 'https://billricestrategy.com/#organization'
-export const VERIFIED_VECTOR_ID = 'https://verifiedvector.com/#organization'
 export const LEAD_BUYERS_PLAYBOOK_ID = 'https://leadbuyersplaybook.com/#book'
 export const SALES_TEAM_OF_ONE_ID = 'https://salesteamofone.com/#book'
 
@@ -47,8 +46,7 @@ export const personStructuredData = {
   // Ownership/affiliation expressed as relationships, by reference.
   "worksFor": [
     { "@id": KALEIDICO_ID },
-    { "@id": BRSG_ID },
-    { "@id": VERIFIED_VECTOR_ID }
+    { "@id": BRSG_ID }
   ],
   "author": [
     { "@id": LEAD_BUYERS_PLAYBOOK_ID },
@@ -153,15 +151,6 @@ export const organizationNodes = [
     "description": "B2B marketing strategy consulting for fintech companies.",
     "foundingDate": "2020",
     "founder": { "@id": PERSON_ID }
-  },
-  {
-    "@type": "Organization",
-    "@id": VERIFIED_VECTOR_ID,
-    "name": "Verified Vector",
-    "url": "https://verifiedvector.com/",
-    "description": "AI-first marketing agency — every deliverable produced in code.",
-    "foundingDate": "2024",
-    "founder": { "@id": PERSON_ID }
   }
 ];
 
@@ -170,14 +159,15 @@ export const bookNodes = [
     "@type": "Book",
     "@id": LEAD_BUYERS_PLAYBOOK_ID,
     "name": "The Lead Buyer's Playbook",
-    "alternateName": "The Enterprise Guide to Buying and Converting Leads Profitably",
+    "isbn": "9798994221006",
+    "alternateName": "How to Turn Third-Party Leads Into a Predictable Revenue Engine",
     "author": { "@id": PERSON_ID },
     "publisher": { "@id": PERSON_ID },
     "url": "https://leadbuyersplaybook.com/",
     "datePublished": "2025-11",
     "bookEdition": "First Edition",
     "bookFormat": "https://schema.org/EBook",
-    "description": "The enterprise guide to buying and converting leads profitably. A systematic approach that turns lead buying from a cost center into a competitive advantage.",
+    "description": "How to turn third-party leads into a predictable revenue engine. A systematic approach that turns lead buying from a cost center into a competitive advantage.",
     "genre": "Business",
     "inLanguage": "en"
   },
@@ -189,6 +179,7 @@ export const bookNodes = [
     "author": { "@id": PERSON_ID },
     "publisher": { "@id": PERSON_ID },
     "url": "https://salesteamofone.com/",
+    "datePublished": "2026-10-20",
     "bookFormat": "https://schema.org/EBook",
     "description": "The sales org that used to feed a seller is being automated out from under the people standing on it. A field guide to being the whole team yourself — and wielding the thing that is coming for everyone else.",
     "genre": "Business",

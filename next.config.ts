@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { LEAD_BUYERS_PLAYBOOK_SLUG } from "./src/lib/books";
 
 // Slugs of the industry posts unpublished on 2026-07-30. Kept here so the
 // redirect list and scripts/unpublish-industry-posts.ts can be diffed against
@@ -83,15 +82,24 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
-      // The Playbook is canonical at /book, which predates the /books library
-      // and is what the nav, the sitemap and llms.txt point at. This lives here
-      // rather than as a redirect() inside the page because /books/[slug] is
-      // statically generated: a redirect() in a prerendered route cannot carry
-      // an HTTP status, so Next emits a meta-refresh page instead, which search
-      // engines treat as a soft redirect. At the routing layer it is a real 308
-      // and the page is never rendered at all.
+      // The library lives at the singular /book — the URL the nav, the sitemap
+      // and llms.txt have always pointed at — with each book at /book/<slug>.
+      // The plural was briefly the library during a restructure, so both it and
+      // anything beneath it map across. Order matters: the :slug rule has to
+      // come first or the bare /books rule would swallow it.
+      //
+      // These live here rather than as redirect() calls inside the pages
+      // because those routes are statically generated, and a redirect() in a
+      // prerendered route cannot carry an HTTP status — Next emits a
+      // meta-refresh page instead, which search engines read as a soft
+      // redirect. At the routing layer it is a real 308 and no page renders.
       {
-        source: `/books/${LEAD_BUYERS_PLAYBOOK_SLUG}`,
+        source: '/books/:slug',
+        destination: '/book/:slug',
+        permanent: true,
+      },
+      {
+        source: '/books',
         destination: '/book',
         permanent: true,
       },

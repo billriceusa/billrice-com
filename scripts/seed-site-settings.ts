@@ -41,7 +41,7 @@ const doc = {
       'In 2005 I founded Kaleidico, starting as a lead management software company before pivoting to the demand generation agency it is today. I coined "lead management" as a category and authored the original Wikipedia page. From 2016 to 2018 I also owned and operated Velocity Lending, a DTC mortgage lender, as a live proof-of-concept for the playbook we were teaching clients.',
     ),
     block(
-      'Today I run three companies. Kaleidico, where I\'m CRO following the agency\'s acquisition — I retained 10% and continue to lead business development, sales, and marketing strategy and execution. Bill Rice Strategy Group, my B2B strategic agency for fintech clients. And Verified Vector, my AI-first agency with no employees — just AI agents and me, every deliverable produced in code. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
+      'Today I run two companies. Kaleidico, where I\'m CRO following the agency\'s acquisition — I retained 10% and continue to lead business development, sales, and marketing strategy and execution. And Bill Rice Strategy Group, my B2B strategic agency for fintech clients. Alongside the companies, I operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.',
     ),
   ],
   socialLinks: {

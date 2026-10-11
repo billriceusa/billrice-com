@@ -1,90 +1,138 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { sanityFetch } from '@/sanity/lib/live'
-import { BOOK_BY_SLUG_QUERY } from '@/sanity/lib/queries'
-import { BookDetail, type BookFallback } from '@/components/book-detail'
-import { AMAZON_LBP_URL, LEAD_BUYERS_PLAYBOOK_SLUG } from '@/lib/books'
-import type { BookDetail as Book } from '@/sanity/lib/types'
+import Image from 'next/image'
+import { BOOKS, buyLabel, statusLabel } from '@/lib/books'
+import { BILL_RICE_SAME_AS } from '@/lib/identity'
 
 export const metadata: Metadata = {
-  title: "The Lead Buyer's Playbook",
+  title: 'Books',
   description:
-    'The enterprise guide to buying and converting leads profitably. By Bill Rice.',
+    'Books by Bill Rice — The Lead Buyer\'s Playbook and Sales Team of One. Thirty years of buying, generating, and converting the consumer-direct lead, written down.',
   alternates: { canonical: '/book' },
 }
 
+/** Bill's Amazon Author Central page, already canonical in the identity set. */
+const AMAZON_AUTHOR_URL = BILL_RICE_SAME_AS.find((url) => url.includes('amazon.com/stores/author'))
+
 /**
- * Everything on this page that is specific to the Playbook. It stays here
- * rather than in the shared component because this page is the Playbook's page
- * — it is in the nav, in the sitemap and in llms.txt under that name — and it
- * has to render correctly whether or not Sanity answers.
+ * The library.
+ *
+ * /book is the singular URL this has always lived at — it is in the nav, the
+ * sitemap and llms.txt — so it keeps the URL and becomes the shelf rather than
+ * one book's page. Individual books hang off it at /book/<slug>.
+ *
+ * It is deliberately not a reading surface. The full text of both books lives
+ * off-domain (leadbuyersplaybook.com, salesteamofone.com); this page exists to
+ * introduce the author and sell the books, and each book's page teases a few
+ * chapters rather than reproducing them.
  */
-const PLAYBOOK_FALLBACK: BookFallback = {
-  title: "The Lead Buyer's Playbook",
-  subtitle: 'The Enterprise Guide to Buying and Converting Leads Profitably',
-  description:
-    'Stop treating lead generation as a procurement problem. Learn the systematic approach that transforms lead buying from a cost center into a competitive advantage. Drawing on 30+ years of experience in lead generation and mortgage lending, this book covers strategic foundations, risk management, operational excellence, and financial intelligence for enterprise lead acquisition.',
-  publishedDate: '2025-11',
-  dateLabel: 'November 2025',
-  freeReadUrl: 'https://leadbuyersplaybook.com',
-  purchase: { url: AMAZON_LBP_URL, label: 'Buy on Amazon' },
-}
-
-export default async function BookPage() {
-  // Fetched by slug, not by position. This page's title, canonical tag and Book
-  // JSON-LD all name the Playbook, so it must keep resolving to the Playbook
-  // once the other two books have documents of their own.
-  let book: Book | null = null
-  try {
-    const { data } = await sanityFetch({
-      query: BOOK_BY_SLUG_QUERY,
-      params: { slug: LEAD_BUYERS_PLAYBOOK_SLUG },
-    })
-    book = data as Book | null
-  } catch {
-    // Sanity unreachable — the fallbacks below carry the page.
-  }
-
+export default function BookLibraryPage() {
   return (
-    <>
-      <BookDetail book={book} canonicalPath="/book" fallback={PLAYBOOK_FALLBACK} />
-
-      <div className="container mx-auto px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
-          {/* Second book */}
-          <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-black rounded-lg p-7">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-              Also from Bill Rice · Free chapters available now
-            </p>
-            <h2 className="text-2xl font-bold text-gray-900">Sales Team of One</h2>
-            <p className="mt-1 text-gray-500">
-              How to Stay Irreplaceable When AI Comes for the Sales Team
-            </p>
-            <p className="mt-4 text-gray-600">
-              The Playbook is about buying the lead. This one is about who is left to work it — and how to stay the
-              person who can, while the org around the seller collapses into software.
-            </p>
-            <a
-              href="https://salesteamofone.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-5 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-              aria-label="Read the opening of Sales Team of One free (opens in new tab)"
-            >
-              Read the Opening — salesteamofone.com
-            </a>
+    <div className="bg-white">
+      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Author profile */}
+          <div className="flex flex-col sm:flex-row gap-8 items-start">
+            <Image
+              src="/bill-rice-headshot.jpg"
+              alt="Bill Rice"
+              width={160}
+              height={160}
+              className="rounded-full w-32 h-32 sm:w-40 sm:h-40 object-cover shrink-0 mx-auto sm:mx-0"
+              priority
+            />
+            <div>
+              <p className="text-sm font-semibold text-[#E6BB00] uppercase tracking-wide">
+                Books by
+              </p>
+              <h1 className="mt-1 text-4xl font-bold text-gray-900">Bill Rice</h1>
+              <p className="mt-4 text-lg text-gray-600">
+                I&apos;ve stood on all four sides of the consumer-direct lead — I built the software
+                that managed it, generated it as an agency, bought it as a lender with my own P&amp;L,
+                and now write about what that taught me. Both books come out of work I actually did,
+                not research I did about other people&apos;s.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                {AMAZON_AUTHOR_URL && (
+                  <a
+                    href={AMAZON_AUTHOR_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 underline hover:text-black transition-colors"
+                  >
+                    Amazon Author Central
+                  </a>
+                )}
+                <Link
+                  href="/about"
+                  className="text-gray-700 underline hover:text-black transition-colors"
+                >
+                  Full background
+                </Link>
+                <Link
+                  href="/essays"
+                  className="text-gray-700 underline hover:text-black transition-colors"
+                >
+                  Essays
+                </Link>
+              </div>
+            </div>
           </div>
 
-          {/* The library's only inbound link until the nav moves to it. An
-              orphaned /books would be a page no reader and no crawler reaches
-              from anywhere on the site. */}
-          <p className="mt-8 text-center text-sm text-gray-500">
-            <Link href="/books" className="underline hover:text-gray-900 transition-colors">
-              All books by Bill Rice
-            </Link>
-          </p>
+          {/* The shelf */}
+          <div className="mt-16 space-y-10">
+            {BOOKS.map((book) => (
+              <article
+                key={book.slug}
+                className="flex flex-col sm:flex-row gap-6 sm:gap-8 border-t border-gray-200 pt-10"
+              >
+                <Link href={`/book/${book.slug}`} className="shrink-0 mx-auto sm:mx-0">
+                  <Image
+                    src={book.cover.src}
+                    alt={book.cover.alt}
+                    width={book.cover.width}
+                    height={book.cover.height}
+                    className="w-36 h-auto rounded-lg shadow-md border border-gray-200 transition-transform hover:scale-[1.02]"
+                  />
+                </Link>
+                <div className="flex-1">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                    {statusLabel(book)}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-bold text-gray-900">
+                    <Link
+                      href={`/book/${book.slug}`}
+                      className="hover:text-[#B8960A] transition-colors"
+                    >
+                      {book.title}
+                    </Link>
+                  </h2>
+                  <p className="mt-1 text-gray-500">{book.subtitle}</p>
+                  <p className="mt-4 text-gray-600">{book.blurb}</p>
+                  <div className="mt-5 flex flex-wrap items-center gap-4">
+                    {book.amazonUrl && (
+                      <a
+                        href={book.amazonUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-6 py-2.5 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
+                      >
+                        {buyLabel(book)}
+                      </a>
+                    )}
+                    <Link
+                      href={`/book/${book.slug}`}
+                      className="text-gray-700 underline hover:text-black transition-colors"
+                    >
+                      What&apos;s inside
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

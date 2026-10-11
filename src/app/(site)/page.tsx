@@ -3,13 +3,12 @@ import Image from 'next/image'
 import {
   siteEntityGraph,
 } from '@/lib/structured-data'
-import { AMAZON_LBP_URL } from '@/lib/books'
+import { BOOKS, buyLabel, statusLabel } from '@/lib/books'
 import { sanityFetch } from '@/sanity/lib/live'
 import {
   SITE_SETTINGS_QUERY,
   COMPANIES_QUERY,
   PROJECTS_QUERY,
-  TOOLS_QUERY,
 } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
 import { JsonLd } from '@/components/json-ld'
@@ -43,15 +42,6 @@ type Project = {
   url: string | null
 }
 
-type Tool = {
-  _id: string
-  name: string | null
-  description: string | null
-  url: string | null
-  category: string | null
-  price: string | null
-}
-
 const FALLBACK_COMPANIES: Company[] = [
   {
     _id: 'f-kaleidico',
@@ -68,14 +58,6 @@ const FALLBACK_COMPANIES: Company[] = [
     description:
       'B2B consultancy helping fintech founders and marketing leaders replace guesswork with data-driven frameworks that generate predictable revenue.',
     url: 'https://billricestrategy.com/',
-  },
-  {
-    _id: 'f-vv',
-    name: 'Verified Vector',
-    slug: 'verified-vector',
-    description:
-      'Programmatic SEO and AI marketing agency for fintech companies. Compliance-ready content and marketing systems at scale.',
-    url: 'https://verifiedvector.com/',
   },
 ]
 
@@ -118,12 +100,6 @@ const FALLBACK_PROJECTS: Project[] = [
   },
 ]
 
-const FALLBACK_TOOLS: Tool[] = [
-  { _id: 'f-wmss', name: 'WriteMySalesScript', description: 'AI-powered sales script generation for B2B teams', url: 'https://writemysalesscript.com/', category: 'ai-tool', price: 'Free' },
-  { _id: 'f-va', name: 'VisibilityAnalyzer', description: 'SEO and LLM visibility analysis and optimization', url: 'https://visibilityanalyzer.com/', category: 'ai-tool', price: 'Free' },
-  { _id: 'f-b2b', name: 'B2B Marketing Battlecard', description: 'Competitive intelligence and strategic insights', url: 'https://b2bmarketingbattlecard.com/', category: 'ai-tool', price: 'Free' },
-]
-
 const FALLBACK_HERO_TITLE = 'Bill Rice'
 const FALLBACK_HERO_TAGLINE = "I've stood on all four sides of the consumer-direct lead."
 const FALLBACK_HERO_SUBTEXT =
@@ -131,7 +107,6 @@ const FALLBACK_HERO_SUBTEXT =
 
 // Canonical book destinations — never link the singular or a *.vercel.app preview.
 const LEAD_BUYERS_PLAYBOOK_URL = 'https://leadbuyersplaybook.com'
-const SALES_TEAM_OF_ONE_URL = 'https://salesteamofone.com'
 const LEAD_BRIEF_URL = 'https://theleadbrief.com/'
 
 const ExternalLinkIcon = () => (
@@ -144,25 +119,21 @@ export default async function HomePage() {
   let settings: SiteSettings | null = null
   let companies: Company[] = []
   let projects: Project[] = []
-  let tools: Tool[] = []
   try {
-    const [s, c, p, t] = await Promise.all([
+    const [s, c, p] = await Promise.all([
       sanityFetch({ query: SITE_SETTINGS_QUERY }),
       sanityFetch({ query: COMPANIES_QUERY }),
       sanityFetch({ query: PROJECTS_QUERY }),
-      sanityFetch({ query: TOOLS_QUERY }),
     ])
     settings = s.data as SiteSettings | null
     companies = (c.data as Company[]) ?? []
     projects = (p.data as Project[]) ?? []
-    tools = (t.data as Tool[]) ?? []
   } catch {
     // fall through to fallbacks
   }
 
   if (companies.length === 0) companies = FALLBACK_COMPANIES
   if (projects.length === 0) projects = FALLBACK_PROJECTS
-  if (tools.length === 0) tools = FALLBACK_TOOLS
 
   const heroTitle = settings?.heroTitle || FALLBACK_HERO_TITLE
   const heroTagline = settings?.heroTagline || FALLBACK_HERO_TAGLINE
@@ -171,7 +142,6 @@ export default async function HomePage() {
   const twitter = settings?.socialLinks?.twitter || 'https://x.com/billrice'
   const youtube = settings?.socialLinks?.youtube || 'https://www.youtube.com/@billricestrategy'
 
-  const aiTools = tools.filter((t) => t.category === 'ai-tool')
 
   return (
     <div className="min-h-screen bg-white">
@@ -241,83 +211,64 @@ export default async function HomePage() {
                 </p>
               </div>
 
+              {/* Driven by the registry in src/lib/books.ts so these cards, the
+                  library at /book and each book's own page cannot drift. The
+                  buy label flips from pre-order to buy on the release date by
+                  itself — see buyLabel(). */}
               <div className="grid md:grid-cols-2 gap-6 items-stretch">
-                {/* The Lead Buyer's Playbook */}
-                <article className="flex flex-col bg-white p-7 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                    Published · November 2025
-                  </p>
-                  <h3 className="text-2xl font-bold text-gray-900">The Lead Buyer&apos;s Playbook</h3>
-                  <p className="mt-1 text-gray-500">
-                    The Enterprise Guide to Buying and Converting Leads Profitably
-                  </p>
-                  <p className="mt-4 text-gray-600 flex-1">
-                    Stop treating lead generation as a procurement problem. The systematic approach that turns lead
-                    buying from a cost center into a competitive advantage — vendor selection, lead quality, speed to
-                    lead, aged leads, compliance, and unit economics.
-                  </p>
-                  <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a
-                      href={LEAD_BUYERS_PLAYBOOK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2 text-center"
-                      aria-label="Read The Lead Buyer's Playbook free online (opens in new tab)"
-                    >
-                      Read Free Online
-                    </a>
-                    <a
-                      href={AMAZON_LBP_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
-                    >
-                      Buy on Amazon
-                    </a>
-                  </div>
-                  <p className="mt-3 text-sm text-gray-500">
-                    leadbuyersplaybook.com
-                  </p>
-                </article>
-
-                {/* Sales Team of One */}
-                <article className="flex flex-col bg-white p-7 border border-gray-200 border-l-4 border-l-black rounded-lg">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                    Free chapters available now
-                  </p>
-                  <h3 className="text-2xl font-bold text-gray-900">Sales Team of One</h3>
-                  <p className="mt-1 text-gray-500">
-                    How to Stay Irreplaceable When AI Comes for the Sales Team
-                  </p>
-                  <p className="mt-4 text-gray-600 flex-1">
-                    The sales org that used to feed a seller — SDRs, marketing, ops, enablement — is being automated out
-                    from under the people standing on it. There is one safe seat left: be the whole team yourself, and
-                    wield the very thing that is coming for everyone else.
-                  </p>
-                  <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                    <a
-                      href={SALES_TEAM_OF_ONE_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-black hover:bg-gray-800 text-white px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
-                      aria-label="Read the opening of Sales Team of One free (opens in new tab)"
-                    >
-                      Read the Opening
-                    </a>
-                    <a
-                      href={`${SALES_TEAM_OF_ONE_URL}/#notify`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-3 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-center"
-                    >
-                      Get Notified
-                    </a>
-                  </div>
-                  <p className="mt-3 text-sm text-gray-500">
-                    salesteamofone.com
-                  </p>
-                </article>
+                {BOOKS.map((book) => (
+                  <article
+                    key={book.slug}
+                    className="flex flex-col sm:flex-row gap-5 bg-white p-7 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg"
+                  >
+                    <Link href={`/book/${book.slug}`} className="shrink-0 mx-auto sm:mx-0">
+                      <Image
+                        src={book.cover.src}
+                        alt={book.cover.alt}
+                        width={book.cover.width}
+                        height={book.cover.height}
+                        className="w-28 h-auto rounded shadow-sm border border-gray-200 transition-transform hover:scale-[1.02]"
+                      />
+                    </Link>
+                    <div className="flex flex-col flex-1">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                        {statusLabel(book)}
+                      </p>
+                      <h3 className="text-2xl font-bold text-gray-900">
+                        <Link href={`/book/${book.slug}`} className="hover:text-[#B8960A] transition-colors">
+                          {book.title}
+                        </Link>
+                      </h3>
+                      <p className="mt-1 text-gray-500">{book.subtitle}</p>
+                      <p className="mt-4 text-gray-600 flex-1">{book.blurb}</p>
+                      <div className="mt-5 flex flex-wrap items-center gap-3">
+                        {book.amazonUrl && (
+                          <a
+                            href={book.amazonUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#FFD000] hover:bg-[#E6BB00] text-black px-5 py-2.5 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#FFD000] focus:ring-offset-2"
+                          >
+                            {buyLabel(book)}
+                          </a>
+                        )}
+                        <Link
+                          href={`/book/${book.slug}`}
+                          className="border-2 border-black hover:bg-black hover:text-white text-black px-5 py-2.5 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                        >
+                          What&apos;s inside
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
+
+              <p className="mt-8 text-center">
+                <Link href="/book" className="text-gray-700 underline hover:text-black transition-colors">
+                  All books by Bill Rice
+                </Link>
+              </p>
             </div>
           </div>
         </section>
@@ -344,7 +295,7 @@ export default async function HomePage() {
                         I coined the term &ldquo;lead management&rdquo; to differentiate platforms that work leads from CRMs that manage customers. I authored the original Wikipedia page for the category. The frameworks I built are now industry standard.
                       </p>
                       <p className="text-lg text-gray-600 mb-6">
-                        Today I run three companies&mdash;Kaleidico, Bill Rice Strategy Group, and Verified Vector&mdash;and operate a portfolio of authority content sites across lead generation, real estate investing, and fintech.
+                        Today I run two companies&mdash;Kaleidico and Bill Rice Strategy Group&mdash;and operate a portfolio of authority content sites across lead generation, real estate investing, and crypto lending.
                       </p>
                     </>
                   )}
@@ -447,45 +398,6 @@ export default async function HomePage() {
                   )}
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Tools */}
-        <section className="py-16 bg-gray-50" aria-labelledby="tools-heading">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 id="tools-heading" className="text-3xl font-bold text-gray-900">Free Tools</h2>
-              <p className="mt-4 text-lg text-gray-600">AI-powered tools I built and give away</p>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              {aiTools.length > 0 && (
-                <div className="mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Free AI Tools</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {aiTools.map((tool) => (
-                      <div
-                        key={tool._id}
-                        className="p-4 border border-gray-200 border-l-4 border-l-[#FFD000] rounded-lg hover:shadow-md hover:border-l-[#E6BB00] transition-all"
-                      >
-                        <h4 className="font-medium text-gray-900 mb-2">{tool.name}</h4>
-                        {tool.description && <p className="text-sm text-gray-600 mb-4">{tool.description}</p>}
-                        {tool.url && (
-                          <a
-                            href={tool.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-black hover:text-black font-medium underline"
-                          >
-                            Visit {tool.name}
-                            <ExternalLinkIcon />
-                          </a>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </section>

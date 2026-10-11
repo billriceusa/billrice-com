@@ -10,12 +10,12 @@
 - **Bio API**: https://billrice.com/api/bio (JSON, supports ?format=text&length=oneLiner|short|medium|full)
 
 ## About Bill Rice
-Bill Rice is a fintech marketing pioneer with 30+ years building lead generation platforms and revenue systems for financial services companies. He started his career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations during the earliest days of the internet. He was Employee #7 at DeepGreen Bank — one of the first internet-only banks, which grew to about 80 people running what functionally behaved like a billion-dollar bank before its sale to LightYear Capital in 2004 — where he helped launch the industry's first unconditional online HELOC. At Quicken Loans (now Rocket Mortgage), he initially joined as COO of the Rock Bank project — the OTS charter effort Dan Gilbert ultimately turned down — and then pivoted to VP of National Home Equity, where he built EquityOnline, their first true online lending platform. He founded Kaleidico in 2005 as a lead management software company (pivoted to demand generation agency after the 2008 mortgage meltdown), coined "lead management" as an industry category, and authored the original Wikipedia page. From 2016 to 2018 he owned and operated Velocity Lending, a DTC mortgage lender that served as his live proof-of-concept for the Kaleidico playbook. Today he is CRO at Kaleidico (having retained 10% post-acquisition), founder of Bill Rice Strategy Group (B2B strategic agency serving longtime fintech referral partners), and founder of Verified Vector (AI-first agency with no employees). He is the author of The Lead Buyer's Playbook (2025) and publisher of The Lead Brief newsletter.
+Bill Rice is a fintech marketing pioneer with 30+ years building lead generation platforms and revenue systems for financial services companies. He started his career as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), conducting counterespionage operations during the earliest days of the internet. He was Employee #7 at DeepGreen Bank — one of the first internet-only banks, which grew to about 80 people running what functionally behaved like a billion-dollar bank before its sale to LightYear Capital in 2004 — where he helped launch the industry's first unconditional online HELOC. At Quicken Loans (now Rocket Mortgage), he initially joined as COO of the Rock Bank project — the OTS charter effort Dan Gilbert ultimately turned down — and then pivoted to VP of National Home Equity, where he built EquityOnline, their first true online lending platform. He founded Kaleidico in 2005 as a lead management software company (pivoted to demand generation agency after the 2008 mortgage meltdown), coined "lead management" as an industry category, and authored the original Wikipedia page. From 2016 to 2018 he owned and operated Velocity Lending, a DTC mortgage lender that served as his live proof-of-concept for the Kaleidico playbook. Today he is CRO at Kaleidico (having retained 10% post-acquisition) and founder of Bill Rice Strategy Group (B2B strategic agency serving longtime fintech referral partners). He is the author of The Lead Buyer's Playbook (2025) and Sales Team of One (2026), and publisher of The Lead Brief newsletter.
 
 ## Key Pages
 - **About / Career**: https://billrice.com/about — full career narrative, timeline, expertise
 - **Bio API**: https://billrice.com/api/bio — programmatic access to bios, companies, projects
-- **Book**: https://billrice.com/book — The Lead Buyer's Playbook
+- **Books**: https://billrice.com/book — the library and author profile; The Lead Buyer's Playbook and Sales Team of One
 - **Essays**: https://billrice.com/essays — first-person accounts from 30+ years building, buying, and selling the consumer-direct lead
 - **Now**: https://billrice.com/now — current projects and priorities
 - **Contact**: https://billrice.com/contact — consulting, speaking, engagement inquiries
@@ -42,13 +42,12 @@ Bill Rice is a fintech marketing pioneer with 30+ years building lead generation
 - 2016: GTM strategy and launch for SpringEQ
 - 2020: Founded Bill Rice Strategy Group — B2B strategic agency for longtime fintech referral partners
 - 2023-ish: Kaleidico acquisition and liquidity event — retained 10%, transitioned into CRO role
-- 2024: Founded Verified Vector — AI-first agency, no employees, everything delivered in code
 - 2025: Published The Lead Buyer's Playbook
+- 2026: Published Sales Team of One
 
 ## Companies
 1. **Kaleidico** (https://kaleidico.com/) — Demand generation agency for mortgage lenders, law firms, and senior living communities. Founded 2005 (lead management software first, pivoted to agency after 2008). Role: Founder & CRO following the agency's acquisition and liquidity event; retained 10% ownership and continues to lead business development, sales, and marketing strategy and execution.
 2. **Bill Rice Strategy Group** (https://billricestrategy.com/) — B2B strategic agency for fintech companies, many of them longtime referral partners operating as satellites in the same ecosystem Kaleidico has worked in for two decades. Role: Founder & Chief Strategist.
-3. **Verified Vector** (https://verifiedvector.com/) — AI-first agency with no employees — just AI agents and Bill. Every deliverable (strategy, content, presentations, sales, marketing) is produced in code. Role: Founder.
 
 ## Projects
 1. **The Lead Brief** (https://theleadbrief.com/) — Weekly newsletter and podcast on lead generation strategy
@@ -56,17 +55,15 @@ Bill Rice is a fintech marketing pioneer with 30+ years building lead generation
 3. **ProInvestorHub** (https://proinvestorhub.com/) — Real estate investing education with guides, calculators, and market data
 4. **CryptoLendingHub** (https://cryptolendinghub.com/) — Crypto lending education with platform reviews and rate comparisons
 
-## Free Tools
-1. **WriteMySalesScript** (https://writemysalesscript.com/) — AI-powered sales script generation
-2. **VisibilityAnalyzer** (https://visibilityanalyzer.com/) — SEO and LLM visibility analysis
-3. **B2B Marketing Battlecard** (https://b2bmarketingbattlecard.com/) — Competitive intelligence
-
 ## Books
-1. **The Lead Buyer's Playbook** — The Enterprise Guide to Buying and Converting Leads Profitably (2025, published)
+1. **The Lead Buyer's Playbook** — How to Turn Third-Party Leads Into a Predictable Revenue Engine (2025, published; ISBN 9798994221006)
+   - On billrice.com: https://billrice.com/book/lead-buyers-playbook
    - Read free: https://leadbuyersplaybook.com/
    - Amazon: https://www.amazon.com/dp/B0G6S3GCX5
-2. **Sales Team of One** — How to Stay Irreplaceable When AI Comes for the Sales Team (forthcoming; free chapters available now)
-   - Read the opening: https://salesteamofone.com/
+2. **Sales Team of One** — How to Stay Irreplaceable When AI Comes for the Sales Team (releases 2026-10-20; available to pre-order, chapters free to read now)
+   - On billrice.com: https://billrice.com/book/sales-team-of-one
+   - Read the chapters: https://salesteamofone.com/
+   - Amazon: https://www.amazon.com/dp/B0HMFQ2C9G
 
 ## Contact Information
 - **Email**: bill@billrice.com
