@@ -5,6 +5,13 @@ import { sanityFetch } from '@/sanity/lib/live'
 import { NOW_PAGE_QUERY } from '@/sanity/lib/queries'
 import { PortableText } from '@/components/portable-text'
 import { JsonLd } from '@/components/json-ld'
+import {
+  NOW_CONSULTING_AVAILABILITY,
+  NOW_LAST_UPDATED,
+  NOW_PRIORITIES,
+  NOW_SPEAKING_TOPICS,
+  type NowSegment,
+} from '@/lib/now'
 
 export const metadata: Metadata = {
   title: "What I'm Working On Now",
@@ -59,10 +66,14 @@ export default async function NowPage() {
     // fallback below
   }
 
-  const priorities = now?.priorities ?? []
-  const speakingTopics = now?.speakingTopics ?? []
-  const consultingAvailability = now?.consultingAvailability ?? null
-  const lastUpdated = now?.lastUpdated ?? null
+  // Sanity wins when it answers, but this page used to render as a bare header
+  // and a contact box whenever it did not — every section is gated on a
+  // non-empty array. The fallbacks in src/lib/now.ts are the same copy that
+  // seeds the dataset, so the two cannot say different things.
+  const sanityPriorities = now?.priorities ?? []
+  const speakingTopics = now?.speakingTopics?.length ? now.speakingTopics : NOW_SPEAKING_TOPICS
+  const consultingAvailability = now?.consultingAvailability ?? NOW_CONSULTING_AVAILABILITY
+  const lastUpdated = now?.lastUpdated ?? NOW_LAST_UPDATED
 
   return (
     <div className="min-h-screen bg-white">
@@ -109,27 +120,47 @@ export default async function NowPage() {
           <div className="max-w-3xl mx-auto">
 
             {/* Current Priorities */}
-            {priorities.length > 0 && (
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Strategic Priorities</h2>
-                <div className="space-y-6">
-                  {priorities.map((p, i) => (
-                    <div key={p._key ?? i}>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
-                      {p.description && (
-                        <div className="prose prose-gray max-w-none text-gray-600">
-                          <PortableText value={p.description} />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Strategic Priorities</h2>
+              <div className="space-y-6">
+                {sanityPriorities.length > 0
+                  ? sanityPriorities.map((p, i) => (
+                      <div key={p._key ?? i}>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+                        {p.description && (
+                          <div className="prose prose-gray max-w-none text-gray-600">
+                            <PortableText value={p.description} />
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  : NOW_PRIORITIES.map((p) => (
+                      <div key={p.title}>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+                        <p className="text-gray-600">
+                          {p.body.map((segment: NowSegment, i: number) =>
+                            typeof segment === 'string' ? (
+                              segment
+                            ) : (
+                              <a
+                                key={i}
+                                href={segment.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-black transition-colors"
+                              >
+                                {segment.text}
+                              </a>
+                            )
+                          )}
+                        </p>
+                      </div>
+                    ))}
               </div>
-            )}
+            </div>
 
             {/* Speaking & Consulting */}
-            {(speakingTopics.length > 0 || consultingAvailability) && (
-              <div className="mb-12">
+            <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Speaking & Consulting</h2>
                 <div className="space-y-4">
                   {speakingTopics.length > 0 && (
@@ -149,8 +180,7 @@ export default async function NowPage() {
                     </div>
                   )}
                 </div>
-              </div>
-            )}
+            </div>
 
             {/* Contact */}
             <div className="bg-gray-50 p-8 rounded-lg border-l-4 border-l-[#FFD000] text-center">

@@ -30,9 +30,9 @@ const doc = {
   description:
     'Fintech marketing pioneer. Coined "lead management." 30+ years building lead generation platforms and revenue systems for financial services companies.',
   heroTitle: 'Bill Rice',
-  heroTagline: 'Fintech Marketing Pioneer & Lead Generation Strategist',
+  heroTagline: "I've stood on all four sides of the consumer-direct lead.",
   heroSubtext:
-    '30+ years building lead generation platforms and revenue systems for financial services companies. Coined "lead management." Built platforms at DeepGreen Bank and Quicken Loans.',
+    'I built the software that managed it, generated it as an agency, bought it as a lender with my own P&L, and wrote the book on how to buy it. 30+ years in mortgage and fintech.',
   aboutBio: [
     block(
       'I started as a Special Agent and case officer with the U.S. Air Force Office of Special Investigations (AFOSI), running counterespionage operations. From there I joined DeepGreen Bank as Employee #7 — one of the first internet-only banks, where we grew to about 80 people running what functionally behaved like a billion-dollar bank. After DeepGreen sold to LightYear Capital in 2004, I built EquityOnline at Quicken Loans — their first true online lending platform.',
@@ -46,7 +46,7 @@ const doc = {
   ],
   socialLinks: {
     linkedin: 'https://www.linkedin.com/in/billrice/',
-    twitter: 'https://twitter.com/billrice',
+    twitter: 'https://x.com/billrice',
     youtube: 'https://www.youtube.com/@billricestrategy',
   },
   copyrightName: 'Bill Rice',
@@ -56,6 +56,22 @@ async function main() {
   console.log(`Upserting siteSettings (_id: ${doc._id})...`)
   const result = await client.createOrReplace(doc)
   console.log('✓ Seeded:', result._id)
+
+  // SITE_SETTINGS_QUERY takes [0] with no ordering, so a second document means
+  // the homepage hero is whichever one the dataset happens to hand back.
+  const strays: string[] = await client.fetch(
+    `*[_type == "siteSettings" && _id != $id]._id`,
+    { id: doc._id }
+  )
+  if (strays.length === 0) {
+    console.log('✓ No duplicate siteSettings documents.')
+    return
+  }
+  console.log(`Deleting ${strays.length} duplicate siteSettings document(s): ${strays.join(', ')}`)
+  for (const id of strays) {
+    await client.delete(id)
+  }
+  console.log('✓ Duplicates removed.')
 }
 
 main().catch((err) => {
