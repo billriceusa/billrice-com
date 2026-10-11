@@ -1,6 +1,6 @@
 # billrice.com Backlog
 
-Single source of truth for billrice.com work. Last updated 2026-10-10.
+Single source of truth for billrice.com work. Last updated 2026-10-11.
 
 **Stack**: Next.js 16 + Sanity.io (`st1plnki`) + Tailwind v4 + Resend
 **Repo**: `~/Code/sites/personal/billrice.com` (canonical)
@@ -170,6 +170,114 @@ return 200 and all seven essay slugs resolve.
   `engines.node`; it now supports 20.x, 22.x and 24.x, and 18.x is off the list. Dropped
   the block, set `engines.node` to `"22.x"`.
 - [ ] **`/api/bio` has no `tools` key** — it exposes `companies`, `projects`, `books`.
+
+---
+
+## 2026-10-11 — session log
+
+### Shipped (code)
+
+- **Sales Team of One is on the site.** Live on Amazon as `B0HMFQ2C9G`, Kindle, $9.99,
+  **releasing 20 Oct 2026** — so it is a pre-order, not a launch, for nine more days. Books
+  now live in a registry (`src/lib/books.ts`) that the homepage cards, the library and each
+  book page all read; all three previously carried their own copies and had drifted. The buy
+  CTA keys off the release date and flips from "Pre-order on Amazon" to "Buy on Amazon" by
+  itself on an hourly revalidate.
+- **Cover thumbnails** for both books. Sales Team of One supplied by Bill; the Playbook
+  pulled from `leadbuyersplaybook.com` — Amazon's image CDN is blocked here and the Sanity
+  book document has no cover asset.
+- **`/book` is the library and author profile**, each book at `/book/<slug>` with a
+  six-chapter teaser. `/books` and `/books/<slug>` 308 to the singular, reversing the 10-10
+  structure on Bill's call. Nav label is now "Books". These pages read the registry, not
+  Sanity, so an unknown slug 404s instead of 500ing.
+- **Free Tools is gone.** Sanity held zero `tool` documents, so that section rendered
+  entirely from a code fallback — the deletion is complete, not cosmetic.
+- **Verified Vector removed everywhere**, history included, per Bill: homepage, `/about`
+  prose and its 2024 timeline entry and ventures card, all three `/api/bio` bios, `llms.txt`,
+  and the Organization node and `worksFor` edge in the entity graph. The seed scripts too —
+  leaving them would let a re-run restore it, which is how Gumroad came back once.
+- **`/now` rewritten** and given the fallback it never had. Copy lives in `src/lib/now.ts`,
+  read by both the page and `seed-now-page.ts`.
+
+### The Playbook's subtitle — resolved
+
+The previous session's missing `patch-author-pillar.ts` was going to fix this. Sanity and
+this repo both said *"The Enterprise Guide to Buying and Converting Leads Profitably"*. The
+published subtitle is **"How to Turn Third-Party Leads Into a Predictable Revenue Engine"** —
+confirmed three ways: the cover art, the Amazon listing, and ISBN 9798994221006. Corrected
+everywhere in the repo. **The Sanity document still carries the old one.**
+
+`LEAD_BUYERS_PLAYBOOK_SLUG` was also wrong — guessed as `the-lead-buyers-playbook` on 10-10,
+actually `lead-buyers-playbook`. It failed invisibly into the fallbacks, exactly as designed,
+which argues for verifying rather than for the fallback.
+
+### Sanity credentials — the environment is pointed at the wrong project
+
+**Resolved: `st1plnki` is billrice.com.** It holds what the live site shows — Kaleidico,
+BRSG, Verified Vector; four projects; 28 posts; one book. The 10-10 pin was correct.
+
+**But this environment's credentials are for a different project entirely.**
+`NEXT_PUBLIC_SANITY_PROJECT_ID` is `wb45fzy0`, display name **"Zoom Casa"**, which is empty of
+every billrice.com content type, and `SANITY_API_READ_TOKEN` is a **read-only viewer token
+belonging to that project**. `st1plnki` rejects it outright ("Session does not match project
+host"). So no write was possible even after the network was opened.
+
+Two consequences worth knowing:
+
+- The project-id guard added on 10-10 earned its keep immediately — it refused every script.
+- `wb45fzy0` baked into a build is a live hazard: `NEXT_PUBLIC_*` values are inlined at build
+  time, so anything built in this environment points at the empty project. That is why
+  `/feed.xml` 500s locally while production returns 200.
+
+**To finish the job**, mint a token in the billrice.com (`st1plnki`) project with Editor
+rights, add it as `SANITY_API_TOKEN` in the environment's secrets, and correct or remove
+`NEXT_PUBLIC_SANITY_PROJECT_ID`. Then:
+
+```
+npx tsx scripts/patch-site-content.ts          # review the diff
+npx tsx scripts/patch-site-content.ts --apply
+npx tsx scripts/seed-now-page.ts
+npx tsx scripts/seed-site-settings.ts
+npx tsx scripts/seed-about-page.ts
+```
+
+### Still stale on the live site until the above runs
+
+Three surfaces read Sanity and only fall back to code, so the repo is correct and the site is
+not:
+
+- [ ] **Homepage Companies** still shows Verified Vector (3 documents).
+- [ ] **Homepage Projects** still shows Aged Lead Sales and How to Work Leads (4 documents).
+- [ ] **`/now`** still shows the July priorities.
+- [ ] **The book document** still carries the superseded subtitle. Lower stakes now — no page
+      reads it any more.
+
+### Landmines found in the seed scripts
+
+Both would have fired on the next person to run them:
+
+- **`seed-site-settings.ts` carried a hero tagline two revisions old.** The live tagline comes
+  from a *duplicate* siteSettings document, so re-running this "idempotent, safe to re-run"
+  script and then tidying the duplicate would have reverted the homepage headline. Corrected
+  to match what renders; its Twitter link moved to the canonical x.com form.
+- **`nowPage` and `siteSettings` each have two documents**, and both queries take `[0]` with no
+  ordering — the books bug, but on singletons, so the hero and /now are whichever copy the
+  dataset returns. Both seeds now delete strays after upserting the canonical id.
+- `seed-now-page.ts` linked `leadbuyerplaybook.com`, the singular domain the backlog warns
+  never to link. Gone with the rewrite.
+
+### Open
+
+- [ ] **Sales Team of One has no chapter list.** `salesteamofone.com` publishes chapters but no
+      machine-readable TOC, and inventing chapter titles on this domain is what the blog was
+      retired over. Add them from the manuscript.
+- [ ] **The `book` schema and its Sanity document are now unused.** Schema kept so the document
+      is not orphaned. Decide whether to retire both.
+- [ ] **The hero's primary CTA still points at the free full read** of the Playbook. Arguably
+      off-strategy now that the library exists and both books are purchasable — not changed,
+      since the hero was not in scope.
+- [ ] `colorScheme`/`themeColor`/`viewport` still sit in a `metadata` export; Next 16 warns on
+      every build and wants a `viewport` export.
 
 ---
 
